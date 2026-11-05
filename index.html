@@ -7,19 +7,19 @@
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gaboulc.github.io/para-violet/">
-<meta property="og:title" content="Un mensaje sellado desde Asgard">
-<meta property="og:description" content="Solo una persona en los Nueve Reinos puede abrirlo.">
+<meta property="og:title" content="Te llegó un regalo, Violet">
+<meta property="og:description" content="Desde Asgard, de parte de tu hermano del trueno. Ábrelo.">
 <meta property="og:image" content="https://gaboulc.github.io/para-violet/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23070b1a' stroke='%23e2b85c' stroke-width='3'/%3E%3Cpath d='M36 8 L18 36 H30 L26 56 L46 26 H34 Z' fill='%23ffe3a1'/%3E%3C/svg%3E">
-<title>Mensaje sellado de Asgard</title>
+<title>Un regalo para Violet</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Un regalo de cumpleaños para Viviana, la Diosa de las Travesuras, de parte de su hermano, el Dios del Trueno.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..700;1,400..700&family=Alegreya+SC:wght@500;700&family=Grenze+Gotisch:wght@100..900&family=Noto+Sans+Runic&family=Oswald:wght@300..700&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..700;1,400..700&family=Alegreya+SC:wght@500;700&family=Grenze+Gotisch:wght@100..900&family=Noto+Sans+Runic&family=Oswald:wght@300..700&family=Space+Mono:wght@400;700&family=Caveat:wght@500;700&display=swap">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 /* Layout: una película en una sola página. Sello → intro de estudio → póster → reparto → escenas en horizontal →
@@ -52,6 +52,7 @@
   --font-sc:"Alegreya SC","Alegreya",Georgia,serif;
   --font-cine:"Oswald","Arial Narrow","Segoe UI",sans-serif;
   --font-mono:"Space Mono",Consolas,"Courier New",monospace;
+  --font-hand:"Caveat","Segoe Print","Comic Sans MS",cursive;
   --font-rune:"Noto Sans Runic","Segoe UI Historic","Segoe UI Symbol",sans-serif;
   --step--1:clamp(.92rem,.88rem + .2vw,1rem);
   --step-0:clamp(1.06rem,1rem + .3vw,1.22rem);
@@ -127,21 +128,20 @@ main{position:relative;z-index:1}
 .gate-left{left:0;background:radial-gradient(90% 60% at 100% 50%,rgba(76,124,255,.18),transparent 70%),linear-gradient(90deg,#050816,#0a1430);border-right:1px solid rgba(166,220,255,.28)}
 .gate-right{right:0;background:radial-gradient(90% 60% at 0% 50%,rgba(79,227,166,.16),transparent 70%),linear-gradient(270deg,#030f0a,#0a2a1d);border-left:1px solid rgba(79,227,166,.28)}
 .gate-inner{position:relative;z-index:1;width:min(100%,540px);text-align:center;display:grid;justify-items:center;gap:12px}
-.seal{width:min(62vw,250px);height:auto;overflow:visible;filter:drop-shadow(0 0 30px rgba(226,184,92,.25))}
-.seal-runes{font-family:var(--font-rune);font-size:14px;fill:var(--gold);letter-spacing:1px}
-html:not(.js-gsap) .seal-ring{transform-origin:120px 120px;animation:spin 50s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.gate-kicker{font-family:var(--font-sc);color:var(--gold);font-size:var(--step-0);margin:8px 0 0}
-.gate-title{font-family:var(--font-display);font-weight:600;font-size:var(--step-2);line-height:1.05;margin:0;text-wrap:balance}
-.gate-form{display:grid;gap:12px;width:100%;margin-top:4px}
-.gate-form label{color:var(--ink-soft);text-wrap:balance}
-.gate-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.gate-row input{flex:1 1 220px;min-width:0;font:inherit;font-size:1.12rem;color:var(--ink);background:rgba(255,255,255,.05);border:1px solid var(--hair);border-radius:12px;padding:.75em 1em;text-align:center;min-height:48px}
-.gate-row input::placeholder{color:var(--ink-soft);opacity:.6}
-.gate-row input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(226,184,92,.25)}
-.gate-msg{min-height:3.2em;margin:0;color:var(--gold-bright);font-style:italic;text-wrap:balance}
-.gate.shake .gate-row{animation:shake .45s}
-@keyframes shake{20%{transform:translateX(-9px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
+.js .gate{overflow-x:hidden}
+.gate-kicker{font-family:var(--font-hand);font-weight:700;font-size:clamp(1.7rem,1.4rem + 1.4vw,2.3rem);color:var(--gold-bright);margin:0;line-height:1.1}
+.gate-title{font-family:var(--font-display);font-weight:700;font-size:var(--step-3);line-height:1;margin:0;text-wrap:balance}
+.gift{appearance:none;background:none;border:0;padding:0;position:relative;width:min(70vw,290px);margin-top:6px;cursor:pointer;border-radius:18px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.gift[disabled]{cursor:default}
+.gift svg{position:relative;z-index:1;display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 22px 40px rgba(0,0,0,.5))}
+.gift-glow{position:absolute;z-index:0;left:-30%;top:38%;width:160%;aspect-ratio:1;margin-top:-80%;border-radius:50%;pointer-events:none;opacity:0;
+  background:repeating-conic-gradient(from 0deg,rgba(255,227,161,.55) 0 8deg,transparent 8deg 20deg);
+  -webkit-mask:radial-gradient(circle,#000 8%,transparent 64%);mask:radial-gradient(circle,#000 8%,transparent 64%)}
+.tag-txt{font-family:var(--font-hand);font-size:15px;fill:#36260f}
+.tag-name{font-size:20px;font-weight:700;fill:#0f4a33}
+.gate-msg{min-height:2.8em;margin:0;color:var(--ink-soft);font-style:italic;text-wrap:balance}
+.gift-reveal{margin:0;max-width:20ch;font-family:var(--font-display);font-weight:700;font-size:var(--step-2);line-height:1.1;color:var(--gold-bright);text-wrap:balance}
 
 /* ---------- Intro de estudio ---------- */
 .intro{position:fixed;inset:0;z-index:62;background:#000;overflow:hidden;perspective:1200px}
@@ -187,6 +187,7 @@ html:not(.js-gsap) .seal-ring{transform-origin:120px 120px;animation:spin 50s li
 .hero-ring text{font-family:var(--font-rune);font-size:15px;fill:var(--gold)}
 .hero-inner{position:relative}
 .hero-kicker{font-family:var(--font-cine);font-weight:400;text-transform:uppercase;letter-spacing:.42em;font-size:var(--step--1);color:var(--gold);margin:0;padding-left:.42em}
+.hero-hb{font-family:var(--font-display);font-weight:700;font-size:var(--step-3);line-height:1;margin:.4em 0 0;color:var(--ink);text-shadow:0 4px 30px rgba(0,0,0,.6)}
 .hero-stage{display:grid;grid-template-columns:auto auto auto;align-items:center;justify-content:center;gap:clamp(8px,2.5vw,36px);margin-top:.3em}
 .hero-icon{appearance:none;background:none;border:0;padding:6px;cursor:pointer;border-radius:18px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 .hero-icon svg{display:block;width:clamp(70px,12vw,170px);height:clamp(70px,12vw,170px);animation:float 4.2s ease-in-out infinite alternate;transition:filter .2s}
@@ -391,8 +392,15 @@ html:not(.js-gsap) .seal-ring{transform-origin:120px 120px;animation:spin 50s li
 .mic-msg{min-height:1.6em;margin:12px auto 0;max-width:40ch;color:var(--ink-soft);font-size:var(--step--1)}
 .final{margin-top:clamp(24px,4vw,40px);display:grid;justify-items:center;gap:14px}
 .final-title{font-family:var(--font-display);font-weight:800;font-size:var(--step-3);line-height:1;margin:0;color:var(--gold-bright);text-shadow:0 0 34px rgba(226,184,92,.45);perspective:600px}
-.final p{margin:0;max-width:40ch;font-size:var(--step-1);line-height:1.5;text-wrap:balance}
+.final > p{margin:0;max-width:40ch;font-size:var(--step-1);line-height:1.5;text-wrap:balance}
 .final-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.voucher{position:relative;width:min(100%,440px);margin:6px auto 4px;padding:20px 24px 18px;border-radius:14px;color:var(--parchment-ink);text-align:center;
+  background:linear-gradient(135deg,#fff4d2,#ecc97a);
+  box-shadow:0 22px 50px -22px rgba(0,0,0,.85),inset 0 0 0 2px rgba(143,106,34,.65),inset 0 0 0 8px rgba(255,255,255,.3),inset 0 0 0 9px rgba(143,106,34,.4)}
+.voucher-top{margin:0;font-family:var(--font-cine);font-weight:600;text-transform:uppercase;letter-spacing:.3em;font-size:.82rem;color:var(--cape);padding-left:.3em}
+.voucher-what{margin:.25em 0 .2em;font-family:var(--font-display);font-weight:800;font-size:var(--step-2);line-height:1.05;color:var(--emerald);text-wrap:balance}
+.voucher-fine{margin:0;font-style:italic;font-size:var(--step--1);color:rgba(54,38,15,.8)}
+.voucher-sign{margin:.7em 0 0;padding-top:.5em;border-top:2px dashed rgba(143,106,34,.55);font-family:var(--font-hand);font-weight:700;font-size:1.5rem;line-height:1.1}
 
 /* ---------- Créditos ---------- */
 .credits{position:fixed;inset:0;z-index:75;background:#000;color:#e9e4d8;overflow:hidden;text-align:center;font-family:var(--font-cine)}
@@ -403,7 +411,19 @@ html:not(.js-gsap) .credits{overflow-y:auto}
 html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
 .cr-title{font-family:var(--font-display);font-weight:800;font-size:clamp(3rem,13vw,6rem);color:var(--gold-bright);margin:0;line-height:1}
 .cr-sub{margin:.4em 0 0;font-weight:300;letter-spacing:.4em;text-transform:uppercase;font-size:clamp(.8rem,2.6vw,1rem);padding-left:.4em}
+.cr-gift{margin:1.2em 0 0;font-family:var(--font-hand);font-weight:700;font-size:1.7rem;color:#cfc9bc}
 .cr-block{margin-top:64px;width:min(100%,560px)}
+.balloons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,3vw,30px);max-width:640px;margin:clamp(28px,5vw,48px) auto 0;align-items:end}
+.balloon{appearance:none;background:none;border:0;padding:0;cursor:pointer;width:100%;max-width:110px;justify-self:center;-webkit-tap-highlight-color:transparent;touch-action:manipulation;animation:bob 3.2s ease-in-out infinite alternate}
+.balloon:nth-child(2n){animation-delay:-1.1s;margin-bottom:24%}
+.balloon:nth-child(3n){animation-delay:-2.1s}
+.balloon svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 10px 14px rgba(0,0,0,.4))}
+.balloon.popped{visibility:hidden}
+@keyframes bob{from{transform:translateY(6px) rotate(-3deg)}to{transform:translateY(-10px) rotate(3deg)}}
+.b-blue{color:#2f63d6}.b-red{color:#c23a43}.b-green{color:#1f9c66}.b-gold{color:#d9a640}
+.balloons-left{margin:18px 0 0;color:var(--ink-soft);font-size:var(--step--1);font-style:italic}
+.notes{list-style:none;margin:20px auto 0;padding:0;max-width:520px;display:grid;gap:10px;text-align:left}
+.notes li{padding:12px 16px;border-radius:12px;background:var(--panel);border:1px solid var(--hair);border-left:3px solid var(--gold);line-height:1.45}
 .cr-head{font-weight:300;letter-spacing:.35em;text-transform:uppercase;font-size:.8rem;color:#9a958a;margin:0 0 18px;padding-left:.35em}
 .cr-list{margin:0;display:grid;gap:10px}
 .cr-list div{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:baseline}
@@ -429,7 +449,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
   .cast{grid-template-columns:1fr}
 }
 @media (max-width:640px){
-  .hero-stage{grid-template-columns:auto auto;grid-template-areas:"thor loki" "name name";row-gap:4px;column-gap:28vw}
+  .hero-stage{grid-template-columns:auto auto;grid-template-areas:"name name" "thor loki";row-gap:4px;column-gap:28vw}
   .hero-thor{grid-area:thor}.hero-loki{grid-area:loki}.hero-name{grid-area:name}
   .tva-dl div{grid-template-columns:1fr;gap:0}
 }
@@ -497,28 +517,66 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
 <div class="nebula" aria-hidden="true"></div>
 <canvas id="sky" aria-hidden="true"></canvas>
 
-<!-- ===================== EL SELLO ===================== -->
+<!-- ===================== EL REGALO ===================== -->
 <section id="gate" class="gate" aria-labelledby="gate-title">
   <div class="gate-half gate-left" aria-hidden="true"></div>
   <div class="gate-half gate-right" aria-hidden="true"></div>
   <div class="gate-inner">
-    <svg class="seal" viewBox="0 0 240 240" aria-hidden="true">
-      <defs><path id="ring-path" d="M120,120 m-98,0 a98,98 0 1,1 196,0 a98,98 0 1,1 -196,0"/></defs>
-      <circle cx="120" cy="120" r="114" fill="#070b1a" fill-opacity=".7" stroke="url(#g-gold)" stroke-width="1.5"/>
-      <circle cx="120" cy="120" r="84" fill="none" stroke="url(#g-gold)" stroke-width="1" opacity=".7"/>
-      <g class="seal-ring"><text class="seal-runes"><textPath href="#ring-path" textLength="610" lengthAdjust="spacing">ᚠᛖᛚᛁᛉ ᚲᚢᛗᛈᛚᛖᚨᚾᛟᛊ ᛬ ᚹᛁᛟᛚᛖᛏ ᛬ ᚠᛖᛚᛁᛉ ᚲᚢᛗᛈᛚᛖᚨᚾᛟᛊ ᛬ ᚹᛁᛟᛚᛖᛏ ᛬</textPath></text></g>
-      <use href="#i-crest" x="0" y="0" width="240" height="240"/>
-    </svg>
-    <p class="gate-kicker">Llegó un envío sellado desde Asgard</p>
-    <h2 id="gate-title" class="gate-title">Para la Diosa de las Travesuras</h2>
-    <form id="gate-form" class="gate-form" autocomplete="off" novalidate>
-      <label for="gate-input">Este sello solo se rompe con el nombre que te da el Dios del Trueno.</label>
-      <div class="gate-row">
-        <input id="gate-input" name="clave" type="text" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="24" placeholder="Tu nombre secreto">
-        <button type="submit" class="btn btn-gold">Romper el sello</button>
-      </div>
-      <p id="gate-msg" class="gate-msg" role="status" aria-live="polite"></p>
-    </form>
+    <p class="gate-kicker">Hoy es tu día, Violet</p>
+    <h2 id="gate-title" class="gate-title">Te llegó un regalo</h2>
+    <button id="gift" class="gift" type="button" aria-label="Abrir el regalo">
+      <span class="gift-glow" aria-hidden="true"></span>
+      <svg viewBox="0 0 300 340" aria-hidden="true">
+        <defs>
+          <pattern id="paper" width="36" height="36" patternUnits="userSpaceOnUse">
+            <rect width="36" height="36" fill="#13603f"/>
+            <path d="M9 3 L4 12 H8 L6 19 L13 8 H9 L11 3 Z" fill="#e2b85c"/>
+            <text x="21" y="31" font-size="12" fill="#a6dcff" fill-opacity=".8" style="font-family:var(--font-rune)">ᚹ</text>
+            <circle cx="29" cy="8" r="1.6" fill="#ffe3a1"/><circle cx="6" cy="29" r="1.2" fill="#ffe3a1" fill-opacity=".7"/>
+          </pattern>
+          <linearGradient id="g-ribbon" x1="0" x2="1"><stop offset="0" stop-color="#8e1d26"/><stop offset=".45" stop-color="#d23b45"/><stop offset=".55" stop-color="#e3545d"/><stop offset="1" stop-color="#8e1d26"/></linearGradient>
+          <linearGradient id="g-ribbon-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ea5f68"/><stop offset="1" stop-color="#8e1d26"/></linearGradient>
+          <linearGradient id="g-shade" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset=".6" stop-color="#000" stop-opacity=".05"/><stop offset="1" stop-color="#000" stop-opacity=".38"/></linearGradient>
+        </defs>
+        <ellipse cx="150" cy="326" rx="112" ry="12" fill="#000" opacity=".35"/>
+        <g id="gift-all">
+          <g id="gift-box">
+            <rect x="52" y="158" width="196" height="164" rx="6" fill="url(#paper)"/>
+            <rect x="52" y="158" width="196" height="164" rx="6" fill="url(#g-shade)"/>
+            <rect x="52" y="158" width="196" height="12" fill="#000" opacity=".28"/>
+            <rect x="135" y="158" width="30" height="164" fill="url(#g-ribbon)"/>
+            <rect x="52" y="158" width="196" height="164" rx="6" fill="none" stroke="#e2b85c" stroke-opacity=".5" stroke-width="1.5"/>
+          </g>
+          <g id="gift-lid">
+            <rect x="42" y="120" width="216" height="44" rx="6" fill="url(#paper)"/>
+            <rect x="42" y="120" width="216" height="44" rx="6" fill="url(#g-shade)"/>
+            <rect x="46" y="122" width="208" height="6" rx="3" fill="#fff" opacity=".18"/>
+            <rect x="135" y="120" width="30" height="44" fill="url(#g-ribbon)"/>
+            <rect x="42" y="120" width="216" height="44" rx="6" fill="none" stroke="#e2b85c" stroke-opacity=".6" stroke-width="1.5"/>
+            <g id="gift-bow">
+              <path id="tail-l" d="M146 122 C138 140 128 152 116 170 L130 172 C140 154 146 142 152 124 Z" fill="url(#g-ribbon-v)"/>
+              <path id="tail-r" d="M154 122 C162 140 172 152 184 170 L170 172 C160 154 154 142 148 124 Z" fill="url(#g-ribbon-v)"/>
+              <path id="bow-l" d="M150 120 C122 78 82 90 96 116 C104 130 132 128 150 120 Z" fill="url(#g-ribbon-v)" stroke="#7a1820" stroke-width="1.5"/>
+              <path id="bow-r" d="M150 120 C178 78 218 90 204 116 C196 130 168 128 150 120 Z" fill="url(#g-ribbon-v)" stroke="#7a1820" stroke-width="1.5"/>
+              <path class="bow-hl" d="M112 104 C120 96 132 98 142 112" fill="none" stroke="#ffc2c6" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/>
+              <path class="bow-hl" d="M188 104 C180 96 168 98 158 112" fill="none" stroke="#ffc2c6" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/>
+              <ellipse id="bow-knot" cx="150" cy="120" rx="13" ry="11" fill="#c22f3a" stroke="#7a1820" stroke-width="1.5"/>
+            </g>
+          </g>
+          <g id="gift-tag">
+            <path d="M156 126 C180 146 196 158 212 180" fill="none" stroke="#e2b85c" stroke-width="1.6"/>
+            <g transform="rotate(12 232 208)">
+              <path d="M206 182 L250 182 L262 194 L262 238 L206 238 Z" fill="#efe2c2" stroke="#8f6a22" stroke-width="1.5"/>
+              <circle cx="214" cy="190" r="3" fill="none" stroke="#8f6a22" stroke-width="1.5"/>
+              <text x="233" y="212" text-anchor="middle" class="tag-txt">Para</text>
+              <text x="233" y="231" text-anchor="middle" class="tag-txt tag-name">Violet</text>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </button>
+    <p id="gate-msg" class="gate-msg" role="status" aria-live="polite">Algo se mueve adentro. Tócalo para abrirlo.</p>
+    <p id="gift-reveal" class="gift-reveal" hidden>Te regalé una película, y la protagonista eres tú.</p>
   </div>
 </section>
 
@@ -568,6 +626,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
     </div>
     <div class="wrap hero-inner">
       <p class="hero-kicker">Asgard Studios presenta</p>
+      <p class="hero-hb">Feliz cumpleaños</p>
       <div class="hero-stage">
         <button id="duo-thor" class="hero-icon hero-thor" type="button" aria-label="Thor: invocar un rayo"><svg viewBox="0 0 200 260" aria-hidden="true"><use href="#i-hammer"/></svg></button>
         <h1 id="hero-title" class="hero-name"><span class="hn-shadow" aria-hidden="true">Viviana</span><span id="hero-name" class="hn-face">Viviana</span></h1>
@@ -575,10 +634,10 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
       </div>
       <p class="hero-tag">La Diosa de las Travesuras</p>
       <p id="hero-runes" class="hero-runes" aria-label="Viviana y Violet, escrito en runas">ᚹᛁᚹᛁᚨᚾᚨ ᛬ ᚹᛁᛟᛚᛖᛏ</p>
-      <p class="hero-runes-cap">Tu nombre y tu apodo, en runas del futhark antiguo.</p>
-      <p class="billing">Asgard Studios presenta una producción del <b>Dios del Trueno</b> · <b>Viviana «Violet»</b> como <b>Loki</b> · <b>Gabo</b> como <b>Thor</b> · música de los escaldos · efectos de rayos: Thor, sin ayuda · ilusiones: Loki, sin permiso · dirigida por <b>el Caos</b> · basada en una amistad real</p>
-      <p class="release">Estreno mundial: hoy · Solo en los cines de Asgard</p>
-      <p class="hint">Toca el martillo y el casco. Los dioses responden.</p>
+      <p class="hero-runes-cap">Tu nombre y tu apodo, en runas antiguas.</p>
+      <p class="billing">Un regalo de cumpleaños de <b>Gabo</b> · <b>Viviana «Violet»</b> como <b>Loki</b> · <b>Gabo</b> como <b>Thor</b> · música de los escaldos · rayos: Thor, sin ayuda · ilusiones: Loki, sin permiso · dirigida por <b>el Caos</b> · basada en una amistad real</p>
+      <p class="release">Estreno mundial: hoy, en tu cumpleaños</p>
+      <p class="hint">Toca el martillo y el casco, a ver qué pasa.</p>
       <a class="scroll-cue" href="#elenco">
         Baja, hermana
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
@@ -590,7 +649,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
   <section id="elenco" class="band" aria-labelledby="t-elenco">
     <div class="wrap">
       <h2 id="t-elenco" class="h-section split-title">El reparto</h2>
-      <p class="lead">Dos dioses, un solo caos. Hermanos de elección, que es la forma más difícil y la mejor.</p>
+      <p class="lead">No somos hermanos de sangre, pero nos elegimos hace tiempo.</p>
       <div class="cast">
         <article class="char char-thor" aria-labelledby="n-thor">
           <div class="char-inner">
@@ -634,7 +693,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
   <section id="escenas" class="scenes" aria-labelledby="t-escenas">
     <div class="wrap">
       <h2 id="t-escenas" class="h-section split-title">Basada en hechos reales</h2>
-      <p class="lead">Escenas de las películas que, de alguna forma, ya vivimos.</p>
+      <p class="lead">Escenas de las películas que, más o menos, ya vivimos tú y yo.</p>
     </div>
     <div class="scenes-viewport">
       <div id="scenes-track" class="scenes-track">
@@ -655,7 +714,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
             <p class="ref">Thor (2011)</p>
             <p class="scene-quote" lang="en">«Another!»</p>
             <h3>¡Otro!</h3>
-            <p>Thor probó su primer café en Midgard, le gustó y rompió la taza contra el piso para pedir otro. Así pido otro año contigo. <span id="mug-count">Tazas rotas: 0.</span></p>
+            <p>Thor probó su primer café en la Tierra, le encantó y rompió la taza para pedir otro. Yo hago lo mismo con tus cumpleaños: quiero otro, y otro más. <span id="mug-count">Tazas rotas: 0.</span></p>
           </div>
         </article>
         <article class="scene">
@@ -671,7 +730,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
           <div class="scene-text">
             <p class="ref">Thor: Ragnarok (2017)</p>
             <h3>La serpiente</h3>
-            <p>Thor cuenta que, de niños, Loki se convirtió en serpiente porque sabía que a él le encantaban. Thor la recogió y Loki lo apuñaló. Así funcionamos: tú inventas la travesura y yo caigo. Y lo volvería a hacer.</p>
+            <p>Thor cuenta que, de chicos, Loki se convirtió en serpiente porque sabía que a él le encantaban. Thor la levantó para verla de cerca y Loki lo apuñaló. Con nosotros pasa igual: tú inventas la broma y yo caigo, cada vez.</p>
           </div>
         </article>
         <article class="scene">
@@ -683,7 +742,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
             <p class="ref">Thor: Ragnarok (2017)</p>
             <p class="scene-quote" lang="en">«Get help!»</p>
             <h3>El plan «¡Ayuda!»</h3>
-            <p>Loki finge estar herido, Thor pide ayuda a gritos y luego lanza a su hermano contra los guardias. Es el plan más vergonzoso de Asgard. Thor lo adora, Loki lo odia y funciona.</p>
+            <p>Loki se hace el herido, Thor pide ayuda a gritos y después lo lanza contra los guardias. A Loki le da una vergüenza terrible, pero siempre funciona.</p>
           </div>
         </article>
         <article class="scene">
@@ -696,7 +755,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
           <div class="scene-text">
             <p class="ref">Thor: Ragnarok (2017)</p>
             <h3>Media hora cayendo</h3>
-            <p>Loki pasó treinta minutos cayendo por un portal, olvidado, mientras su hermano conversaba tranquilo. Es lo que siento cada vez que me cuentas un chisme a medias.</p>
+            <p>Loki pasó media hora cayendo por un portal mientras Thor conversaba de lo más tranquilo. Así me siento cuando me cuentas un chisme y lo dejas a medias.</p>
           </div>
         </article>
         <article class="scene">
@@ -708,7 +767,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
             <p class="ref">The Avengers (2012)</p>
             <p class="scene-quote" lang="en">«I am burdened with glorious purpose.»</p>
             <h3>Un propósito glorioso</h3>
-            <p>Loki siempre tuvo un propósito glorioso. El tuyo hoy es sencillo: cumplir años y dejar que te celebren. Con travesuras incluidas, obvio.</p>
+            <p>Loki siempre hablaba de su propósito glorioso. El tuyo hoy es fácil: cumplir años y dejar que te celebren.</p>
           </div>
         </article>
         <article class="scene">
@@ -721,12 +780,12 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
             <p class="ref">Avengers: Infinity War (2018)</p>
             <p class="scene-quote" lang="en">«I assure you, brother, the sun will shine on us again.»</p>
             <h3>El sol volverá a brillar</h3>
-            <p>También hubo días nublados. En cada uno, uno de los dos sostuvo al otro. Te lo prometo, hermana: el sol siempre volverá a brillar sobre nosotros.</p>
+            <p>Hemos tenido días grises, y en cada uno alguno de los dos sostuvo al otro. Por eso sé que el sol vuelve a salir.</p>
           </div>
         </article>
       </div>
     </div>
-    <p class="wrap scenes-foot">Sigue bajando: las escenas avanzan solas.</p>
+    <p class="wrap scenes-foot">Sigue bajando y las escenas avanzan solas.</p>
   </section>
 
   <!-- ===================== PRUEBA DE DIGNIDAD ===================== -->
@@ -755,7 +814,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
         <p id="hammer-hint" class="trial-msg" role="status" aria-live="polite">Mantén presionado el martillo hasta que se enciendan las cinco runas.</p>
         <div id="worthy" class="worthy" hidden>
           <p class="worthy-title">Eres digna</p>
-          <p class="worthy-sub">Como Thor en Avengers: Endgame (2019), cuando descubre que sigue siendo digno. Ahora el Mjölnir te obedece: toca cualquier parte de la pantalla para lanzarlo.</p>
+          <p class="worthy-sub">Igualito que Thor en Avengers: Endgame (2019). Desde ahora el Mjölnir es tuyo: toca cualquier parte de la pantalla y vuela hasta ahí.</p>
           <button id="hammer-reset" class="btn btn-ghost" type="button">Dejarlo y probar otra vez</button>
         </div>
       </div>
@@ -766,7 +825,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
   <section id="tva" class="band" aria-labelledby="t-tva">
     <div class="wrap">
       <h2 id="t-tva" class="h-section split-title">Expediente de la variante</h2>
-      <p class="lead">Una oficina que vigila la línea temporal sagrada abrió un caso a tu nombre. Tranquila: es buena noticia.</p>
+      <p class="lead">La oficina que cuida la línea del tiempo abrió un caso con tu nombre. Tranquila, son buenas noticias.</p>
       <p class="ref" style="margin:.8em 0 0">Inspirado en la serie Loki (2021)</p>
       <svg class="timeline" viewBox="0 0 1000 150" aria-hidden="true">
         <path class="tl-main" d="M0 75 C150 75 250 70 400 75 S 700 80 1000 75"/>
@@ -790,7 +849,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
               <div><dt>Dramatismo</dt><dd>nivel asgardiano</dd></div>
               <div><dt>Secretos</dt><dd>todos guardados, bajo juramento</dd></div>
               <div><dt>Thor te defiende</dt><dd>100 % de probabilidad</dd></div>
-              <div><dt>Sentencia</dt><dd>Un año más de vida, con todo el cariño de Asgard.</dd></div>
+              <div><dt>Sentencia</dt><dd>Celebrar en grande. No hay apelación.</dd></div>
             </dl>
           </div>
           <div id="stamp" class="stamp" aria-hidden="true">Aprobado<small>Feliz cumpleaños</small></div>
@@ -829,20 +888,20 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
   <!-- ===================== LA CARTA (edita el texto a tu gusto) ===================== -->
   <section id="carta" class="band" aria-labelledby="t-carta">
     <div class="wrap center">
-      <h2 id="t-carta" class="h-section split-title">Una carta desde Asgard</h2>
-      <p class="lead">Sellada con <span style="font-family:var(--font-rune)">ᚹ</span>, wunjo, la runa de la alegría. También es tu inicial.</p>
+      <h2 id="t-carta" class="h-section split-title">Tu tarjeta</h2>
+      <p class="lead">Todo regalo trae tarjeta. La cerré con la runa <span style="font-family:var(--font-rune)">ᚹ</span>, que significa alegría y además es tu inicial.</p>
       <div class="letter-zone">
         <article id="parchment" class="parchment">
           <button id="wax" class="wax" type="button" aria-label="Romper el sello de cera y abrir la carta">ᚹ</button>
           <p class="letter-to">Querida Violet:</p>
-          <p class="letter-teaser">Esta carta tiene sello de cera. Ya sabes qué hacer.</p>
+          <p class="letter-teaser">Tiene sello de cera. Ya sabes qué hacer.</p>
           <p class="wax-hint">Toca el sello para abrirla.</p>
           <div id="letter-body" class="letter-body">
-            <p>En los Nueve Reinos no existe nadie que me saque de quicio como tú, ni nadie a quien quiera tanto. Eres la travesura que le sacude el polvo a mis días aburridos, la estratega cuando yo solo tengo un martillo y medio plan, y la hermana que la vida me dejó elegir.</p>
-            <p>Gracias por las risas que nadie más entiende, por los planes absurdos y por cada vez que me engañaste (y por las veces que me dejé engañar). Sobre todo, gracias por quedarte, incluso cuando el cielo se puso gris.</p>
-            <p>Hoy celebramos el día en que llegaste a este mundo a ponerlo de cabeza. Que este nuevo año te traiga aventuras dignas de una diosa, gente que te cuide como tú cuidas a los tuyos y muchas razones para sonreír con esa cara de estar tramando algo.</p>
-            <p>Te lo prometo, hermana: el sol siempre volverá a brillar sobre nosotros.</p>
-            <p>Feliz cumpleaños.</p>
+            <p>¡Feliz cumpleaños! No conozco a nadie que me saque de quicio como tú, ni a nadie a quien quiera tanto.</p>
+            <p>Gracias por las risas que solo nosotros entendemos y por todas las veces que me hiciste caer en tus bromas. Y gracias, sobre todo, por quedarte cuando las cosas se pusieron feas.</p>
+            <p>Eres la hermana que la vida me dejó elegir, y te volvería a elegir.</p>
+            <p>Que este año te trate bonito y que nunca pierdas esa cara de estar tramando algo.</p>
+            <p>Te quiero mucho, hermana.</p>
             <p class="letter-sign">Tu hermano, el Dios del Trueno<b>Gabo</b></p>
           </div>
         </article>
@@ -850,11 +909,22 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
     </div>
   </section>
 
+  <!-- ===================== GLOBOS (las notas se editan en el script, en NOTAS) ===================== -->
+  <section id="globos" class="band center" aria-labelledby="t-globos">
+    <div class="wrap">
+      <h2 id="t-globos" class="h-section split-title">Globos de Asgard</h2>
+      <p class="lead">Cada globo guarda algo que Thor casi nunca dice en voz alta. Revienta todos.</p>
+      <div id="balloons" class="balloons"></div>
+      <p id="balloons-left" class="balloons-left"></p>
+      <ol id="notes" class="notes" aria-live="polite"></ol>
+    </div>
+  </section>
+
   <!-- ===================== EL DESEO ===================== -->
   <section id="deseo" class="band center" aria-labelledby="t-deseo">
     <div class="wrap">
       <h2 id="t-deseo" class="h-section split-title">Pide un deseo</h2>
-      <p class="lead">Un piso es de Loki y el otro de Thor. Cierra los ojos, pide algo que valga la pena y sopla.</p>
+      <p class="lead">Un piso es de Loki y el otro de Thor. Cierra los ojos, pide tu deseo y sopla.</p>
       <div class="cake-wrap">
         <div class="burn-wrap" aria-hidden="true"><svg id="burn" class="burn" viewBox="0 0 300 300">
           <defs><path id="burn-path" d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0"/></defs>
@@ -915,7 +985,13 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
       <p id="mic-msg" class="mic-msg" role="status" aria-live="polite"></p>
       <div id="final" class="final" hidden>
         <h3 id="final-title" class="final-title">Feliz cumpleaños, Violet</h3>
-        <p>Que nunca te falten motivos para tramar algo. Y que, pase lo que pase, sepas que en Asgard siempre tienes un hermano esperándote.</p>
+        <p>Que este año venga con muchas travesuras de las buenas. Y acuérdate de que en Asgard siempre vas a tener un hermano esperándote.</p>
+        <div class="voucher">
+          <p class="voucher-top">Vale de regalo</p>
+          <p class="voucher-what">Un plan juntos, el que tú elijas</p>
+          <p class="voucher-fine">Vale en los Nueve Reinos y no vence. Se canjea con Thor.</p>
+          <p class="voucher-sign">Gabo, Dios del Trueno</p>
+        </div>
         <div class="final-actions">
           <button id="to-credits" class="btn btn-gold" type="button">Ver los créditos</button>
           <button id="replay" class="btn btn-ghost" type="button">Ver el Bifröst otra vez</button>
@@ -928,7 +1004,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
     <div class="wrap">
       <p>Secretos de Loki encontrados: <b id="secret-count">0</b> de 3</p>
       <p>Pista: los dioses responden cuando insistes. Y a veces, cuando escribes su nombre.</p>
-      <p>Forjado a mano en Midgard por tu hermano del trueno.</p>
+      <p>Un regalo hecho a mano por Gabo, para tu cumpleaños.</p>
       <p class="fine">Página de fans sin fines comerciales, inspirada en Thor y Loki del Universo Cinematográfico de Marvel. Los personajes y las películas pertenecen a sus dueños; todas las ilustraciones de esta página son originales.</p>
     </div>
   </footer>
@@ -943,6 +1019,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
   <div id="credits-roll" class="credits-roll">
     <p class="cr-title">Violet</p>
     <p class="cr-sub">La Diosa de las Travesuras</p>
+    <p class="cr-gift">Un regalo de cumpleaños de Gabo</p>
     <div class="cr-block">
       <p class="cr-head">Reparto</p>
       <dl class="cr-list">
@@ -966,7 +1043,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
         <div><dt>Catering</dt><dd>Lo que sobrevivió al «¡Otro!»</dd></div>
       </dl>
     </div>
-    <p class="cr-note">Ningún dios resultó herido durante esta producción. Thor sí, varias veces, pero se lo buscó.</p>
+    <p class="cr-note">Ningún dios salió herido en esta producción. Thor sí, varias veces, pero se lo buscó.</p>
     <p class="cr-note">Página de fans hecha a mano, sin fines comerciales, inspirada en Thor y Loki del Universo Cinematográfico de Marvel.</p>
     <p class="cr-end">Basada en una amistad real.</p>
   </div>
@@ -1090,6 +1167,15 @@ const Sound = {
     this.tone(1046.5, t, { type: 'triangle', peak: .12, dec: .9 }); this.tone(1567.98, t + .1, { type: 'triangle', peak: .1, dec: 1 });
   },
   tick() { if (!this.ok()) return; const t = this.now(); const n = this.noise(t, .04, 'highpass', 2600); this.env(n.g, t, .001, .22, .035); },
+  rustle() {
+    if (!this.ok()) return; const t = this.now();
+    for (let i = 0; i < 7; i++) { const s = t + i * .045, n = this.noise(s, .06, 'bandpass', rand(2500, 5500), .9); this.env(n.g, s, .004, rand(.08, .18), .05); }
+  },
+  pop() {
+    if (!this.ok()) return; const t = this.now();
+    const n = this.noise(t, .09, 'highpass', 900); this.env(n.g, t, .001, .7, .07);
+    this.tone(150, t, { type: 'sine', peak: .3, dec: .1, wet: false });
+  },
   type() { if (!this.ok()) return; const t = this.now(); const n = this.noise(t, .03, 'bandpass', 3200, 2); this.env(n.g, t, .001, .1, .02); },
   whoosh() {
     if (!this.ok()) return; const t = this.now();
@@ -1166,7 +1252,7 @@ const FX = (() => {
   const sky = $('#sky'), fx = $('#fx');
   const sc = sky.getContext('2d'), fc = fx.getContext('2d');
   let W = innerWidth, H = innerHeight, DPR = 1, lastW = 0;
-  let stars = [], parts = [], bolts = [], snakes = [], shoot = null, nextShoot = performance.now() + 6000;
+  let stars = [], parts = [], bolts = [], snakes = [], balloons = [], shoot = null, nextShoot = performance.now() + 6000;
   let raf = 0, last = 0, running = false;
 
   function resize() {
@@ -1252,6 +1338,26 @@ const FX = (() => {
     wake();
   }
   function snake() { snakes.push({ t: 0, dur: 6.5, y: H * rand(.62, .8) }); wake(); }
+  // Globos que suben (al abrir el regalo y en el final)
+  function addBalloons(n = 12, x = null, y = null) {
+    const cols = ['#1f9c66', '#4fe3a6', '#e2b85c', '#2f63d6', '#c23a43', '#f4f1ff'];
+    if (reduce) n = Math.ceil(n / 3);
+    for (let i = 0; i < n; i++) balloons.push({ x: x == null ? rand(.05, .95) * W : x + rand(-110, 110), y: y == null ? H + rand(20, 180) : y + rand(0, 90), vy: -rand(85, 150), r: rand(16, 26), c: pick(cols), p: rand(0, 6.28), t: 0 });
+    wake();
+  }
+  function stepBalloons(dt) {
+    for (let i = balloons.length - 1; i >= 0; i--) {
+      const b = balloons[i]; b.t += dt; b.y += b.vy * dt;
+      if (b.y < -b.r * 4) { balloons.splice(i, 1); continue; }
+      const sway = Math.sin(b.t * 1.6 + b.p), x = b.x + sway * 14, r = b.r;
+      fc.globalAlpha = 1; fc.strokeStyle = 'rgba(236,230,214,.55)'; fc.lineWidth = 1;
+      fc.beginPath(); fc.moveTo(x, b.y + r * 1.12); fc.quadraticCurveTo(x + Math.sin(b.t * 2.2 + b.p) * 9, b.y + r * 2.1, x - sway * 5, b.y + r * 3.3); fc.stroke();
+      fc.fillStyle = b.c; fc.beginPath(); fc.ellipse(x, b.y, r * .86, r, 0, 0, 6.283); fc.fill();
+      fc.beginPath(); fc.moveTo(x - 4, b.y + r * 1.13); fc.lineTo(x + 4, b.y + r * 1.13); fc.lineTo(x, b.y + r * .95); fc.closePath(); fc.fill();
+      fc.fillStyle = 'rgba(0,0,0,.16)'; fc.beginPath(); fc.ellipse(x + r * .25, b.y + r * .2, r * .5, r * .66, 0, 0, 6.283); fc.fill();
+      fc.fillStyle = 'rgba(255,255,255,.4)'; fc.beginPath(); fc.ellipse(x - r * .3, b.y - r * .38, r * .2, r * .32, -.5, 0, 6.283); fc.fill();
+    }
+  }
 
   function stepParts(dt) {
     if (!parts.length) return;
@@ -1325,15 +1431,15 @@ const FX = (() => {
     const dt = last ? Math.min(.05, (now - last) / 1000) : .016; last = now;
     if (!reduce) drawSky(now);
     fc.clearRect(0, 0, W, H);
-    stepParts(dt); stepBolts(dt); stepSnakes(dt);
-    if (reduce && !parts.length && !bolts.length && !snakes.length) { running = false; last = 0; return; }
+    stepBalloons(dt); stepParts(dt); stepBolts(dt); stepSnakes(dt);
+    if (reduce && !parts.length && !bolts.length && !snakes.length && !balloons.length) { running = false; last = 0; return; }
     raf = requestAnimationFrame(frame);
   }
   function wake() { if (!running && !document.hidden) { running = true; last = 0; raf = requestAnimationFrame(frame); } }
   document.addEventListener('visibilitychange', () => { if (document.hidden) { cancelAnimationFrame(raf); running = false; } else wake(); });
   let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(resize, 120); });
   resize(); if (!reduce) wake();
-  return { strike, burst, krackle, confetti, snake, get W() { return W; }, get H() { return H; } };
+  return { strike, burst, krackle, confetti, snake, balloons: addBalloons, get W() { return W; }, get H() { return H; } };
 })();
 
 /* ================= Utilidades ================= */
@@ -1353,7 +1459,7 @@ const countEl = $('#secret-count'); countEl.textContent = found.size;
 function findSecret(id, msg) {
   const isNew = !found.has(id); found.add(id); store.set('violet-secretos', [...found].join(','));
   countEl.textContent = found.size; Sound.chime(); toast(msg);
-  if (isNew && found.size === 3) setTimeout(() => { toast('Encontraste los tres secretos. Loki está orgullosa, aunque nunca lo va a decir.', 5600); FX.confetti(120); Sound.magic(); }, 4800);
+  if (isNew && found.size === 3) setTimeout(() => { toast('Encontraste los tres secretos. Loki está orgullosa, aunque nunca lo va a admitir.', 5600); FX.confetti(120); Sound.magic(); }, 4800);
 }
 function storm() {
   for (let i = 0; i < 6; i++) setTimeout(() => {
@@ -1368,38 +1474,29 @@ function lokiMode() {
   if (root.classList.contains('loki-mode')) return;
   root.classList.add('loki-mode'); Sound.magic();
   FX.burst(FX.W / 2, FX.H / 2, { count: 140, colors: GREEN, speed: [120, 620], life: [.8, 1.6], gravity: 40 });
-  findSecret('loki', 'Secreto encontrado: Loki tomó el control de la página. Todo es verde y dorado ahora.');
+  findSecret('loki', 'Secreto encontrado: Loki se adueñó de la página. Ahora todo es verde y dorado.');
   clearTimeout(lokiTimer);
   lokiTimer = setTimeout(() => { root.classList.remove('loki-mode'); toast('Thor recuperó el control. Más o menos.'); }, 9000);
 }
 function snakeEgg() { FX.snake(); findSecret('serpiente', 'Secreto encontrado: ¿te acuerdas de la serpiente? Thor todavía tiene la cicatriz.'); }
 
-/* ================= EL SELLO ================= */
-const gate = $('#gate'), gForm = $('#gate-form'), gInput = $('#gate-input'), gMsg = $('#gate-msg');
-let opened = false, tries = 0, spin = null;
-const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z]/g, '');
-if (motion) spin = G.to('.seal-ring', { rotation: 360, svgOrigin: '120 120', duration: 50, repeat: -1, ease: 'none' });
-if (store.get('violet-abierto')) { gInput.value = 'Violet'; gMsg.textContent = 'Ya conoces el nombre. Rompe el sello otra vez.'; }
-function say(t) { gMsg.textContent = t; }
-function shakeGate() { gate.classList.remove('shake'); void gate.offsetWidth; gate.classList.add('shake'); }
-gForm.addEventListener('submit', e => {
-  e.preventDefault(); if (opened) return; audio();
-  const v = norm(gInput.value);
-  if (!v) { say('Escribe algo, hermana. Hasta Loki tiene nombre.'); shakeGate(); return; }
-  if (['violet', 'violeta', 'violetta', 'viviana', 'vivi'].includes(v)) { say('Ese es. El sello te reconoce.'); openGate(); return; }
-  if (v === 'loki') { say('Te delataste tú solita. Tramposa. Pasa.'); openGate(); return; }
-  tries++;
-  if (['thor', 'gabo', 'gabriel'].includes(v)) say('Ese es el nombre de tu hermano, no el tuyo. Intenta otra vez.');
-  else if (tries === 1) say('Mmm. Eso suena a algo que Loki diría para engañarme. Otra vez.');
-  else if (tries === 2) say('Pista del trueno: es un color y empieza con V.');
-  else { say('Está bien. Loki nunca sigue las reglas, así que tú tampoco. Adelante.'); setTimeout(openGate, 1400); return; }
-  shakeGate(); Sound.fail();
-});
+/* ================= EL REGALO ================= */
+const gate = $('#gate'), giftBtn = $('#gift'), gMsg = $('#gate-msg'), gReveal = $('#gift-reveal');
+let opened = false, wiggle = null;
+const BASE = '150 322';
+if (motion) {
+  // La caja se mueve sola cada tanto, como si algo se moviera adentro
+  wiggle = G.timeline({ repeat: -1, repeatDelay: 2, delay: 1 })
+    .to('#gift-all', { rotation: -4, y: -10, svgOrigin: BASE, duration: .12, ease: 'power1.out' })
+    .to('#gift-all', { rotation: 4, svgOrigin: BASE, duration: .12 })
+    .to('#gift-all', { rotation: -3, svgOrigin: BASE, duration: .1 })
+    .to('#gift-all', { rotation: 0, y: 0, svgOrigin: BASE, duration: .35, ease: 'bounce.out' });
+}
+giftBtn.addEventListener('click', () => openGate());
 function unlock() {
   gate.hidden = true; root.classList.remove('locked');
   $('#sound').hidden = false;
   if (store.get('violet-digna')) enableSummon(false);
-  if (spin) spin.kill();
   if (hasST) ScrollTrigger.refresh();
   ambient();
 }
@@ -1407,15 +1504,40 @@ function openGate(instant = false) {
   if (opened) return; opened = true;
   store.set('violet-abierto', '1');
   document.title = 'Feliz cumpleaños, Violet';
-  gInput.blur();
-  if (instant === true || !motion) { unlock(); return; }
-  const c = center($('.seal'));
+  if (instant === true) { unlock(); return; }
+  audio(); giftBtn.disabled = true; gMsg.hidden = true;
+  if (!motion) { gReveal.hidden = false; FX.balloons(6); setTimeout(unlock, 1800); return; }
+  if (wiggle) wiggle.kill();
   const tl = G.timeline();
-  if (spin) tl.to(spin, { timeScale: 45, duration: 1.2, ease: 'power2.in' }, 0);
-  tl.to('.seal', { scale: 1.12, duration: 1.2, ease: 'power2.in' }, 0)
-    .add(() => { Sound.magic(); FX.burst(c.x, c.y, { count: 70, colors: GREEN, speed: [80, 400], gravity: 20 }); FX.krackle(c.x, c.y, { n: 10, spread: 90, color: '#4fe3a6' }); }, .1)
-    .add(() => { FX.strike(c.x + rand(-60, 60), -20, c.x, c.y, { width: 3.4, branches: 4 }); flash(.9); Sound.thunder(1); }, 1.05)
-    .add(() => playIntro(() => { unlock(); heroIntro(); }), 1.3);
+  // 1. Se desata el lazo y se cae la tarjetita
+  tl.to('#gift-all', { rotation: 0, y: 0, svgOrigin: BASE, duration: .12 })
+    .add(() => Sound.rustle(), .05)
+    .to('#bow-l', { x: -60, y: -40, rotation: -80, opacity: 0, svgOrigin: '150 120', duration: .55, ease: 'power2.out' }, .1)
+    .to('#bow-r', { x: 60, y: -40, rotation: 80, opacity: 0, svgOrigin: '150 120', duration: .55, ease: 'power2.out' }, .1)
+    .to('#tail-l, #tail-r, #bow-knot, .bow-hl', { y: 70, opacity: 0, duration: .5, ease: 'power2.in' }, .15)
+    .to('#gift-tag', { y: 160, rotation: 35, opacity: 0, svgOrigin: '156 126', duration: .8, ease: 'power2.in' }, .2);
+  // 2. La caja tiembla un poquito
+  [-3, 3, -2, 2, 0].forEach((r, i) => tl.to('#gift-all', { rotation: r, svgOrigin: BASE, duration: .08, ease: 'none' }, .6 + i * .08));
+  // 3. Sale volando la tapa: luz, globos, confeti, un rayo y magia
+  tl.add(() => {
+      const r = $('#gift-lid').getBoundingClientRect(), x = r.left + r.width / 2, y = r.top + r.height / 2;
+      Sound.magic(); Sound.thunder(.6); flash(.6);
+      FX.burst(x, y, { count: 90, colors: ['#ffe3a1', '#4fe3a6', '#a6dcff', '#ffffff'], speed: [150, 560], angle: -Math.PI / 2, spread: 1.7, gravity: 160 });
+      FX.krackle(x, y, { n: 12, spread: 90, color: '#ffe3a1' });
+      FX.strike(x + rand(-90, 90), -20, x, y, { width: 3, branches: 3 });
+      FX.balloons(12, x, r.bottom + 40);
+      FX.confetti(140);
+    }, 1.05)
+    .to('#gift-lid', { y: -340, x: 50, rotation: -30, opacity: 0, svgOrigin: '150 142', duration: .9, ease: 'power3.out' }, 1.05)
+    .fromTo('.gift-glow', { opacity: 0, scale: .2 }, { opacity: 1, scale: 1, duration: .8, ease: 'power3.out' }, 1.05)
+    .to('.gift-glow', { rotation: 70, duration: 4, ease: 'none' }, 1.05)
+    .to(['.gate-kicker', '.gate-title'], { opacity: 0, y: -12, duration: .4 }, 1.05)
+    // 4. Lo que hay adentro
+    .add(() => {
+      gReveal.hidden = false;
+      if (hasSplit) { const s = SplitText.create(gReveal, { type: 'words' }); G.from(s.words, { opacity: 0, y: 14, filter: 'blur(6px)', stagger: .09, duration: .6, ease: 'power2.out' }); }
+    }, 1.5)
+    .add(() => playIntro(() => { unlock(); heroIntro(); }), 4.3);
 }
 
 /* ================= INTRO DE ESTUDIO ================= */
@@ -1458,6 +1580,7 @@ function heroIntro() {
   if (!motion) return;
   const tl = G.timeline();
   tl.from('.hero-kicker', { opacity: 0, letterSpacing: '1em', duration: .9, ease: 'power3.out' }, .05)
+    .from('.hero-hb', { opacity: 0, y: 24, duration: .8, ease: 'power3.out' }, .1)
     .fromTo(heroTitle, { '--w': 100, opacity: 0, scale: 1.5 }, { '--w': 260, opacity: 1, scale: 1, duration: .9, ease: 'power3.out' }, .15)
     .add(() => {
       const c = center(heroTitle);
@@ -1647,7 +1770,7 @@ mug.addEventListener('click', () => {
 const hb = $('#hammer-btn'), hammer = $('#hammer'), rp = $('#runes-progress'), rSpans = $$('#runes-progress span');
 const hint = $('#hammer-hint'), worthyEl = $('#worthy'), cracks = $$('.crack');
 const HOLD = 2.2;
-const FAILS = ['Casi. Hasta Thor tiene días flojos.', 'Un poquito más. El martillo ya sabe que eres tú.', 'No lo sueltes hasta que brillen las cinco runas.'];
+const FAILS = ['Casi. Hasta Thor tiene días flojos.', 'Un poquito más, ya casi.', 'No lo sueltes hasta que brillen las cinco runas.'];
 let holding = false, prog = 0, hRAF = 0, lastTS = 0, worthy = false, humCtl = null, fails = 0, floatTw = null;
 function holdingNow() { return holding; }
 cracks.forEach(c => { const L = c.getTotalLength(); c.dataset.len = L; c.style.strokeDasharray = L; c.style.strokeDashoffset = L; });
@@ -1828,6 +1951,52 @@ cards.forEach(c => c.addEventListener('click', () => {
 shBtn.addEventListener('click', shuffle);
 againBtn.addEventListener('click', () => { againBtn.hidden = true; shBtn.hidden = false; shuffle(); });
 
+/* ================= GLOBOS DE ASGARD (edita las notas aquí) ================= */
+const NOTAS = [
+  'Tus planes locos terminan siendo las mejores historias.',
+  'Contigo puedo hablar de todo, o de nada, y igual está bien.',
+  'Te ríes de mis chistes malos. Bueno, de algunos.',
+  'Cuando te va bien, lo celebro como si fuera mío.',
+  'Eres más valiente de lo que crees.',
+  'Me sacas de quicio y aun así eres de mis personas favoritas.',
+  'Si algún día necesitas ayuda, ahí voy a estar. Con martillo y todo.',
+  'Y la más importante: feliz cumpleaños, hermana.'
+];
+const bWrap = $('#balloons'), notesEl = $('#notes'), leftEl = $('#balloons-left');
+const BCOLORS = ['b-blue', 'b-green', 'b-red', 'b-gold'];
+let poppedCount = 0;
+function updateLeft() {
+  const q = NOTAS.length - poppedCount;
+  leftEl.textContent = q === 0 ? 'Ya los reventaste todos. Ahora sí, a la torta.' : q === 1 ? 'Queda 1 globo.' : `Quedan ${q} globos.`;
+}
+function popBalloon(b, nota, thor) {
+  if (b.classList.contains('popped')) return; audio();
+  const c = center(b.querySelector('svg')), y = c.r.top + c.r.height * .35;
+  b.classList.add('popped'); b.disabled = true; Sound.pop();
+  if (thor) { FX.strike(c.x + rand(-60, 60), -20, c.x, y, { width: 2.2, branches: 2, life: .3 }); FX.krackle(c.x, y, { n: 6, spread: 30 }); }
+  else FX.krackle(c.x, y, { n: 6, spread: 30, color: '#4fe3a6' });
+  FX.burst(c.x, y, { count: 30, colors: thor ? BLUE : GREEN, speed: [80, 320], gravity: 200 });
+  const li = document.createElement('li'); li.textContent = nota; notesEl.appendChild(li);
+  if (motion) G.from(li, { opacity: 0, y: -16, scale: .96, duration: .5, ease: 'back.out(1.6)' });
+  poppedCount++; updateLeft();
+  if (poppedCount === NOTAS.length) setTimeout(() => { FX.confetti(110); FX.balloons(10); Sound.magic(); }, 350);
+}
+NOTAS.forEach((nota, i) => {
+  const cls = BCOLORS[i % BCOLORS.length], thor = cls === 'b-blue' || cls === 'b-red';
+  const b = document.createElement('button');
+  b.type = 'button'; b.className = 'balloon ' + cls; b.setAttribute('aria-label', `Reventar el globo ${i + 1}`);
+  b.innerHTML = '<svg viewBox="0 0 80 132" aria-hidden="true">'
+    + '<path d="M40 103 C34 112 46 121 40 132" fill="none" stroke="rgba(236,230,214,.6)" stroke-width="1.5"/>'
+    + '<path d="M40 4 C62 4 76 22 76 44 C76 70 56 92 42 96 L38 96 C24 92 4 70 4 44 C4 22 18 4 40 4 Z" fill="currentColor"/>'
+    + '<path d="M35 103 L45 103 L41 96 L39 96 Z" fill="currentColor"/>'
+    + '<ellipse cx="25" cy="27" rx="6" ry="12" transform="rotate(-25 25 27)" fill="#fff" fill-opacity=".35"/>'
+    + (thor ? '<use href="#i-bolt" x="29" y="32" width="22" height="32"/>' : '<use href="#i-helm" x="19" y="24" width="42" height="42"/>')
+    + '</svg>';
+  b.addEventListener('click', () => popBalloon(b, nota, thor));
+  bWrap.appendChild(b);
+});
+updateLeft();
+
 /* ================= LA CARTA ================= */
 const parchment = $('#parchment'), wax = $('#wax'), lBody = $('#letter-body');
 if (hasG) parchment.classList.add('sealed'); else wax.hidden = true;
@@ -1851,7 +2020,7 @@ const cake = $('#cake'), micBtn = $('#blow-mic'), micMsg = $('#mic-msg'), finalE
 let finalSplit = null;
 function bifrost() {
   flash(.7); Sound.magic(); Sound.braam(.5); setTimeout(() => Sound.melody(), 400);
-  FX.confetti(190); cinema(true); setTimeout(() => cinema(false), 2600);
+  FX.confetti(190); FX.balloons(16); cinema(true); setTimeout(() => cinema(false), 2600);
   const c = center(cake); FX.krackle(c.x, c.r.bottom, { n: 14, spread: 120, color: '#ffe3a1' });
   if (motion) {
     G.timeline().set(bif, { opacity: 1 }).fromTo(bif, { scaleX: 0 }, { scaleX: 1, duration: .55, ease: 'expo.out' }).to(bif, { opacity: 0, duration: 1.8, ease: 'power2.out' }, '+=.5');
@@ -1871,7 +2040,9 @@ function blowOut() {
       if (finalSplit) finalSplit.revert();
       finalSplit = SplitText.create('#final-title', { type: 'words,chars' });
       G.from(finalSplit.chars, { yPercent: 120, rotationX: -90, opacity: 0, stagger: .035, duration: .9, ease: 'back.out(1.7)', transformOrigin: '50% 100%' });
-      G.from('#final p, .final-actions', { opacity: 0, y: 14, stagger: .2, duration: .8, delay: .9, ease: 'power2.out' });
+      G.from('#final > p', { opacity: 0, y: 14, duration: .8, delay: .9, ease: 'power2.out' });
+      G.from('.voucher', { opacity: 0, scale: .6, rotation: -8, duration: .9, delay: 1.4, ease: 'back.out(1.8)', onStart: () => Sound.chime() });
+      G.from('.final-actions', { opacity: 0, y: 14, duration: .8, delay: 2, ease: 'power2.out' });
     }
   }, 750);
 }
@@ -1949,7 +2120,7 @@ if (hasSplit && hasST && !reduce) {
 
 /* ================= Arranque ================= */
 if (document.fonts && document.fonts.ready && hasST) document.fonts.ready.then(() => ScrollTrigger.refresh());
-if (location.hash === '#sin-sello') { openGate(true); }
+if (location.hash === '#sin-sello' || location.hash === '#sin-regalo') { openGate(true); }
 else root.classList.add('locked');
 })();
 </script>
