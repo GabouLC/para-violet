@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..700;1,400..700&family=Alegreya+SC:wght@500;700&family=Grenze+Gotisch:wght@100..900&family=Noto+Sans+Runic&family=Oswald:wght@300..700&family=Space+Mono:wght@400;700&family=Caveat:wght@500;700&display=swap">
-<script>document.documentElement.classList.add('js')</script>
+<script>document.documentElement.classList.add('js');try{if(localStorage.getItem('violet-motion')==='on')document.documentElement.classList.add('force-motion')}catch(e){}</script>
 <style>
 /* Layout: una película en una sola página. Sello → intro de estudio → póster → reparto → escenas en horizontal →
    prueba del Mjölnir → expediente TVA → ilusiones → carta → deseo → créditos y escena post-créditos.
@@ -462,9 +462,12 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
   .scenes .lead{display:none}
 }
 @media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
-  .grain-wrap{display:none}
+  html:not(.force-motion) *,html:not(.force-motion) *::before,html:not(.force-motion) *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  html:not(.force-motion) .grain-wrap{display:none}
 }
+.motion-ask{display:grid;justify-items:center;gap:10px;max-width:34ch}
+.motion-ask p{margin:0;color:var(--ink-soft);font-size:var(--step--1);text-wrap:balance}
+.linkish{appearance:none;background:none;border:0;padding:8px 4px;min-height:44px;color:var(--ink-soft);font:inherit;font-size:var(--step--1);text-decoration:underline;cursor:pointer}
 </style>
 
 <!-- Dibujos reutilizables (todos originales, hechos a mano en SVG) -->
@@ -577,6 +580,10 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
     </button>
     <p id="gate-msg" class="gate-msg" role="status" aria-live="polite">Algo se mueve adentro. Tócalo para abrirlo.</p>
     <p id="gift-reveal" class="gift-reveal" hidden>Te regalé una película, y la protagonista eres tú.</p>
+    <div id="motion-ask" class="motion-ask" hidden>
+      <p>Tu equipo tiene las animaciones reducidas, así que este regalo se vería casi quieto.</p>
+      <button id="motion-on" class="btn btn-ghost" type="button">Verlo con todas las animaciones</button>
+    </div>
   </div>
 </section>
 
@@ -1005,6 +1012,7 @@ html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
       <p>Secretos de Loki encontrados: <b id="secret-count">0</b> de 3</p>
       <p>Pista: los dioses responden cuando insistes. Y a veces, cuando escribes su nombre.</p>
       <p>Un regalo hecho a mano por Gabo, para tu cumpleaños.</p>
+      <p><button id="motion-off" class="linkish" type="button" hidden>Volver a las animaciones reducidas</button></p>
       <p class="fine">Página de fans sin fines comerciales, inspirada en Thor y Loki del Universo Cinematográfico de Marvel. Los personajes y las películas pertenecen a sus dueños; todas las ilustraciones de esta página son originales.</p>
     </div>
   </footer>
@@ -1072,7 +1080,10 @@ const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
 const root = document.documentElement;
 const G = window.gsap, hasG = !!G;
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Si el equipo pide menos movimiento se respeta, salvo que la persona elija verlo completo (se guarda en su navegador)
+const reduceOS = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let forcedMotion = false; try { forcedMotion = localStorage.getItem('violet-motion') === 'on'; } catch (e) {}
+const reduce = reduceOS && !forcedMotion;
 const fine = matchMedia('(pointer: fine)').matches;
 const rand = (a, b) => a + Math.random() * (b - a);
 const pick = a => a[Math.floor(Math.random() * a.length)];
@@ -1493,6 +1504,10 @@ if (motion) {
     .to('#gift-all', { rotation: 0, y: 0, svgOrigin: BASE, duration: .35, ease: 'bounce.out' });
 }
 giftBtn.addEventListener('click', () => openGate());
+const motionAsk = $('#motion-ask'), motionOff = $('#motion-off');
+if (reduceOS && !forcedMotion) motionAsk.hidden = false;
+$('#motion-on').addEventListener('click', () => { store.set('violet-motion', 'on'); location.reload(); });
+if (forcedMotion) { motionOff.hidden = false; motionOff.addEventListener('click', () => { store.set('violet-motion', 'off'); location.reload(); }); }
 function unlock() {
   gate.hidden = true; root.classList.remove('locked');
   $('#sound').hidden = false;
@@ -1505,7 +1520,7 @@ function openGate(instant = false) {
   store.set('violet-abierto', '1');
   document.title = 'Feliz cumpleaños, Violet';
   if (instant === true) { unlock(); return; }
-  audio(); giftBtn.disabled = true; gMsg.hidden = true;
+  audio(); giftBtn.disabled = true; gMsg.hidden = true; motionAsk.hidden = true;
   if (!motion) { gReveal.hidden = false; FX.balloons(6); setTimeout(unlock, 1800); return; }
   if (wiggle) wiggle.kill();
   const tl = G.timeline();
@@ -1872,26 +1887,34 @@ function enableSummon(announce) {
   if (announce) setTimeout(() => toast('El Mjölnir ahora te obedece. Toca cualquier parte de la pantalla para lanzarlo.', 5200), 1200);
 }
 function throwHammer(tx, ty) {
-  if (flying || !motion) return; flying = true; audio();
+  if (flying || !hasG) return; flying = true; audio();
+  const spin1 = reduce ? 0 : 900, spin2 = reduce ? 0 : 1800, t1 = reduce ? .22 : .38, t2 = reduce ? .25 : .45;
   const d = center(summonBtn);
   G.set(flyer, { x: d.x, y: d.y, xPercent: -50, yPercent: -50, rotation: 0, opacity: 1, scale: .9 });
   summonBtn.classList.add('empty'); Sound.whoosh();
   const trail = () => FX.burst(G.getProperty(flyer, 'x'), G.getProperty(flyer, 'y'), { count: 2, colors: ['#a6dcff', '#ffffff'], speed: [10, 60], life: [.2, .45], size: [1, 2.4], gravity: 0 });
   G.timeline({ onComplete: () => { flying = false; G.set(flyer, { opacity: 0 }); summonBtn.classList.remove('empty'); } })
-    .to(flyer, { x: tx, y: ty, rotation: 900, scale: 1.15, duration: .38, ease: 'power2.in', onUpdate: trail })
+    .to(flyer, { x: tx, y: ty, rotation: spin1, scale: 1.15, duration: t1, ease: 'power2.in', onUpdate: trail })
     .add(() => {
       FX.krackle(tx, ty, { n: 9, spread: 40 }); FX.burst(tx, ty, { count: 34, colors: BLUE, speed: [100, 400], gravity: 200 });
       FX.strike(tx + rand(-70, 70), -20, tx, ty, { width: 2.4, branches: 2, life: .3 }); flash(.25); Sound.thunder(.45); shakeMain(5);
     })
-    .to(flyer, { x: d.x, y: d.y, rotation: 1800, scale: .9, duration: .45, ease: 'power2.out', onUpdate: trail }, '+=.08');
+    .to(flyer, { x: d.x, y: d.y, rotation: spin2, scale: .9, duration: t2, ease: 'power2.out', onUpdate: trail }, '+=.08');
 }
 summonBtn.addEventListener('click', e => { e.stopPropagation(); throwHammer(innerWidth * rand(.3, .7), innerHeight * rand(.3, .6)); });
-document.addEventListener('click', e => {
-  if (!summonOn || !opened || !$('#credits').hidden) return;
-  if (e.target.closest('button,a,input,label,textarea,select,.parchment,[role="dialog"]')) return;
+// Toque en cualquier parte: se detecta con pointerdown/pointerup (en iPhone, "click" no llega si tocas algo que no es un botón).
+// Si el dedo se movió (scroll) no cuenta como toque.
+let tapStart = null;
+document.addEventListener('pointerdown', e => { tapStart = { x: e.clientX, y: e.clientY, t: performance.now(), target: e.target }; }, { passive: true });
+document.addEventListener('pointercancel', () => { tapStart = null; }, { passive: true });
+document.addEventListener('pointerup', e => {
+  const s = tapStart; tapStart = null;
+  if (!s || !summonOn || !opened || !$('#credits').hidden) return;
+  if (Math.hypot(e.clientX - s.x, e.clientY - s.y) > 12 || performance.now() - s.t > 600) return;
+  if (s.target.closest && s.target.closest('button,a,input,label,textarea,select,.parchment,[role="dialog"]')) return;
   const sel = window.getSelection && String(window.getSelection()); if (sel) return;
   throwHammer(e.clientX, e.clientY);
-});
+}, { passive: true });
 
 /* ================= ILUSIONES ================= */
 const grid = $('#illusions'), cards = $$('.ill-card'), illMsg = $('#ill-msg'), shBtn = $('#ill-shuffle'), againBtn = $('#ill-again');
