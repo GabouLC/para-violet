@@ -1,0 +1,1957 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070b1a">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gaboulc.github.io/para-violet/">
+<meta property="og:title" content="Un mensaje sellado desde Asgard">
+<meta property="og:description" content="Solo una persona en los Nueve Reinos puede abrirlo.">
+<meta property="og:image" content="https://gaboulc.github.io/para-violet/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23070b1a' stroke='%23e2b85c' stroke-width='3'/%3E%3Cpath d='M36 8 L18 36 H30 L26 56 L46 26 H34 Z' fill='%23ffe3a1'/%3E%3C/svg%3E">
+<title>Mensaje sellado de Asgard</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Un regalo de cumpleaños para Viviana, la Diosa de las Travesuras, de parte de su hermano, el Dios del Trueno.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..700;1,400..700&family=Alegreya+SC:wght@500;700&family=Grenze+Gotisch:wght@100..900&family=Noto+Sans+Runic&family=Oswald:wght@300..700&family=Space+Mono:wght@400;700&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Layout: una película en una sola página. Sello → intro de estudio → póster → reparto → escenas en horizontal →
+   prueba del Mjölnir → expediente TVA → ilusiones → carta → deseo → créditos y escena post-créditos.
+   Thor vive a la izquierda (azul tormenta, rojo capa) y Loki a la derecha (esmeralda y oro). */
+:root{
+  color-scheme: dark;
+  --void:#070b1a;
+  --void-2:#05140e;
+  --ink:#ece6d6;
+  --ink-soft:#b9b3a3;
+  --gold:#e2b85c;
+  --gold-bright:#ffe3a1;
+  --gold-deep:#8f6a22;
+  --seidr:#4fe3a6;
+  --emerald:#0f4a33;
+  --storm:#a6dcff;
+  --cape:#c23a43;
+  --studio:#c8202f;
+  --parchment:#efe2c2;
+  --parchment-ink:#36260f;
+  --tva:#e06a2b;
+  --tva-amber:#ffb347;
+  --tva-brown:#2a1a10;
+  --on-gold:#2a1c05;
+  --hair:rgba(236,230,214,.16);
+  --panel:rgba(9,15,32,.66);
+  --font-display:"Grenze Gotisch","Palatino Linotype",Georgia,serif;
+  --font-body:"Alegreya",Georgia,"Times New Roman",serif;
+  --font-sc:"Alegreya SC","Alegreya",Georgia,serif;
+  --font-cine:"Oswald","Arial Narrow","Segoe UI",sans-serif;
+  --font-mono:"Space Mono",Consolas,"Courier New",monospace;
+  --font-rune:"Noto Sans Runic","Segoe UI Historic","Segoe UI Symbol",sans-serif;
+  --step--1:clamp(.92rem,.88rem + .2vw,1rem);
+  --step-0:clamp(1.06rem,1rem + .3vw,1.22rem);
+  --step-1:clamp(1.22rem,1.1rem + .6vw,1.55rem);
+  --step-2:clamp(1.6rem,1.3rem + 1.4vw,2.4rem);
+  --step-3:clamp(2.2rem,1.5rem + 3.2vw,4.2rem);
+  --step-4:clamp(4.4rem,1rem + 15vw,11.5rem);
+  --ease-out:cubic-bezier(.22,1,.36,1);
+}
+html.loki-mode{--gold:#4fe3a6;--gold-bright:#c4ffe2;--gold-deep:#0f6b45;--storm:#4fe3a6;--cape:#1f9c66;--ink:#dffbec}
+html.loki-mode .nebula{filter:hue-rotate(70deg) saturate(1.4)}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html.locked,html.locked body{overflow:hidden}
+body{margin:0;background:var(--void);color:var(--ink);font-family:var(--font-body);font-size:var(--step-0);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+[hidden]{display:none!important}
+img,svg{max-width:100%}
+::selection{background:var(--seidr);color:var(--void)}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:4px;border-radius:6px}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- Atmósfera ---------- */
+.nebula{position:fixed;inset:0;z-index:0;pointer-events:none;transition:filter 1.2s;
+  background:
+    radial-gradient(60% 50% at 10% 16%,rgba(76,124,255,.26),transparent 70%),
+    radial-gradient(42% 36% at 6% 72%,rgba(194,58,67,.18),transparent 70%),
+    radial-gradient(55% 50% at 92% 28%,rgba(79,227,166,.18),transparent 70%),
+    radial-gradient(45% 40% at 86% 86%,rgba(226,184,92,.14),transparent 70%),
+    linear-gradient(180deg,var(--void) 0%,#09132b 50%,var(--void-2) 100%)}
+#sky,#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;display:block}
+#sky{z-index:0}
+#fx{z-index:70}
+.grain-wrap{position:fixed;inset:0;z-index:63;overflow:hidden;pointer-events:none}
+#elenco,#deseo{overflow-x:clip}
+.grain{position:absolute;left:-50%;top:-50%;width:200%;height:200%;pointer-events:none;opacity:.06;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .7 0 0 0 0'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>");
+  animation:grain .9s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}60%{transform:translate(-2%,4%)}80%{transform:translate(5%,2%)}100%{transform:translate(0,0)}}
+.lb{position:fixed;left:0;right:0;height:0;background:#000;z-index:64;pointer-events:none;transition:height .7s var(--ease-out)}
+.lb-top{top:0}.lb-bot{bottom:0}
+html.cinema .lb{height:8vh}
+.flash{position:fixed;inset:0;z-index:69;background:#eaf6ff;opacity:0;pointer-events:none;mix-blend-mode:screen}
+main{position:relative;z-index:1}
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:3px;z-index:66;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--cape),var(--gold),var(--seidr),var(--storm));pointer-events:none}
+.bifrost{position:fixed;top:0;bottom:0;left:0;right:0;margin-inline:auto;width:min(46vw,320px);z-index:68;pointer-events:none;opacity:0;
+  background:linear-gradient(90deg,transparent,rgba(255,90,90,.55),rgba(255,206,90,.6),rgba(90,255,170,.65),rgba(120,200,255,.65),rgba(186,130,255,.55),transparent);filter:blur(14px);mix-blend-mode:screen}
+
+.wrap{width:100%;max-width:1160px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:clamp(72px,11vw,150px)}
+.h-section{font-family:var(--font-display);font-weight:700;font-size:var(--step-3);line-height:1;margin:0;letter-spacing:.005em;perspective:600px}
+.lead{font-size:var(--step-1);color:var(--ink-soft);max-width:40ch;margin:.7em 0 0;text-wrap:pretty;line-height:1.5}
+.center{text-align:center}
+.center .lead{margin-inline:auto}
+.ref{font-family:var(--font-cine);font-weight:400;text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;color:var(--gold)}
+
+/* ---------- Botones ---------- */
+.btn{font-family:var(--font-sc);font-weight:700;font-size:1.05rem;letter-spacing:.02em;border-radius:999px;border:1px solid transparent;padding:.8em 1.5em;min-height:48px;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:transform .16s var(--ease-out),box-shadow .2s,border-color .2s}
+.btn:active{transform:scale(.97)}
+.btn-gold{color:var(--on-gold);background:linear-gradient(180deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));box-shadow:0 8px 28px -10px var(--gold),inset 0 1px 0 rgba(255,255,255,.55)}
+.btn-gold:hover{box-shadow:0 10px 34px -8px var(--gold),inset 0 1px 0 rgba(255,255,255,.55)}
+.btn-ghost{color:var(--ink);background:rgba(255,255,255,.05);border-color:var(--hair)}
+.btn-ghost:hover{border-color:var(--gold)}
+.btn[disabled]{opacity:.55;cursor:default}
+
+/* ---------- El sello ---------- */
+.gate{display:none}
+.js .gate{display:grid;position:fixed;inset:0;z-index:60;place-items:center;overflow-y:auto;
+  padding-block:max(28px,env(safe-area-inset-top,0px)) max(28px,env(safe-area-inset-bottom,0px));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.gate-half{position:fixed;top:0;bottom:0;width:50.5%}
+.gate-left{left:0;background:radial-gradient(90% 60% at 100% 50%,rgba(76,124,255,.18),transparent 70%),linear-gradient(90deg,#050816,#0a1430);border-right:1px solid rgba(166,220,255,.28)}
+.gate-right{right:0;background:radial-gradient(90% 60% at 0% 50%,rgba(79,227,166,.16),transparent 70%),linear-gradient(270deg,#030f0a,#0a2a1d);border-left:1px solid rgba(79,227,166,.28)}
+.gate-inner{position:relative;z-index:1;width:min(100%,540px);text-align:center;display:grid;justify-items:center;gap:12px}
+.seal{width:min(62vw,250px);height:auto;overflow:visible;filter:drop-shadow(0 0 30px rgba(226,184,92,.25))}
+.seal-runes{font-family:var(--font-rune);font-size:14px;fill:var(--gold);letter-spacing:1px}
+html:not(.js-gsap) .seal-ring{transform-origin:120px 120px;animation:spin 50s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.gate-kicker{font-family:var(--font-sc);color:var(--gold);font-size:var(--step-0);margin:8px 0 0}
+.gate-title{font-family:var(--font-display);font-weight:600;font-size:var(--step-2);line-height:1.05;margin:0;text-wrap:balance}
+.gate-form{display:grid;gap:12px;width:100%;margin-top:4px}
+.gate-form label{color:var(--ink-soft);text-wrap:balance}
+.gate-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.gate-row input{flex:1 1 220px;min-width:0;font:inherit;font-size:1.12rem;color:var(--ink);background:rgba(255,255,255,.05);border:1px solid var(--hair);border-radius:12px;padding:.75em 1em;text-align:center;min-height:48px}
+.gate-row input::placeholder{color:var(--ink-soft);opacity:.6}
+.gate-row input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(226,184,92,.25)}
+.gate-msg{min-height:3.2em;margin:0;color:var(--gold-bright);font-style:italic;text-wrap:balance}
+.gate.shake .gate-row{animation:shake .45s}
+@keyframes shake{20%{transform:translateX(-9px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
+
+/* ---------- Intro de estudio ---------- */
+.intro{position:fixed;inset:0;z-index:62;background:#000;overflow:hidden;perspective:1200px}
+.intro-stack{position:absolute;inset:0;transform-style:preserve-3d}
+.panel{position:absolute;inset:0;display:grid;place-items:center;visibility:hidden;opacity:0;background:var(--pc,#111);overflow:hidden;backface-visibility:hidden}
+.panel::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.34) 1.3px,transparent 1.8px);background-size:10px 10px;pointer-events:none}
+.panel::before{content:"";position:absolute;inset:14px;border:3px solid rgba(255,255,255,.85);pointer-events:none;z-index:2}
+.panel > *{position:relative;z-index:1}
+.pi{width:min(46vw,40vh);height:auto;filter:drop-shadow(10px 10px 0 rgba(0,0,0,.5))}
+.pw{font-family:var(--font-display);font-weight:900;font-size:clamp(3rem,16vw,10rem);color:#ffe14d;-webkit-text-stroke:3px #000;text-shadow:8px 8px 0 #000;transform:rotate(-8deg);line-height:1}
+.pr{font-family:var(--font-rune);font-size:min(58vw,52vh);color:var(--on-gold);line-height:1}
+.po{font-family:var(--font-cine);font-weight:700;font-size:clamp(4rem,26vw,16rem);color:transparent;-webkit-text-stroke:3px var(--seidr);text-transform:uppercase;line-height:1}
+.po-w{-webkit-text-stroke-color:#fff}
+.pm{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.4rem,6vw,3.6rem);color:var(--tva-brown);text-transform:uppercase;text-align:center;padding:0 28px;line-height:1.15}
+.pv{font-family:var(--font-display);font-weight:900;font-size:clamp(3.4rem,20vw,13rem);color:var(--gold-bright);line-height:1}
+.pan-bifrost{background:linear-gradient(100deg,#ff4d4d,#ffb84d,#fff35c,#5cff9d,#4dc3ff,#9b6bff)}
+.studio{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:14px;visibility:hidden;opacity:0;background:#000}
+.studio-box{background:var(--studio);padding:.16em .45em .1em;transition:background-color .2s,box-shadow .3s}
+.studio-box span{display:block;font-family:var(--font-cine);font-weight:700;font-size:clamp(2.2rem,10vw,6.4rem);letter-spacing:.02em;color:#fff;line-height:1.05;text-transform:uppercase;white-space:nowrap}
+.studio.loki .studio-box{background:linear-gradient(180deg,#22a56d,#0d4a31);box-shadow:0 0 70px rgba(79,227,166,.55)}
+.studio.loki .studio-box span{color:var(--gold-bright)}
+.studio.glitch .studio-box{animation:glitch .45s steps(2) 1}
+@keyframes glitch{0%{clip-path:inset(10% 0 60% 0);transform:translate(-10px,0)}25%{clip-path:inset(50% 0 20% 0);transform:translate(10px,0)}50%{clip-path:inset(30% 0 40% 0);transform:translate(-5px,0);filter:hue-rotate(90deg)}75%{clip-path:inset(70% 0 5% 0);transform:translate(7px,0)}100%{clip-path:inset(0);transform:none}}
+.studio-sub{margin:0;font-family:var(--font-cine);font-weight:300;letter-spacing:.6em;text-transform:uppercase;color:#ddd;font-size:clamp(.9rem,2.6vw,1.25rem);padding-left:.6em;opacity:0}
+.intro-skip{position:absolute;z-index:5;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(9vh + 12px + env(safe-area-inset-bottom,0px));font-family:var(--font-cine);text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;color:#ddd;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:.7em 1.2em;min-height:44px;cursor:pointer}
+
+/* ---------- Controles flotantes ---------- */
+.sound{position:fixed;z-index:65;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--hair);background:rgba(7,11,26,.72);color:var(--ink);font-family:var(--font-sc);font-size:.95rem;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.sound svg{width:18px;height:18px}
+.sound[aria-pressed="false"] .wave{display:none}
+.sound[aria-pressed="true"] .mute{display:none}
+.summon{position:fixed;z-index:67;left:calc(14px + env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;border:1px solid rgba(166,220,255,.55);background:radial-gradient(circle at 40% 35%,#1d3263,#070b1a);display:grid;place-items:center;cursor:pointer;box-shadow:0 0 26px rgba(166,220,255,.38);-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.summon svg{width:28px;height:36px;transition:opacity .2s}
+.summon.empty svg{opacity:.15}
+.flyer{position:fixed;left:0;top:0;z-index:69;width:54px;height:70px;pointer-events:none;opacity:0;filter:drop-shadow(0 0 14px rgba(166,220,255,.85))}
+.toast{position:fixed;z-index:80;left:0;right:0;margin-inline:auto;bottom:calc(84px + env(safe-area-inset-bottom,0px));width:fit-content;max-width:min(92vw,460px);padding:12px 18px;border-radius:14px;background:rgba(7,11,26,.94);border:1px solid var(--gold);color:var(--ink);font-size:var(--step--1);text-align:center;opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .35s var(--ease-out)}
+.toast.show{opacity:1;transform:none}
+
+/* ---------- Póster ---------- */
+.hero{position:relative;padding-block:clamp(96px,14vh,160px) clamp(56px,9vh,110px);text-align:center;overflow:hidden}
+.hero-ring-wrap{position:absolute;left:50%;top:clamp(90px,15vh,170px);width:min(140vw,980px);margin-left:calc(min(140vw,980px) / -2);pointer-events:none;opacity:.2}
+.hero-ring{display:block;width:100%;height:auto;animation:spin 120s linear infinite}
+.hero-ring text{font-family:var(--font-rune);font-size:15px;fill:var(--gold)}
+.hero-inner{position:relative}
+.hero-kicker{font-family:var(--font-cine);font-weight:400;text-transform:uppercase;letter-spacing:.42em;font-size:var(--step--1);color:var(--gold);margin:0;padding-left:.42em}
+.hero-stage{display:grid;grid-template-columns:auto auto auto;align-items:center;justify-content:center;gap:clamp(8px,2.5vw,36px);margin-top:.3em}
+.hero-icon{appearance:none;background:none;border:0;padding:6px;cursor:pointer;border-radius:18px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.hero-icon svg{display:block;width:clamp(70px,12vw,170px);height:clamp(70px,12vw,170px);animation:float 4.2s ease-in-out infinite alternate;transition:filter .2s}
+.hero-loki svg{animation-delay:-2.1s}
+.hero-icon:hover svg{filter:brightness(1.25)}
+.hero-thor svg{filter:drop-shadow(0 0 20px rgba(166,220,255,.5))}
+.hero-loki svg{filter:drop-shadow(0 0 22px rgba(79,227,166,.55))}
+@keyframes float{from{transform:translateY(-6px) rotate(-3deg)}to{transform:translateY(8px) rotate(3deg)}}
+.hero-name{display:grid;margin:0;font-family:var(--font-display);font-size:var(--step-4);line-height:.92;font-weight:var(--w,860);letter-spacing:-.01em}
+.hero-name > span{grid-area:1/1;padding:0 .06em .06em}
+.hn-shadow{color:#5c410f;text-shadow:0 .01em 0 #4f380c,0 .02em 0 #43300a,0 .03em 0 #382808,0 .04em 0 #2e2106,0 .05em 0 #241a05,0 .06em 0 #1c1404,0 .14em .2em rgba(0,0,0,.7)}
+.hn-face{cursor:pointer;-webkit-tap-highlight-color:transparent;
+  background:linear-gradient(100deg,var(--gold-deep) 0%,var(--gold) 22%,var(--gold-bright) 40%,#fff7de 48%,var(--gold-bright) 56%,var(--gold) 74%,var(--gold-deep) 100%);
+  background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 26px rgba(226,184,92,.35));animation:sheen 7s ease-in-out infinite}
+.hero-name.aberr .hn-face{filter:drop-shadow(-.04em 0 0 rgba(255,40,110,.85)) drop-shadow(.04em 0 0 rgba(40,230,255,.85))}
+@keyframes sheen{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+.hero-tag{font-family:var(--font-cine);font-weight:500;text-transform:uppercase;letter-spacing:.34em;font-size:var(--step-1);margin:.55em 0 0;padding-left:.34em;color:var(--ink)}
+.hero-runes{font-family:var(--font-rune);font-size:var(--step-1);letter-spacing:.32em;color:var(--seidr);text-shadow:0 0 18px rgba(79,227,166,.55);margin:.6em 0 0;padding-left:.32em}
+.hero-runes-cap{margin:.2em 0 0;font-size:var(--step--1);color:var(--ink-soft);font-style:italic}
+.billing{font-family:var(--font-cine);font-weight:300;text-transform:uppercase;font-size:clamp(.74rem,.62rem + .45vw,.98rem);line-height:1.3;letter-spacing:.06em;color:var(--ink-soft);max-width:52ch;margin:30px auto 0;text-wrap:balance}
+.billing b{font-weight:600;color:var(--ink);font-size:1.16em;letter-spacing:.04em}
+.release{font-family:var(--font-cine);font-weight:500;text-transform:uppercase;letter-spacing:.3em;font-size:var(--step--1);color:var(--gold);margin:16px auto 0;padding-left:.3em;text-wrap:balance;max-width:34ch}
+.hint{margin:16px 0 0;font-size:var(--step--1);color:var(--ink-soft);font-style:italic}
+.scroll-cue{display:inline-grid;justify-items:center;gap:4px;margin-top:clamp(28px,5vw,48px);color:var(--ink-soft);text-decoration:none;font-family:var(--font-sc);font-size:var(--step--1)}
+.scroll-cue svg{width:22px;height:22px;animation:nudge 2.2s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateY(6px)}}
+
+/* ---------- Reparto ---------- */
+.cast{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,3vw,36px);margin-top:clamp(32px,5vw,56px);perspective:1200px}
+.char{min-width:0}
+.char-inner{position:relative;height:100%;border-radius:18px;overflow:hidden;border:1px solid var(--hair);background:#0a1024;box-shadow:0 30px 60px -30px #000;transform-style:preserve-3d}
+.char-inner::after{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.12),transparent 42%);pointer-events:none}
+.char-art{position:relative;height:clamp(200px,26vw,280px);display:grid;place-items:center;overflow:hidden}
+.char-art::before{content:"";position:absolute;inset:-20%}
+.char-art::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.3) 1.2px,transparent 1.7px);background-size:9px 9px;pointer-events:none}
+.char-thor .char-art{background:radial-gradient(80% 90% at 50% 40%,#2f5fd0,#0b1a44 72%)}
+.char-thor .char-art::before{background:linear-gradient(115deg,transparent 56%,rgba(194,58,67,.8) 56% 71%,transparent 71%)}
+.char-loki .char-art{background:radial-gradient(80% 90% at 50% 40%,#1fa36c,#06291b 72%)}
+.char-loki .char-art::before{background:linear-gradient(65deg,transparent 56%,rgba(226,184,92,.6) 56% 66%,transparent 66%)}
+.char-art svg{position:relative;z-index:1;height:72%;width:auto;filter:drop-shadow(10px 12px 0 rgba(0,0,0,.45));animation:float 4s ease-in-out infinite alternate}
+.char-runes{position:absolute;z-index:1;bottom:10px;right:16px;font-family:var(--font-rune);color:rgba(255,255,255,.75);letter-spacing:.3em}
+.char-body{padding:clamp(18px,3vw,30px)}
+.char-actor{font-family:var(--font-cine);text-transform:uppercase;letter-spacing:.25em;font-size:var(--step--1);color:var(--ink-soft);margin:0}
+.char-name{font-family:var(--font-display);font-size:var(--step-3);line-height:.95;margin:.08em 0 0}
+.char-thor .char-name{font-weight:900;color:var(--storm)}
+.char-loki .char-name{font-weight:200;color:var(--seidr)}
+.char-role{margin:.3em 0 1em;font-style:italic;color:var(--ink-soft)}
+.stats{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.stats li{display:grid;grid-template-columns:1fr auto;gap:5px 12px;align-items:center;font-size:var(--step--1);line-height:1.2}
+.stat-bar{grid-column:1/-1;height:7px;border-radius:4px;background:rgba(255,255,255,.08);overflow:hidden}
+.stat-fill{display:block;height:100%;width:calc(var(--v) * 1%);transform-origin:0 50%;border-radius:inherit}
+.char-thor .stat-fill{background:linear-gradient(90deg,var(--cape),var(--storm))}
+.char-loki .stat-fill{background:linear-gradient(90deg,var(--emerald),var(--seidr),var(--gold))}
+.stat-num{font-family:var(--font-cine);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.char-quote{margin:1.1em 0 0;font-family:var(--font-display);font-size:var(--step-1);color:var(--gold-bright)}
+
+/* ---------- Escenas ---------- */
+.scenes{position:relative;padding-block:clamp(56px,8vw,96px) clamp(40px,6vw,72px);overflow:hidden}
+.scenes-viewport{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin-top:clamp(24px,4vw,40px)}
+.h-pin .scenes-viewport{overflow:visible}
+.scenes-track{display:flex;gap:clamp(16px,2.5vw,28px);width:max-content;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-bottom:12px}
+.scene{flex:0 0 min(84vw,560px);scroll-snap-align:center;background:#0b1022;border:1px solid var(--hair);border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -34px #000;will-change:transform}
+.scene-art{position:relative;aspect-ratio:16/9;overflow:hidden;display:grid;place-items:center;border-bottom:3px solid #000}
+.scene-art::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.28) 1.1px,transparent 1.6px);background-size:8px 8px;pointer-events:none;z-index:3}
+.scene-art > *{position:relative;z-index:2}
+.scene-text{padding:clamp(16px,2.6vw,26px)}
+.scene-text h3{font-family:var(--font-display);font-weight:700;font-size:var(--step-2);line-height:1.02;margin:.25em 0 .3em;color:var(--gold-bright)}
+.scene-text p{margin:0}
+.scene-quote{font-style:italic;color:var(--storm);margin:.35em 0 0!important}
+.scene-quote + h3{margin-top:.35em}
+.scenes-foot{margin:14px 0 0;color:var(--ink-soft);font-size:var(--step--1);font-style:italic}
+.onoma{position:absolute;font-family:var(--font-display);font-weight:900;color:#ffe14d;-webkit-text-stroke:2px #000;text-shadow:5px 5px 0 #000;line-height:1;z-index:4;pointer-events:none}
+/* A: ¡Otro! */
+.art-another{background:radial-gradient(70% 90% at 50% 60%,#ffb347,#c8202f 75%)}
+.mug{appearance:none;background:none;border:0;padding:0;cursor:pointer;width:34%;max-width:170px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.mug svg{display:block;width:100%;height:auto;filter:drop-shadow(8px 8px 0 rgba(0,0,0,.45))}
+.art-another .onoma{font-size:clamp(2.4rem,10vw,4.4rem);opacity:0;transform:rotate(-10deg)}
+.mug-tap{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-family:var(--font-cine);text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;color:#fff;text-shadow:0 1px 2px #000;z-index:4}
+/* B: serpiente */
+.art-snake{background:radial-gradient(80% 90% at 50% 50%,#1c8a5a,#04170e 75%)}
+.art-snake svg{width:88%;height:auto}
+.snake-move{animation:slither 2.4s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes slither{from{transform:translateX(-4%) skewX(-4deg)}to{transform:translateX(4%) skewX(4deg)}}
+.tongue{animation:tongue .5s steps(2) infinite}
+@keyframes tongue{50%{opacity:0}}
+/* C: ¡Ayuda! */
+.art-help{background:radial-gradient(70% 90% at 50% 50%,#ff5a3c,#7a0f1a 78%)}
+.burst{width:62%;aspect-ratio:1.6;display:grid;place-items:center;background:#ffe14d;clip-path:polygon(50% 0,61% 22%,85% 6%,78% 32%,100% 36%,82% 54%,98% 76%,72% 74%,66% 100%,50% 80%,34% 100%,28% 74%,2% 76%,18% 54%,0 36%,22% 32%,15% 6%,39% 22%);animation:pulse 1.2s ease-in-out infinite}
+.burst span{font-family:var(--font-cine);font-weight:700;font-size:clamp(1.6rem,6.4vw,3rem);color:#111;letter-spacing:.02em;transform:rotate(-6deg)}
+@keyframes pulse{50%{transform:scale(1.07) rotate(2deg)}}
+.thrown{position:absolute;width:20%;max-width:96px;left:8%;bottom:10%;animation:thrown 2.6s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes thrown{0%{transform:translate(0,0) rotate(0)}45%{transform:translate(170%,-120%) rotate(320deg)}55%{transform:translate(200%,-110%) rotate(380deg)}100%{transform:translate(0,0) rotate(720deg)}}
+/* D: 30 minutos cayendo */
+.art-fall{background:#1a0a02}
+.portal{position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:repeating-conic-gradient(from 0deg,#ff9b3d 0 12deg,#ffcf6b 12deg 24deg,#e0602b 24deg 36deg);-webkit-mask:radial-gradient(circle,#000 0 18%,transparent 19% 23%,#000 24% 60%,transparent 62%);mask:radial-gradient(circle,#000 0 18%,transparent 19% 23%,#000 24% 60%,transparent 62%);animation:spin 3s linear infinite;z-index:1!important}
+.portal-ring{position:absolute;width:52%;aspect-ratio:1;border-radius:50%;border:4px dotted #ffd27a;box-shadow:0 0 30px #ff9b3d,inset 0 0 30px #ff9b3d;animation:spin 1.6s linear infinite reverse;z-index:1!important}
+.falling{width:24%;max-width:120px;animation:fall 1.4s ease-in infinite}
+@keyframes fall{0%{transform:translateY(-120%) rotate(0) scale(.6);opacity:0}20%{opacity:1}100%{transform:translateY(120%) rotate(540deg) scale(1.1);opacity:0}}
+.art-fall .onoma{right:6%;top:10%;font-size:clamp(1.6rem,6vw,2.6rem);transform:rotate(8deg)}
+/* E: propósito glorioso */
+.art-purpose{background:radial-gradient(70% 90% at 50% 60%,#2b7a4f,#061a10 76%)}
+.rays{position:absolute;width:140%;aspect-ratio:1;background:repeating-conic-gradient(from 0deg,rgba(255,227,161,.28) 0 6deg,transparent 6deg 18deg);animation:spin 24s linear infinite;z-index:1!important}
+.art-purpose svg{width:38%;height:auto;filter:drop-shadow(0 0 24px rgba(255,227,161,.6))}
+/* F: el sol */
+.art-sun{background:linear-gradient(180deg,#0b1a44 0%,#5b2a6e 45%,#ff7a3d 78%,#ffc56b 100%)}
+.sun{position:absolute;width:30%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#fff6d0,#ffd27a 50%,#ff9b3d 70%);box-shadow:0 0 60px 20px rgba(255,190,90,.55);bottom:-6%;animation:rise 6s ease-in-out infinite alternate;z-index:1!important}
+@keyframes rise{from{transform:translateY(40%)}to{transform:translateY(-12%)}}
+.horizon{position:absolute;left:0;right:0;bottom:0;height:22%;background:#0b0a12;z-index:2}
+.duo-mini{position:absolute;bottom:8%;display:flex;gap:8%;width:40%;justify-content:center;z-index:3!important}
+.duo-mini svg{width:34%;height:auto}
+
+/* ---------- Mjölnir ---------- */
+.inscription{font-style:italic;font-size:var(--step-1);color:var(--gold-bright);max-width:32ch;margin:1em auto 0;text-wrap:balance;line-height:1.45}
+.stage{position:relative;margin:0 auto;padding-top:clamp(110px,16vw,150px);width:min(100%,440px);display:grid;justify-items:center}
+.hammer-btn{appearance:none;background:none;border:0;padding:0;position:relative;z-index:2;width:min(48vw,200px);cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;border-radius:12px}
+.hammer-btn.holding{cursor:grabbing}
+.hammer{display:block;width:100%;height:auto;transform:rotate(180deg);filter:drop-shadow(0 16px 22px rgba(0,0,0,.6))}
+.hammer-btn.holding .hammer{filter:drop-shadow(0 0 24px rgba(166,220,255,.8)) drop-shadow(0 16px 22px rgba(0,0,0,.6))}
+.stone{display:block;width:100%;height:auto;margin-top:-26px;position:relative;z-index:1}
+.crack{fill:none;stroke:var(--storm);stroke-width:2.2;stroke-linecap:round;filter:drop-shadow(0 0 4px var(--storm))}
+.runes-progress{display:flex;gap:clamp(10px,3vw,18px);justify-content:center;font-family:var(--font-rune);font-size:var(--step-2);line-height:1;color:rgba(236,230,214,.2);margin-top:18px}
+.runes-progress span{transition:color .2s,text-shadow .2s}
+.runes-progress span.on{color:var(--storm);text-shadow:0 0 12px var(--storm),0 0 30px rgba(166,220,255,.6)}
+.runes-cap{margin:.5em 0 0;font-size:var(--step--1);color:var(--ink-soft)}
+.trial-msg{min-height:3.2em;margin:14px auto 0;max-width:34ch;color:var(--ink-soft);text-wrap:balance}
+.worthy{display:grid;justify-items:center;gap:10px;margin-top:6px}
+.worthy-title{font-family:var(--font-display);font-weight:900;font-size:var(--step-4);line-height:.9;margin:0;color:var(--storm);text-shadow:-.03em 0 0 rgba(255,40,110,.7),.03em 0 0 rgba(40,230,255,.7),0 0 40px rgba(166,220,255,.6)}
+.worthy-sub{margin:0;max-width:36ch;text-wrap:balance}
+.worthy-ref{margin:0;max-width:40ch}
+
+/* ---------- Expediente TVA ---------- */
+.timeline{display:block;width:100%;height:auto;margin-top:28px;overflow:visible}
+.timeline path{fill:none;stroke:var(--gold);stroke-linecap:round;filter:drop-shadow(0 0 6px var(--gold))}
+.tl-main{stroke-width:5}
+.tl-branch{stroke-width:3;opacity:.85}
+.tl-node{fill:var(--gold-bright)}
+.crt{position:relative;margin-top:24px;max-width:840px;background:linear-gradient(#5a3a22,#3b2414);border-radius:28px;padding:clamp(12px,2.6vw,26px);box-shadow:inset 0 2px 0 rgba(255,255,255,.14),0 30px 80px -30px #000}
+.crt-screen{position:relative;border-radius:18px;overflow:hidden;background:radial-gradient(120% 100% at 50% 40%,#2e1c0f,#120a05);padding:clamp(18px,4vw,40px) clamp(16px,4vw,40px) clamp(96px,14vw,120px);color:var(--tva-amber);font-family:var(--font-mono);font-size:clamp(.8rem,.74rem + .4vw,1rem);line-height:1.6;text-shadow:0 0 6px rgba(255,150,60,.55)}
+.crt-screen::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.28) 0 1px,transparent 1px 3px);pointer-events:none;z-index:2}
+.crt-screen::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 100% at 50% 50%,transparent 60%,rgba(0,0,0,.55));pointer-events:none;z-index:2;animation:crt 4s steps(1) infinite}
+@keyframes crt{0%,100%{opacity:1}48%{opacity:.85}50%{opacity:1}}
+.tva-h{margin:0;font-weight:700;letter-spacing:.12em;color:var(--tva)}
+.tva-h2{margin:.2em 0 1.2em;letter-spacing:.08em}
+.tva-dl{margin:0;display:grid;gap:8px}
+.tva-dl div{display:grid;grid-template-columns:minmax(0,15ch) minmax(0,1fr);gap:4px 16px}
+.tva-dl dt{color:var(--tva);text-transform:uppercase;font-size:.86em;letter-spacing:.06em}
+.tva-dl dd{margin:0;color:#ffd9a0}
+.stamp{position:absolute;z-index:3;right:clamp(12px,4vw,40px);bottom:clamp(14px,3vw,30px);transform:rotate(-12deg);border:4px solid #e0402f;color:#ff5a45;font-family:var(--font-cine);font-weight:700;text-transform:uppercase;font-size:clamp(1.3rem,5vw,2.3rem);letter-spacing:.12em;padding:.12em .5em .16em;line-height:1.05;text-align:center;border-radius:8px;background:rgba(224,64,47,.08);text-shadow:none}
+.stamp small{display:block;font-size:.42em;letter-spacing:.24em}
+
+/* ---------- Ilusiones ---------- */
+.illusions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,3vw,28px);max-width:620px;margin:clamp(32px,5vw,56px) auto 0;perspective:900px}
+.ill-card{position:relative;aspect-ratio:3/4;width:100%;max-width:100%;border-radius:16px;border:1px solid rgba(79,227,166,.38);cursor:pointer;display:grid;place-items:center;padding:10px;color:var(--ink);font:inherit;-webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  background:radial-gradient(120% 80% at 50% 8%,rgba(79,227,166,.3),transparent 62%),linear-gradient(180deg,#0e3c2a,#05150e);box-shadow:0 14px 34px -14px rgba(79,227,166,.5);transition:box-shadow .2s}
+.shuffling .ill-card{box-shadow:-22px 0 26px -8px rgba(79,227,166,.6),22px 0 26px -8px rgba(79,227,166,.4)}
+.ill-card:hover{border-color:var(--seidr)}
+.ill-front,.ill-back{display:grid;justify-items:center;gap:8px;width:100%}
+.ill-front svg{width:78%;height:auto;aspect-ratio:1}
+.ill-rune{font-family:var(--font-rune);color:var(--gold);letter-spacing:.25em;font-size:clamp(.8rem,2.6vw,1rem)}
+.ill-card.real{border-color:var(--gold);background:radial-gradient(120% 80% at 50% 8%,rgba(226,184,92,.35),transparent 62%),linear-gradient(180deg,#2a2208,#0c0a03);box-shadow:0 0 40px -6px var(--gold)}
+.ill-real{font-family:var(--font-display);font-weight:800;font-size:clamp(1.1rem,4.4vw,1.8rem);line-height:1;color:var(--gold-bright)}
+.ill-real-sub{font-size:clamp(.8rem,2.8vw,1rem);color:var(--ink-soft);font-style:italic}
+.ill-msg{min-height:3.4em;margin:22px auto 0;max-width:38ch;text-align:center;text-wrap:balance}
+.ill-msg small{display:block;margin-top:.4em;color:var(--ink-soft);font-size:var(--step--1)}
+.ill-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:8px}
+
+/* ---------- Carta ---------- */
+.letter-zone{display:grid;justify-items:center;margin-top:clamp(56px,7vw,80px)}
+.parchment{position:relative;width:min(100%,700px);color:var(--parchment-ink);border-radius:6px;padding:clamp(48px,7vw,72px) clamp(22px,6vw,64px) clamp(32px,6vw,56px);font-size:var(--step-1);line-height:1.6;text-align:left;
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .24 0 0 0 0 .16 0 0 0 0 .07 0 0 0 .2 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"),
+    radial-gradient(120% 90% at 50% 40%,transparent 55%,rgba(120,78,22,.32)),
+    var(--parchment);
+  box-shadow:0 34px 90px -30px rgba(0,0,0,.85)}
+.letter-to{font-family:var(--font-display);font-weight:700;font-size:var(--step-2);line-height:1;margin:0 0 .7em;color:var(--emerald)}
+.letter-body p{margin:0 0 1em;max-width:60ch}
+.letter-sign{margin:1.4em 0 0;line-height:1.3}
+.letter-sign b{display:block;font-family:var(--font-display);font-weight:800;font-size:var(--step-3);color:var(--cape);line-height:1;margin-top:.15em}
+.letter-teaser{margin:0;font-style:italic;color:rgba(54,38,15,.75)}
+.parchment:not(.sealed) .letter-teaser{display:none}
+.parchment.sealed .letter-body{display:none}
+.wax{position:absolute;top:-38px;left:0;right:0;margin-inline:auto;width:84px;height:84px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;font-family:var(--font-rune);font-size:2.1rem;color:var(--gold-bright);
+  background:radial-gradient(circle at 34% 30%,#47d797,#168455 45%,#0a4a30 80%);box-shadow:0 8px 18px rgba(0,0,0,.5),inset 0 -5px 9px rgba(0,0,0,.38),inset 0 3px 6px rgba(255,255,255,.28);-webkit-tap-highlight-color:transparent;animation:waxpulse 2.4s ease-in-out infinite}
+@keyframes waxpulse{50%{box-shadow:0 8px 18px rgba(0,0,0,.5),0 0 0 10px rgba(79,227,166,.18),inset 0 -5px 9px rgba(0,0,0,.38),inset 0 3px 6px rgba(255,255,255,.28)}}
+.wax::after{content:"";position:absolute;inset:7px;border-radius:50%;border:2px dashed rgba(255,227,161,.35)}
+.wax-hint{margin:.8em 0 0;font-size:var(--step--1);color:rgba(54,38,15,.8);text-align:center}
+.parchment:not(.sealed) .wax-hint{display:none}
+
+/* ---------- El deseo ---------- */
+.cake-wrap{position:relative;width:min(80vw,340px);margin:clamp(24px,4vw,40px) auto 0;perspective:700px}
+.cake{position:relative;z-index:1;display:block;width:100%;height:auto;overflow:visible}
+.burn-wrap{position:absolute;z-index:0;left:50%;bottom:-30%;width:130%;margin-left:-65%;transform:rotateX(74deg);pointer-events:none}
+.burn{display:block;width:100%;height:auto;opacity:0}
+.burn text{font-family:var(--font-rune);font-size:15px;fill:var(--gold-bright)}
+.cake-runes{font-family:var(--font-rune);font-size:13px;fill:var(--on-gold);letter-spacing:2px}
+.flame{transform-box:fill-box;transform-origin:50% 100%;animation:flicker .14s infinite alternate ease-in-out;transition:opacity .35s}
+.flame-glow{transition:opacity .35s}
+@keyframes flicker{from{transform:scale(1,1) skewX(-3deg)}to{transform:scale(.9,1.1) skewX(3deg)}}
+.cake.out .flame,.cake.out .flame-glow{opacity:0}
+.wish-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.mic-msg{min-height:1.6em;margin:12px auto 0;max-width:40ch;color:var(--ink-soft);font-size:var(--step--1)}
+.final{margin-top:clamp(24px,4vw,40px);display:grid;justify-items:center;gap:14px}
+.final-title{font-family:var(--font-display);font-weight:800;font-size:var(--step-3);line-height:1;margin:0;color:var(--gold-bright);text-shadow:0 0 34px rgba(226,184,92,.45);perspective:600px}
+.final p{margin:0;max-width:40ch;font-size:var(--step-1);line-height:1.5;text-wrap:balance}
+.final-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+/* ---------- Créditos ---------- */
+.credits{position:fixed;inset:0;z-index:75;background:#000;color:#e9e4d8;overflow:hidden;text-align:center;font-family:var(--font-cine)}
+.credits-ctrl{position:absolute;z-index:3;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));display:flex;gap:8px}
+.credits-ctrl button{font-family:var(--font-cine);text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;color:#ddd;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:.7em 1.1em;min-height:44px;cursor:pointer}
+.credits-roll{position:absolute;left:0;right:0;top:0;padding:0 max(16px,env(safe-area-inset-left,0px));display:grid;justify-items:center;gap:0}
+html:not(.js-gsap) .credits{overflow-y:auto}
+html:not(.js-gsap) .credits-roll{position:static;padding-block:80px}
+.cr-title{font-family:var(--font-display);font-weight:800;font-size:clamp(3rem,13vw,6rem);color:var(--gold-bright);margin:0;line-height:1}
+.cr-sub{margin:.4em 0 0;font-weight:300;letter-spacing:.4em;text-transform:uppercase;font-size:clamp(.8rem,2.6vw,1rem);padding-left:.4em}
+.cr-block{margin-top:64px;width:min(100%,560px)}
+.cr-head{font-weight:300;letter-spacing:.35em;text-transform:uppercase;font-size:.8rem;color:#9a958a;margin:0 0 18px;padding-left:.35em}
+.cr-list{margin:0;display:grid;gap:10px}
+.cr-list div{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:baseline}
+.cr-list dt{text-align:right;font-weight:300;text-transform:uppercase;letter-spacing:.12em;font-size:.82rem;color:#b7b2a6}
+.cr-list dd{margin:0;text-align:left;font-weight:500;text-transform:uppercase;letter-spacing:.08em;font-size:1.05rem}
+.cr-note{margin:64px 0 0;max-width:36ch;font-family:var(--font-body);font-style:italic;font-size:1.1rem;color:#cfc9bc;line-height:1.5}
+.cr-end{margin:72px 0 40vh;font-family:var(--font-display);font-weight:700;font-size:clamp(1.6rem,6vw,2.6rem);color:var(--gold-bright)}
+.post{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:18px;padding:24px}
+.post-label{margin:0;font-weight:300;letter-spacing:.4em;text-transform:uppercase;font-size:.8rem;color:#8e897e;padding-left:.4em}
+.post-place{margin:0;font-family:var(--font-body);font-style:italic;font-size:1.2rem;color:#cfc9bc}
+.post-line{margin:0;font-family:var(--font-body);font-size:clamp(1.3rem,5vw,1.9rem)}
+.post-line b{font-family:var(--font-cine);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.7em;color:var(--storm)}
+.post-line.lk b{color:var(--seidr)}
+.post-return{margin:26px 0 0;font-weight:700;font-size:clamp(1.7rem,7.4vw,3.6rem);letter-spacing:.24em;text-transform:uppercase;color:var(--gold-bright);padding-left:.24em;text-shadow:0 0 30px rgba(226,184,92,.5)}
+
+/* ---------- Pie ---------- */
+.foot{padding-block:40px max(96px,calc(70px + env(safe-area-inset-bottom,0px)));text-align:center;color:var(--ink-soft);font-size:var(--step--1);border-top:1px solid var(--hair)}
+.foot p{margin:.35em 0}
+.foot b{color:var(--gold-bright);font-variant-numeric:tabular-nums}
+.foot .fine{max-width:60ch;margin-inline:auto;opacity:.75}
+
+@media (max-width:760px){
+  .cast{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .hero-stage{grid-template-columns:auto auto;grid-template-areas:"thor loki" "name name";row-gap:4px;column-gap:28vw}
+  .hero-thor{grid-area:thor}.hero-loki{grid-area:loki}.hero-name{grid-area:name}
+  .tva-dl div{grid-template-columns:1fr;gap:0}
+}
+@media (max-width:520px){
+  .sound{padding:0;width:44px;justify-content:center}
+  .sound span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+}
+@media (max-height:720px){
+  .scene-art{aspect-ratio:2/1}
+  .scenes .lead{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .grain-wrap{display:none}
+}
+</style>
+
+<!-- Dibujos reutilizables (todos originales, hechos a mano en SVG) -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f7fb"/><stop offset=".45" stop-color="#aab3c2"/><stop offset=".72" stop-color="#6b7486"/><stop offset="1" stop-color="#c9d0db"/></linearGradient>
+    <linearGradient id="g-metal-dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c3cad6"/><stop offset=".5" stop-color="#6d7689"/><stop offset="1" stop-color="#454c5c"/></linearGradient>
+    <linearGradient id="g-gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff0c2"/><stop offset=".42" stop-color="#e2b85c"/><stop offset="1" stop-color="#8f6a22"/></linearGradient>
+    <linearGradient id="g-leather" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3a2213"/><stop offset=".5" stop-color="#6e4629"/><stop offset="1" stop-color="#3a2213"/></linearGradient>
+    <linearGradient id="g-helm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0c2"/><stop offset=".35" stop-color="#e2b85c"/><stop offset=".72" stop-color="#b0852f"/><stop offset="1" stop-color="#6e4f17"/></linearGradient>
+    <radialGradient id="g-seidr"><stop offset="0" stop-color="#4fe3a6" stop-opacity=".95"/><stop offset="1" stop-color="#4fe3a6" stop-opacity="0"/></radialGradient>
+  </defs>
+  <symbol id="i-hammer" viewBox="0 0 200 260">
+    <rect x="88" y="96" width="24" height="128" rx="5" fill="url(#g-leather)"/>
+    <path d="M88 114 L112 105 M88 128 L112 119 M88 142 L112 133 M88 156 L112 147 M88 170 L112 161 M88 184 L112 175 M88 198 L112 189 M88 212 L112 203" stroke="#24140a" stroke-width="2" opacity=".6"/>
+    <rect x="84" y="98" width="32" height="10" rx="3" fill="url(#g-gold)"/>
+    <rect x="84" y="212" width="32" height="10" rx="3" fill="url(#g-gold)"/>
+    <rect x="86" y="222" width="28" height="14" rx="4" fill="url(#g-metal)"/>
+    <path d="M100 236 C82 260 118 260 100 236" fill="none" stroke="#6e4629" stroke-width="5" stroke-linecap="round"/>
+    <rect x="26" y="18" width="148" height="82" rx="10" fill="url(#g-metal)"/>
+    <rect x="26" y="18" width="20" height="82" rx="6" fill="url(#g-metal-dark)"/>
+    <rect x="154" y="18" width="20" height="82" rx="6" fill="url(#g-metal-dark)"/>
+    <rect x="54" y="28" width="92" height="62" rx="6" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.5"/>
+    <g fill="none" stroke="url(#g-gold)" stroke-width="2.4">
+      <circle cx="100" cy="59" r="22"/>
+      <ellipse cx="100" cy="59" rx="20" ry="7.5"/>
+      <ellipse cx="100" cy="59" rx="20" ry="7.5" transform="rotate(60 100 59)"/>
+      <ellipse cx="100" cy="59" rx="20" ry="7.5" transform="rotate(120 100 59)"/>
+    </g>
+    <rect x="26" y="18" width="148" height="82" rx="10" fill="none" stroke="#000000" stroke-opacity=".35" stroke-width="2"/>
+    <path d="M36 24 H164" stroke="#ffffff" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-helm" viewBox="0 0 200 200">
+    <ellipse cx="100" cy="142" rx="34" ry="40" fill="url(#g-seidr)" opacity=".6"/>
+    <path d="M72 96 C44 80 26 40 38 6 C46 40 62 70 90 86 Z" fill="url(#g-helm)" stroke="#6e4f17" stroke-width="1.5"/>
+    <path d="M128 96 C156 80 174 40 162 6 C154 40 138 70 110 86 Z" fill="url(#g-helm)" stroke="#6e4f17" stroke-width="1.5"/>
+    <path d="M60 104 C60 74 80 60 100 60 C120 60 140 74 140 104 L140 152 C140 164 132 174 120 180 L116 152 C116 130 110 116 100 116 C90 116 84 130 84 152 L80 180 C68 174 60 164 60 152 Z" fill="url(#g-helm)" stroke="#6e4f17" stroke-width="2"/>
+    <path d="M100 62 L100 113" stroke="#6e4f17" stroke-width="2" opacity=".7"/>
+    <path d="M68 104 C68 80 84 68 100 68 C116 68 132 80 132 104" fill="none" stroke="#fff0c2" stroke-width="1.5" opacity=".6"/>
+  </symbol>
+  <symbol id="i-bolt" viewBox="0 0 70 100">
+    <path d="M44 0 L8 58 H32 L20 100 L64 36 H40 L54 0 Z" fill="#ffe14d" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-crest" viewBox="0 0 240 240">
+    <use href="#i-helm" x="58" y="30" width="124" height="124"/>
+    <use href="#i-hammer" x="90" y="100" width="60" height="78" transform="rotate(-32 120 139)"/>
+  </symbol>
+</svg>
+
+<div class="nebula" aria-hidden="true"></div>
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<!-- ===================== EL SELLO ===================== -->
+<section id="gate" class="gate" aria-labelledby="gate-title">
+  <div class="gate-half gate-left" aria-hidden="true"></div>
+  <div class="gate-half gate-right" aria-hidden="true"></div>
+  <div class="gate-inner">
+    <svg class="seal" viewBox="0 0 240 240" aria-hidden="true">
+      <defs><path id="ring-path" d="M120,120 m-98,0 a98,98 0 1,1 196,0 a98,98 0 1,1 -196,0"/></defs>
+      <circle cx="120" cy="120" r="114" fill="#070b1a" fill-opacity=".7" stroke="url(#g-gold)" stroke-width="1.5"/>
+      <circle cx="120" cy="120" r="84" fill="none" stroke="url(#g-gold)" stroke-width="1" opacity=".7"/>
+      <g class="seal-ring"><text class="seal-runes"><textPath href="#ring-path" textLength="610" lengthAdjust="spacing">ᚠᛖᛚᛁᛉ ᚲᚢᛗᛈᛚᛖᚨᚾᛟᛊ ᛬ ᚹᛁᛟᛚᛖᛏ ᛬ ᚠᛖᛚᛁᛉ ᚲᚢᛗᛈᛚᛖᚨᚾᛟᛊ ᛬ ᚹᛁᛟᛚᛖᛏ ᛬</textPath></text></g>
+      <use href="#i-crest" x="0" y="0" width="240" height="240"/>
+    </svg>
+    <p class="gate-kicker">Llegó un envío sellado desde Asgard</p>
+    <h2 id="gate-title" class="gate-title">Para la Diosa de las Travesuras</h2>
+    <form id="gate-form" class="gate-form" autocomplete="off" novalidate>
+      <label for="gate-input">Este sello solo se rompe con el nombre que te da el Dios del Trueno.</label>
+      <div class="gate-row">
+        <input id="gate-input" name="clave" type="text" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="24" placeholder="Tu nombre secreto">
+        <button type="submit" class="btn btn-gold">Romper el sello</button>
+      </div>
+      <p id="gate-msg" class="gate-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== INTRO DE ESTUDIO ===================== -->
+<div id="intro" class="intro" hidden>
+  <div id="intro-stack" class="intro-stack" aria-hidden="true">
+    <div class="panel" style="--pc:#c8202f"><svg class="pi" viewBox="0 0 200 260"><use href="#i-hammer"/></svg></div>
+    <div class="panel" style="--pc:#0f6b45"><svg class="pi" viewBox="0 0 200 200"><use href="#i-helm"/></svg></div>
+    <div class="panel" style="--pc:#132a66"><span class="pw">¡Kra-koom!</span></div>
+    <div class="panel" style="--pc:#e2b85c"><span class="pr">ᚹ</span></div>
+    <div class="panel" style="--pc:#b0217a"><span class="pw">¡Otro!</span></div>
+    <div class="panel" style="--pc:#071a10"><span class="po">Loki</span></div>
+    <div class="panel" style="--pc:#05070f"><svg class="pi" style="width:min(28vw,26vh)" viewBox="0 0 70 100"><use href="#i-bolt"/></svg></div>
+    <div class="panel pan-bifrost"></div>
+    <div class="panel" style="--pc:#c8202f"><span class="po po-w">Thor</span></div>
+    <div class="panel" style="--pc:#e06a2b"><span class="pm">Variante detectada</span></div>
+    <div class="panel" style="--pc:#0b1530"><span class="pv">Viviana</span></div>
+    <div class="panel" style="--pc:#0f4a33"><svg class="pi" viewBox="0 0 240 240"><use href="#i-crest"/></svg></div>
+  </div>
+  <div id="studio" class="studio" aria-hidden="true">
+    <div class="studio-box"><span id="studio-text">Asgard Studios</span></div>
+    <p id="studio-sub" class="studio-sub">presenta</p>
+  </div>
+  <button id="intro-skip" class="intro-skip" type="button">Saltar intro</button>
+</div>
+
+<div class="lb lb-top" aria-hidden="true"></div>
+<div class="lb lb-bot" aria-hidden="true"></div>
+<div class="grain-wrap" aria-hidden="true"><div class="grain"></div></div>
+<div id="progress" class="progress" aria-hidden="true"></div>
+<button id="sound" class="sound" type="button" aria-pressed="true" hidden>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="wave" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="mute" d="M17 9l5 6M22 9l-5 6"/></svg>
+  <span id="sound-label">Sonido</span>
+</button>
+<button id="summon" class="summon" type="button" aria-label="Lanzar el Mjölnir" hidden><svg viewBox="0 0 200 260" aria-hidden="true"><use href="#i-hammer"/></svg></button>
+<div id="flyer" class="flyer" aria-hidden="true"><svg viewBox="0 0 200 260" width="54" height="70"><use href="#i-hammer"/></svg></div>
+
+<main id="contenido">
+
+  <!-- ===================== PÓSTER ===================== -->
+  <header id="inicio" class="hero">
+    <div class="hero-ring-wrap" aria-hidden="true">
+      <svg class="hero-ring" viewBox="0 0 400 400"><defs><path id="hero-ring-path" d="M200,200 m-170,0 a170,170 0 1,1 340,0 a170,170 0 1,1 -340,0"/></defs>
+        <circle cx="200" cy="200" r="186" fill="none" stroke="#e2b85c" stroke-width="1"/><circle cx="200" cy="200" r="150" fill="none" stroke="#e2b85c" stroke-width=".6"/>
+        <text><textPath href="#hero-ring-path" textLength="1060" lengthAdjust="spacing">ᚦᛟᚱ ᛬ ᛚᛟᚲᛁ ᛬ ᚹᛁᚹᛁᚨᚾᚨ ᛬ ᚨᛊᚷᚨᚱᛞ ᛬ ᚦᛟᚱ ᛬ ᛚᛟᚲᛁ ᛬ ᚹᛁᛟᛚᛖᛏ ᛬ ᛗᛁᛞᚷᚨᚱᛞ ᛬</textPath></text>
+      </svg>
+    </div>
+    <div class="wrap hero-inner">
+      <p class="hero-kicker">Asgard Studios presenta</p>
+      <div class="hero-stage">
+        <button id="duo-thor" class="hero-icon hero-thor" type="button" aria-label="Thor: invocar un rayo"><svg viewBox="0 0 200 260" aria-hidden="true"><use href="#i-hammer"/></svg></button>
+        <h1 id="hero-title" class="hero-name"><span class="hn-shadow" aria-hidden="true">Viviana</span><span id="hero-name" class="hn-face">Viviana</span></h1>
+        <button id="duo-loki" class="hero-icon hero-loki" type="button" aria-label="Loki: lanzar un hechizo"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#i-helm"/></svg></button>
+      </div>
+      <p class="hero-tag">La Diosa de las Travesuras</p>
+      <p id="hero-runes" class="hero-runes" aria-label="Viviana y Violet, escrito en runas">ᚹᛁᚹᛁᚨᚾᚨ ᛬ ᚹᛁᛟᛚᛖᛏ</p>
+      <p class="hero-runes-cap">Tu nombre y tu apodo, en runas del futhark antiguo.</p>
+      <p class="billing">Asgard Studios presenta una producción del <b>Dios del Trueno</b> · <b>Viviana «Violet»</b> como <b>Loki</b> · <b>Gabo</b> como <b>Thor</b> · música de los escaldos · efectos de rayos: Thor, sin ayuda · ilusiones: Loki, sin permiso · dirigida por <b>el Caos</b> · basada en una amistad real</p>
+      <p class="release">Estreno mundial: hoy · Solo en los cines de Asgard</p>
+      <p class="hint">Toca el martillo y el casco. Los dioses responden.</p>
+      <a class="scroll-cue" href="#elenco">
+        Baja, hermana
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===================== REPARTO ===================== -->
+  <section id="elenco" class="band" aria-labelledby="t-elenco">
+    <div class="wrap">
+      <h2 id="t-elenco" class="h-section split-title">El reparto</h2>
+      <p class="lead">Dos dioses, un solo caos. Hermanos de elección, que es la forma más difícil y la mejor.</p>
+      <div class="cast">
+        <article class="char char-thor" aria-labelledby="n-thor">
+          <div class="char-inner">
+            <div class="char-art"><svg viewBox="0 0 200 260" aria-hidden="true"><use href="#i-hammer"/></svg><span class="char-runes" aria-hidden="true">ᚦᛟᚱ</span></div>
+            <div class="char-body">
+              <p class="char-actor">Gabo es</p>
+              <h3 id="n-thor" class="char-name">Thor</h3>
+              <p class="char-role">Dios del Trueno</p>
+              <ul class="stats">
+                <li><span>Fuerza</span><span class="stat-num" data-v="96">96</span><span class="stat-bar"><span class="stat-fill" style="--v:96"></span></span></li>
+                <li><span>Planes B</span><span class="stat-num" data-v="4">4</span><span class="stat-bar"><span class="stat-fill" style="--v:4"></span></span></li>
+                <li><span>Lealtad</span><span class="stat-num" data-v="100">100</span><span class="stat-bar"><span class="stat-fill" style="--v:100"></span></span></li>
+                <li><span>Caer en las trampas de su hermana</span><span class="stat-num" data-v="99">99</span><span class="stat-bar"><span class="stat-fill" style="--v:99"></span></span></li>
+              </ul>
+              <p class="char-quote">«¿Otra vez, hermana?»</p>
+            </div>
+          </div>
+        </article>
+        <article class="char char-loki" aria-labelledby="n-loki">
+          <div class="char-inner">
+            <div class="char-art"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#i-helm"/></svg><span class="char-runes" aria-hidden="true">ᛚᛟᚲᛁ</span></div>
+            <div class="char-body">
+              <p class="char-actor">Viviana es</p>
+              <h3 id="n-loki" class="char-name">Loki</h3>
+              <p class="char-role">Diosa de las Travesuras. Para Thor, Violet.</p>
+              <ul class="stats">
+                <li><span>Ingenio</span><span class="stat-num" data-v="99">99</span><span class="stat-bar"><span class="stat-fill" style="--v:99"></span></span></li>
+                <li><span>Dramatismo</span><span class="stat-num" data-v="100">100</span><span class="stat-bar"><span class="stat-fill" style="--v:100"></span></span></li>
+                <li><span>Travesuras</span><span class="stat-num">∞</span><span class="stat-bar"><span class="stat-fill" style="--v:100"></span></span></li>
+                <li><span>Corazón (lo niega)</span><span class="stat-num" data-v="100">100</span><span class="stat-bar"><span class="stat-fill" style="--v:100"></span></span></li>
+              </ul>
+              <p class="char-quote">«Confía en mí.»</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ESCENAS (scroll horizontal) ===================== -->
+  <section id="escenas" class="scenes" aria-labelledby="t-escenas">
+    <div class="wrap">
+      <h2 id="t-escenas" class="h-section split-title">Basada en hechos reales</h2>
+      <p class="lead">Escenas de las películas que, de alguna forma, ya vivimos.</p>
+    </div>
+    <div class="scenes-viewport">
+      <div id="scenes-track" class="scenes-track">
+        <article class="scene">
+          <div class="scene-art art-another">
+            <button id="mug" class="mug" type="button" aria-label="Romper la taza y pedir otra"><svg viewBox="0 0 120 120" aria-hidden="true">
+              <path d="M84 46 C104 46 106 80 84 82" fill="none" stroke="#3b2414" stroke-width="13" stroke-linecap="round"/>
+              <path d="M84 46 C104 46 106 80 84 82" fill="none" stroke="#f3e3c3" stroke-width="7" stroke-linecap="round"/>
+              <path d="M26 30 H88 L84 96 Q83 106 72 106 H42 Q31 106 30 96 Z" fill="#f3e3c3" stroke="#3b2414" stroke-width="3"/>
+              <path d="M29 52 H86" stroke="#c8202f" stroke-width="6"/>
+              <ellipse cx="57" cy="30" rx="31" ry="7" fill="#5a3418" stroke="#3b2414" stroke-width="3"/>
+              <path d="M48 20 C44 13 52 9 48 2 M64 20 C60 13 68 9 64 2" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            </svg></button>
+            <span id="otro" class="onoma" aria-hidden="true">¡Otro!</span>
+            <span class="mug-tap" aria-hidden="true">Toca la taza</span>
+          </div>
+          <div class="scene-text">
+            <p class="ref">Thor (2011)</p>
+            <p class="scene-quote" lang="en">«Another!»</p>
+            <h3>¡Otro!</h3>
+            <p>Thor probó su primer café en Midgard, le gustó y rompió la taza contra el piso para pedir otro. Así pido otro año contigo. <span id="mug-count">Tazas rotas: 0.</span></p>
+          </div>
+        </article>
+        <article class="scene">
+          <div class="scene-art art-snake">
+            <svg viewBox="0 0 320 180" aria-hidden="true"><g class="snake-move">
+              <path d="M30 130 C70 70 110 170 150 110 S 230 60 262 96" fill="none" stroke="#1f9c66" stroke-width="20" stroke-linecap="round"/>
+              <path d="M30 130 C70 70 110 170 150 110 S 230 60 262 96" fill="none" stroke="#e2b85c" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round"/>
+              <circle cx="268" cy="100" r="16" fill="#2fbf7f"/><circle cx="274" cy="94" r="3.6" fill="#ffe3a1"/><circle cx="275" cy="94" r="1.7" fill="#071a10"/>
+              <path class="tongue" d="M283 104 l14 4 l5 -4 m-5 4 l5 5" stroke="#e0454f" stroke-width="2.5" fill="none" stroke-linecap="round"/></g>
+              <g transform="translate(66 28) rotate(35)"><path d="M-4 0 L0 -14 L4 0 Z" fill="#dfe5ee"/><rect x="-4" y="0" width="8" height="40" fill="#cfd6e0"/><rect x="-12" y="40" width="24" height="6" rx="2" fill="#e2b85c"/><rect x="-4" y="46" width="8" height="18" fill="#0f4a33"/></g>
+            </svg>
+          </div>
+          <div class="scene-text">
+            <p class="ref">Thor: Ragnarok (2017)</p>
+            <h3>La serpiente</h3>
+            <p>Thor cuenta que, de niños, Loki se convirtió en serpiente porque sabía que a él le encantaban. Thor la recogió y Loki lo apuñaló. Así funcionamos: tú inventas la travesura y yo caigo. Y lo volvería a hacer.</p>
+          </div>
+        </article>
+        <article class="scene">
+          <div class="scene-art art-help">
+            <div class="burst"><span>¡Ayuda!</span></div>
+            <svg class="thrown" viewBox="0 0 200 200" aria-hidden="true"><use href="#i-helm"/></svg>
+          </div>
+          <div class="scene-text">
+            <p class="ref">Thor: Ragnarok (2017)</p>
+            <p class="scene-quote" lang="en">«Get help!»</p>
+            <h3>El plan «¡Ayuda!»</h3>
+            <p>Loki finge estar herido, Thor pide ayuda a gritos y luego lanza a su hermano contra los guardias. Es el plan más vergonzoso de Asgard. Thor lo adora, Loki lo odia y funciona.</p>
+          </div>
+        </article>
+        <article class="scene">
+          <div class="scene-art art-fall">
+            <div class="portal" aria-hidden="true"></div>
+            <div class="portal-ring" aria-hidden="true"></div>
+            <svg class="falling" viewBox="0 0 200 200" aria-hidden="true"><use href="#i-helm"/></svg>
+            <span class="onoma" aria-hidden="true">¡30 min!</span>
+          </div>
+          <div class="scene-text">
+            <p class="ref">Thor: Ragnarok (2017)</p>
+            <h3>Media hora cayendo</h3>
+            <p>Loki pasó treinta minutos cayendo por un portal, olvidado, mientras su hermano conversaba tranquilo. Es lo que siento cada vez que me cuentas un chisme a medias.</p>
+          </div>
+        </article>
+        <article class="scene">
+          <div class="scene-art art-purpose">
+            <div class="rays" aria-hidden="true"></div>
+            <svg viewBox="0 0 200 200" aria-hidden="true"><use href="#i-helm"/></svg>
+          </div>
+          <div class="scene-text">
+            <p class="ref">The Avengers (2012)</p>
+            <p class="scene-quote" lang="en">«I am burdened with glorious purpose.»</p>
+            <h3>Un propósito glorioso</h3>
+            <p>Loki siempre tuvo un propósito glorioso. El tuyo hoy es sencillo: cumplir años y dejar que te celebren. Con travesuras incluidas, obvio.</p>
+          </div>
+        </article>
+        <article class="scene">
+          <div class="scene-art art-sun">
+            <div class="sun" aria-hidden="true"></div>
+            <div class="horizon" aria-hidden="true"></div>
+            <div class="duo-mini" aria-hidden="true"><svg viewBox="0 0 200 260"><use href="#i-hammer"/></svg><svg viewBox="0 0 200 200"><use href="#i-helm"/></svg></div>
+          </div>
+          <div class="scene-text">
+            <p class="ref">Avengers: Infinity War (2018)</p>
+            <p class="scene-quote" lang="en">«I assure you, brother, the sun will shine on us again.»</p>
+            <h3>El sol volverá a brillar</h3>
+            <p>También hubo días nublados. En cada uno, uno de los dos sostuvo al otro. Te lo prometo, hermana: el sol siempre volverá a brillar sobre nosotros.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <p class="wrap scenes-foot">Sigue bajando: las escenas avanzan solas.</p>
+  </section>
+
+  <!-- ===================== PRUEBA DE DIGNIDAD ===================== -->
+  <section id="mjolnir" class="band center" aria-labelledby="t-mjolnir">
+    <div class="wrap">
+      <h2 id="t-mjolnir" class="h-section split-title">¿Eres digna?</h2>
+      <p class="inscription">«Quien levante este martillo, si es digna, tendrá el poder de cumplir años como una diosa.»</p>
+      <div class="stage">
+        <button id="hammer-btn" class="hammer-btn" type="button" aria-describedby="hammer-hint">
+          <span class="sr-only">Mjölnir. Mantén presionado para levantarlo.</span>
+          <svg id="hammer" class="hammer" viewBox="0 0 200 260" aria-hidden="true"><use href="#i-hammer"/></svg>
+        </button>
+        <svg class="stone" viewBox="0 0 400 120" aria-hidden="true">
+          <defs><linearGradient id="g-stone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5c5a66"/><stop offset=".35" stop-color="#34333d"/><stop offset="1" stop-color="#16161d"/></linearGradient></defs>
+          <path d="M18 116 L36 60 L84 34 L164 22 L244 26 L318 40 L368 64 L388 116 Z" fill="url(#g-stone)"/>
+          <path d="M36 60 L84 34 L164 22 L244 26 L318 40 L368 64" fill="none" stroke="#8d8a98" stroke-opacity=".55" stroke-width="2"/>
+          <path class="crack" d="M200 26 L186 46 L194 64 L170 92 L176 112"/>
+          <path class="crack" d="M200 26 L222 44 L212 70 L238 96"/>
+          <path class="crack" d="M200 26 L160 36 L128 56 L104 60"/>
+          <path class="crack" d="M200 26 L248 34 L282 54 L300 82"/>
+        </svg>
+        <div id="runes-progress" class="runes-progress" role="progressbar" aria-label="Fuerza para levantar el martillo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span>ᛞ</span><span>ᛁ</span><span>ᚷ</span><span>ᚾ</span><span>ᚨ</span>
+        </div>
+        <p class="runes-cap">Estas runas dicen «digna».</p>
+        <p id="hammer-hint" class="trial-msg" role="status" aria-live="polite">Mantén presionado el martillo hasta que se enciendan las cinco runas.</p>
+        <div id="worthy" class="worthy" hidden>
+          <p class="worthy-title">Eres digna</p>
+          <p class="worthy-sub">Como Thor en Avengers: Endgame (2019), cuando descubre que sigue siendo digno. Ahora el Mjölnir te obedece: toca cualquier parte de la pantalla para lanzarlo.</p>
+          <button id="hammer-reset" class="btn btn-ghost" type="button">Dejarlo y probar otra vez</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPEDIENTE TVA ===================== -->
+  <section id="tva" class="band" aria-labelledby="t-tva">
+    <div class="wrap">
+      <h2 id="t-tva" class="h-section split-title">Expediente de la variante</h2>
+      <p class="lead">Una oficina que vigila la línea temporal sagrada abrió un caso a tu nombre. Tranquila: es buena noticia.</p>
+      <p class="ref" style="margin:.8em 0 0">Inspirado en la serie Loki (2021)</p>
+      <svg class="timeline" viewBox="0 0 1000 150" aria-hidden="true">
+        <path class="tl-main" d="M0 75 C150 75 250 70 400 75 S 700 80 1000 75"/>
+        <path class="tl-branch" d="M220 74 C270 74 300 34 380 24"/>
+        <path class="tl-branch" d="M470 76 C520 76 540 118 620 128"/>
+        <path class="tl-branch" d="M700 77 C750 77 770 38 850 30"/>
+        <circle class="tl-node" cx="220" cy="74" r="7"/><circle class="tl-node" cx="470" cy="76" r="7"/><circle class="tl-node" cx="700" cy="77" r="7"/>
+      </svg>
+      <div class="crt">
+        <div class="crt-screen">
+          <div id="tva-file" class="tva-file">
+            <p class="tva-h">Autoridad de Variación Temporal</p>
+            <p class="tva-h2">Expediente V-001. Variante única: no hay otra igual.</p>
+            <dl class="tva-dl">
+              <div><dt>Variante</dt><dd>Viviana</dd></div>
+              <div><dt>Alias</dt><dd>Violet, Loki, la hermana del Dios del Trueno</dd></div>
+              <div><dt>Delito</dt><dd>Cambiar para siempre la línea temporal de Thor. Para bien.</dd></div>
+              <div><dt>Travesuras</dt><dd>incontables</dd></div>
+              <div><dt>Thor cayó</dt><dd>todas las veces</dd></div>
+              <div><dt>Volvería a caer</dt><dd>todas, otra vez</dd></div>
+              <div><dt>Dramatismo</dt><dd>nivel asgardiano</dd></div>
+              <div><dt>Secretos</dt><dd>todos guardados, bajo juramento</dd></div>
+              <div><dt>Thor te defiende</dt><dd>100 % de probabilidad</dd></div>
+              <div><dt>Sentencia</dt><dd>Un año más de vida, con todo el cariño de Asgard.</dd></div>
+            </dl>
+          </div>
+          <div id="stamp" class="stamp" aria-hidden="true">Aprobado<small>Feliz cumpleaños</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ILUSIONES ===================== -->
+  <section id="ilusiones" class="band center" aria-labelledby="t-ilusiones">
+    <div class="wrap">
+      <h2 id="t-ilusiones" class="h-section split-title">¿Cuál es la verdadera?</h2>
+      <p class="lead">Loki nunca está donde crees. Hay tres y solo una es real. Mézclalas y elige.</p>
+      <div id="illusions" class="illusions">
+        <button class="ill-card" type="button" aria-label="Loki número 1">
+          <span class="ill-front"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#i-helm"/></svg><span class="ill-rune">ᛚᛟᚲᛁ</span></span>
+          <span class="ill-back" hidden><span class="ill-real">La verdadera</span><span class="ill-real-sub">Viviana</span></span>
+        </button>
+        <button class="ill-card" type="button" aria-label="Loki número 2">
+          <span class="ill-front"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#i-helm"/></svg><span class="ill-rune">ᛚᛟᚲᛁ</span></span>
+          <span class="ill-back" hidden><span class="ill-real">La verdadera</span><span class="ill-real-sub">Viviana</span></span>
+        </button>
+        <button class="ill-card" type="button" aria-label="Loki número 3">
+          <span class="ill-front"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#i-helm"/></svg><span class="ill-rune">ᛚᛟᚲᛁ</span></span>
+          <span class="ill-back" hidden><span class="ill-real">La verdadera</span><span class="ill-real-sub">Viviana</span></span>
+        </button>
+      </div>
+      <p id="ill-msg" class="ill-msg" role="status" aria-live="polite">Primero mezcla las ilusiones.</p>
+      <div class="ill-actions">
+        <button id="ill-shuffle" class="btn btn-gold" type="button">Mezclar las ilusiones</button>
+        <button id="ill-again" class="btn btn-ghost" type="button" hidden>Jugar otra vez</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LA CARTA (edita el texto a tu gusto) ===================== -->
+  <section id="carta" class="band" aria-labelledby="t-carta">
+    <div class="wrap center">
+      <h2 id="t-carta" class="h-section split-title">Una carta desde Asgard</h2>
+      <p class="lead">Sellada con <span style="font-family:var(--font-rune)">ᚹ</span>, wunjo, la runa de la alegría. También es tu inicial.</p>
+      <div class="letter-zone">
+        <article id="parchment" class="parchment">
+          <button id="wax" class="wax" type="button" aria-label="Romper el sello de cera y abrir la carta">ᚹ</button>
+          <p class="letter-to">Querida Violet:</p>
+          <p class="letter-teaser">Esta carta tiene sello de cera. Ya sabes qué hacer.</p>
+          <p class="wax-hint">Toca el sello para abrirla.</p>
+          <div id="letter-body" class="letter-body">
+            <p>En los Nueve Reinos no existe nadie que me saque de quicio como tú, ni nadie a quien quiera tanto. Eres la travesura que le sacude el polvo a mis días aburridos, la estratega cuando yo solo tengo un martillo y medio plan, y la hermana que la vida me dejó elegir.</p>
+            <p>Gracias por las risas que nadie más entiende, por los planes absurdos y por cada vez que me engañaste (y por las veces que me dejé engañar). Sobre todo, gracias por quedarte, incluso cuando el cielo se puso gris.</p>
+            <p>Hoy celebramos el día en que llegaste a este mundo a ponerlo de cabeza. Que este nuevo año te traiga aventuras dignas de una diosa, gente que te cuide como tú cuidas a los tuyos y muchas razones para sonreír con esa cara de estar tramando algo.</p>
+            <p>Te lo prometo, hermana: el sol siempre volverá a brillar sobre nosotros.</p>
+            <p>Feliz cumpleaños.</p>
+            <p class="letter-sign">Tu hermano, el Dios del Trueno<b>Gabo</b></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EL DESEO ===================== -->
+  <section id="deseo" class="band center" aria-labelledby="t-deseo">
+    <div class="wrap">
+      <h2 id="t-deseo" class="h-section split-title">Pide un deseo</h2>
+      <p class="lead">Un piso es de Loki y el otro de Thor. Cierra los ojos, pide algo que valga la pena y sopla.</p>
+      <div class="cake-wrap">
+        <div class="burn-wrap" aria-hidden="true"><svg id="burn" class="burn" viewBox="0 0 300 300">
+          <defs><path id="burn-path" d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0"/></defs>
+          <circle cx="150" cy="150" r="138" fill="none" stroke="#ffe3a1" stroke-width="3"/>
+          <circle cx="150" cy="150" r="104" fill="none" stroke="#ffe3a1" stroke-width="2"/>
+          <text><textPath href="#burn-path" textLength="750" lengthAdjust="spacing">ᛒᛁᚠᚱᛟᛊᛏ ᛬ ᚹᛁᛟᛚᛖᛏ ᛬ ᛒᛁᚠᚱᛟᛊᛏ ᛬ ᚹᛁᛟᛚᛖᛏ ᛬ ᛒᛁᚠᚱᛟᛊᛏ ᛬ ᚹᛁᛟᛚᛖᛏ ᛬</textPath></text>
+          <g fill="none" stroke="#ffe3a1" stroke-width="2.5"><ellipse cx="150" cy="150" rx="70" ry="26"/><ellipse cx="150" cy="150" rx="70" ry="26" transform="rotate(60 150 150)"/><ellipse cx="150" cy="150" rx="70" ry="26" transform="rotate(120 150 150)"/></g>
+        </svg></div>
+        <svg id="cake" class="cake" viewBox="0 0 300 280" role="img" aria-label="Torta de cumpleaños de dos pisos con tres velas encendidas">
+          <defs>
+            <linearGradient id="g-tier-loki" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c7a52"/><stop offset="1" stop-color="#082a1c"/></linearGradient>
+            <linearGradient id="g-tier-thor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d4f94"/><stop offset="1" stop-color="#0f1b40"/></linearGradient>
+            <radialGradient id="g-glow"><stop offset="0" stop-color="#ffd27a" stop-opacity=".75"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+          </defs>
+          <ellipse cx="150" cy="260" rx="138" ry="14" fill="url(#g-gold)" opacity=".85"/>
+          <rect x="42" y="168" width="216" height="92" rx="10" fill="url(#g-tier-loki)"/>
+          <path d="M42 168 L258 168 L258 180 C252 180 252 192 246 192 C240 192 242 180 234 180 L214 180 C208 180 208 198 200 198 C192 198 194 180 186 180 L160 180 C154 180 154 190 148 190 C142 190 144 180 136 180 L110 180 C104 180 104 196 96 196 C88 196 90 180 82 180 L66 180 C60 180 60 188 54 188 C48 188 48 180 42 180 Z" fill="url(#g-gold)"/>
+          <ellipse cx="150" cy="168" rx="108" ry="12" fill="#2a9a68"/>
+          <rect x="42" y="214" width="216" height="22" fill="url(#g-gold)"/>
+          <text x="150" y="230" text-anchor="middle" class="cake-runes">ᚠᛖᛚᛁᛉ ᚲᚢᛗᛈᛚᛖᚨᚾᛟᛊ</text>
+          <rect x="82" y="112" width="136" height="62" rx="8" fill="url(#g-tier-thor)"/>
+          <ellipse cx="150" cy="112" rx="68" ry="9" fill="#4a72c4"/>
+          <g fill="#a6dcff">
+            <path d="M106 128 L114 140 L109 140 L116 156 L102 138 L107 138 Z"/>
+            <path d="M146 128 L154 140 L149 140 L156 156 L142 138 L147 138 Z"/>
+            <path d="M186 128 L194 140 L189 140 L196 156 L182 138 L187 138 Z"/>
+          </g>
+          <g transform="translate(116 64)">
+            <circle class="flame-glow" cx="0" cy="-12" r="22" fill="url(#g-glow)"/>
+            <rect x="-5" y="0" width="10" height="48" rx="2" fill="#4fe3a6"/>
+            <path d="M-5 10 L5 4 M-5 22 L5 16 M-5 34 L5 28" stroke="#0f4a33" stroke-width="2"/>
+            <path d="M0 0 V-4" stroke="#2b2b2b" stroke-width="1.5"/>
+            <path class="flame" d="M0 -24 C8 -12 8 -4 0 -2 C-8 -4 -8 -12 0 -24 Z" fill="#ffae42"/>
+            <path class="flame" d="M0 -15 C4 -9 4 -4 0 -3 C-4 -4 -4 -9 0 -15 Z" fill="#fff4c2"/>
+          </g>
+          <g transform="translate(150 58)">
+            <circle class="flame-glow" cx="0" cy="-12" r="22" fill="url(#g-glow)"/>
+            <rect x="-5" y="0" width="10" height="54" rx="2" fill="#e2b85c"/>
+            <path d="M-5 10 L5 4 M-5 22 L5 16 M-5 34 L5 28 M-5 46 L5 40" stroke="#8f6a22" stroke-width="2"/>
+            <path d="M0 0 V-4" stroke="#2b2b2b" stroke-width="1.5"/>
+            <path class="flame" d="M0 -24 C8 -12 8 -4 0 -2 C-8 -4 -8 -12 0 -24 Z" fill="#ffae42"/>
+            <path class="flame" d="M0 -15 C4 -9 4 -4 0 -3 C-4 -4 -4 -9 0 -15 Z" fill="#fff4c2"/>
+          </g>
+          <g transform="translate(184 64)">
+            <circle class="flame-glow" cx="0" cy="-12" r="22" fill="url(#g-glow)"/>
+            <rect x="-5" y="0" width="10" height="48" rx="2" fill="#a6dcff"/>
+            <path d="M-5 10 L5 4 M-5 22 L5 16 M-5 34 L5 28" stroke="#2d4f94" stroke-width="2"/>
+            <path d="M0 0 V-4" stroke="#2b2b2b" stroke-width="1.5"/>
+            <path class="flame" d="M0 -24 C8 -12 8 -4 0 -2 C-8 -4 -8 -12 0 -24 Z" fill="#ffae42"/>
+            <path class="flame" d="M0 -15 C4 -9 4 -4 0 -3 C-4 -4 -4 -9 0 -15 Z" fill="#fff4c2"/>
+          </g>
+        </svg>
+      </div>
+      <div id="wish-actions" class="wish-actions">
+        <button id="blow" class="btn btn-gold" type="button">Soplar las velas</button>
+        <button id="blow-mic" class="btn btn-ghost" type="button">Soplar de verdad, con el micrófono</button>
+      </div>
+      <p id="mic-msg" class="mic-msg" role="status" aria-live="polite"></p>
+      <div id="final" class="final" hidden>
+        <h3 id="final-title" class="final-title">Feliz cumpleaños, Violet</h3>
+        <p>Que nunca te falten motivos para tramar algo. Y que, pase lo que pase, sepas que en Asgard siempre tienes un hermano esperándote.</p>
+        <div class="final-actions">
+          <button id="to-credits" class="btn btn-gold" type="button">Ver los créditos</button>
+          <button id="replay" class="btn btn-ghost" type="button">Ver el Bifröst otra vez</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>Secretos de Loki encontrados: <b id="secret-count">0</b> de 3</p>
+      <p>Pista: los dioses responden cuando insistes. Y a veces, cuando escribes su nombre.</p>
+      <p>Forjado a mano en Midgard por tu hermano del trueno.</p>
+      <p class="fine">Página de fans sin fines comerciales, inspirada en Thor y Loki del Universo Cinematográfico de Marvel. Los personajes y las películas pertenecen a sus dueños; todas las ilustraciones de esta página son originales.</p>
+    </div>
+  </footer>
+</main>
+
+<!-- ===================== CRÉDITOS ===================== -->
+<div id="credits" class="credits" hidden role="dialog" aria-modal="true" aria-label="Créditos finales">
+  <div class="credits-ctrl">
+    <button id="credits-skip" type="button">Saltar</button>
+    <button id="credits-close" type="button">Cerrar</button>
+  </div>
+  <div id="credits-roll" class="credits-roll">
+    <p class="cr-title">Violet</p>
+    <p class="cr-sub">La Diosa de las Travesuras</p>
+    <div class="cr-block">
+      <p class="cr-head">Reparto</p>
+      <dl class="cr-list">
+        <div><dt>Loki</dt><dd>Viviana «Violet»</dd></div>
+        <div><dt>Thor</dt><dd>Gabo</dd></div>
+        <div><dt>Una serpiente</dt><dd>Viviana, otra vez</dd></div>
+        <div><dt>Tres ilusiones</dt><dd>También Viviana</dd></div>
+        <div><dt>El Mjölnir</dt><dd>Él mismo</dd></div>
+        <div><dt>Una taza de cafetería</dt><dd>En paz descanse</dd></div>
+      </dl>
+    </div>
+    <div class="cr-block">
+      <p class="cr-head">Equipo</p>
+      <dl class="cr-list">
+        <div><dt>Dirección</dt><dd>El Caos</dd></div>
+        <div><dt>Guion</dt><dd>Los escaldos de Asgard</dd></div>
+        <div><dt>Música original</dt><dd>Un trueno y una caja musical</dd></div>
+        <div><dt>Efectos de rayos</dt><dd>Thor, sin ayuda</dd></div>
+        <div><dt>Efectos de ilusiones</dt><dd>Loki, sin permiso</dd></div>
+        <div><dt>Línea temporal</dt><dd>Supervisada y aprobada</dd></div>
+        <div><dt>Catering</dt><dd>Lo que sobrevivió al «¡Otro!»</dd></div>
+      </dl>
+    </div>
+    <p class="cr-note">Ningún dios resultó herido durante esta producción. Thor sí, varias veces, pero se lo buscó.</p>
+    <p class="cr-note">Página de fans hecha a mano, sin fines comerciales, inspirada en Thor y Loki del Universo Cinematográfico de Marvel.</p>
+    <p class="cr-end">Basada en una amistad real.</p>
+  </div>
+  <div id="post" class="post" hidden>
+    <p class="post-label">Escena post-créditos</p>
+    <p class="post-place">Asgard. Un año después.</p>
+    <p class="post-line"><b>Thor</b> ¿Otra vez tú?</p>
+    <p class="post-line lk"><b>Loki</b> Siempre.</p>
+    <p class="post-return">Violet volverá</p>
+  </div>
+</div>
+
+<div id="bifrost" class="bifrost" aria-hidden="true"></div>
+<div id="flash" class="flash" aria-hidden="true"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha384-HOvlOYPIs/zjoIkWUGXkVmXsjr8GuZLV+Q+rcPwmJOVZVpvTSXQChiN4t9Euv9Vc" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha384-P8VzCVnT9NBUkMrpcIZrJbA7EBjJvh/fJS6PmP+4nLIM284DtsImIv8D0fFjIkeh" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js" integrity="sha384-xb96EMJeax+NLXMC88ZBa1xAeAW+kn+horHh/zFlbMLG2UPWhMJJSlv7fi57hS+Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js" integrity="sha384-QsPhgdP78a1erQNT34dj/oyh7uPCXUnT/FkptUa/56LnSGsbTBmdiAOfB7j+8K4A" crossorigin="anonymous"></script>
+<script>
+(() => {
+'use strict';
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const root = document.documentElement;
+const G = window.gsap, hasG = !!G;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(pointer: fine)').matches;
+const rand = (a, b) => a + Math.random() * (b - a);
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const RUNES = 'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ';
+const GREEN = ['#4fe3a6', '#b7ffd9', '#1f9c66', '#ffe3a1'];
+const BLUE = ['#a6dcff', '#ffffff', '#ffe3a1'];
+if (hasG) {
+  const pl = [window.ScrollTrigger, window.SplitText, window.ScrambleTextPlugin].filter(Boolean);
+  if (pl.length) G.registerPlugin(...pl);
+  root.classList.add('js-gsap');
+}
+const hasST = hasG && !!window.ScrollTrigger;
+const hasSplit = hasG && !!window.SplitText;
+const hasScr = hasG && !!window.ScrambleTextPlugin;
+const motion = hasG && !reduce;
+if (hasST) ScrollTrigger.config({ ignoreMobileResize: true });
+
+/* ================= SONIDO (todo sintetizado en el navegador) ================= */
+const Sound = {
+  ctx: null, master: null, bus: null, nb: null, on: true, _curve: null,
+  init() {
+    if (this.ctx) return true;
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return false;
+    try { this.ctx = new AC(); } catch (e) { return false; }
+    const c = this.ctx;
+    this.master = c.createGain(); this.master.gain.value = this.on ? .85 : 0;
+    const comp = c.createDynamicsCompressor(); comp.threshold.value = -14; comp.ratio.value = 4;
+    this.master.connect(comp); comp.connect(c.destination);
+    const d = c.createDelay(1); d.delayTime.value = .22;
+    const fb = c.createGain(); fb.gain.value = .36;
+    const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 3000;
+    const wet = c.createGain(); wet.gain.value = .32;
+    d.connect(lp); lp.connect(fb); fb.connect(d); lp.connect(wet); wet.connect(this.master);
+    this.bus = d;
+    const len = c.sampleRate * 3; this.nb = c.createBuffer(1, len, c.sampleRate);
+    const ch = this.nb.getChannelData(0); for (let i = 0; i < len; i++) ch[i] = Math.random() * 2 - 1;
+    return true;
+  },
+  resume() { if (this.ctx && this.ctx.state === 'suspended') this.ctx.resume(); },
+  ok() { return !!this.ctx && this.on; },
+  now() { return this.ctx.currentTime; },
+  setOn(v) { this.on = v; if (this.master) this.master.gain.setTargetAtTime(v ? .85 : 0, this.ctx.currentTime, .05); },
+  env(g, t, a, peak, dec) { g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(peak, t + a); g.gain.exponentialRampToValueAtTime(.0001, t + a + dec); },
+  noise(t, dur, type, freq, q = .7) {
+    const c = this.ctx, s = c.createBufferSource(); s.buffer = this.nb; s.loop = true;
+    const f = c.createBiquadFilter(); f.type = type; f.frequency.value = freq; f.Q.value = q;
+    const g = c.createGain(); s.connect(f); f.connect(g); g.connect(this.master);
+    s.start(t, Math.random() * 2); s.stop(t + dur + .05); return { f, g };
+  },
+  tone(f, t, { type = 'sine', peak = .2, a = .01, dec = .8, wet = true } = {}) {
+    const c = this.ctx, o = c.createOscillator(); o.type = type; o.frequency.value = f;
+    const g = c.createGain(); this.env(g, t, a, peak, dec); o.connect(g); g.connect(this.master);
+    if (wet) g.connect(this.bus); o.start(t); o.stop(t + a + dec + .05);
+  },
+  curve() {
+    if (this._curve) return this._curve;
+    const n = 1024, a = new Float32Array(n);
+    for (let i = 0; i < n; i++) { const x = i / (n - 1) * 2 - 1; a[i] = Math.tanh(2.6 * x); }
+    return (this._curve = a);
+  },
+  thunder(k = 1) {
+    if (!this.ok()) return; const c = this.ctx, t = this.now();
+    const a = this.noise(t, .35, 'highpass', 1500); this.env(a.g, t, .008, .6 * k, .3);
+    const b = this.noise(t, 3.4, 'lowpass', 1000, .8);
+    b.f.frequency.setValueAtTime(1100, t); b.f.frequency.exponentialRampToValueAtTime(80, t + 3);
+    this.env(b.g, t, .06, 1.1 * k, 3.2);
+    const o = c.createOscillator(); o.type = 'sine'; o.frequency.setValueAtTime(72, t); o.frequency.exponentialRampToValueAtTime(30, t + 1.6);
+    const og = c.createGain(); this.env(og, t, .02, .5 * k, 1.6); o.connect(og); og.connect(this.master); o.start(t); o.stop(t + 1.8);
+  },
+  braam(k = 1) {
+    if (!this.ok()) return; const c = this.ctx, t = this.now();
+    const f = c.createBiquadFilter(); f.type = 'lowpass'; f.Q.value = 3;
+    f.frequency.setValueAtTime(120, t); f.frequency.exponentialRampToValueAtTime(1500, t + .22); f.frequency.exponentialRampToValueAtTime(180, t + 2.6);
+    const ws = c.createWaveShaper(); ws.curve = this.curve();
+    const g = c.createGain(); this.env(g, t, .04, .5 * k, 2.8);
+    f.connect(ws); ws.connect(g); g.connect(this.master); g.connect(this.bus);
+    [32.7, 65.41, 98, 130.81].forEach(fr => [-7, 7].forEach(det => {
+      const o = c.createOscillator(); o.type = 'sawtooth'; o.frequency.value = fr; o.detune.value = det; o.connect(f); o.start(t); o.stop(t + 3);
+    }));
+  },
+  magic() {
+    if (!this.ok()) return; const t = this.now();
+    [659.25, 783.99, 987.77, 1174.66, 1318.51, 1567.98].forEach((f, i) => this.tone(f, t + i * .055, { type: 'triangle', peak: .11, dec: .7 }));
+  },
+  chime() {
+    if (!this.ok()) return; const t = this.now();
+    this.tone(1046.5, t, { type: 'triangle', peak: .12, dec: .9 }); this.tone(1567.98, t + .1, { type: 'triangle', peak: .1, dec: 1 });
+  },
+  tick() { if (!this.ok()) return; const t = this.now(); const n = this.noise(t, .04, 'highpass', 2600); this.env(n.g, t, .001, .22, .035); },
+  type() { if (!this.ok()) return; const t = this.now(); const n = this.noise(t, .03, 'bandpass', 3200, 2); this.env(n.g, t, .001, .1, .02); },
+  whoosh() {
+    if (!this.ok()) return; const t = this.now();
+    const n = this.noise(t, .55, 'bandpass', 400, 1.5); n.f.frequency.setValueAtTime(300, t); n.f.frequency.exponentialRampToValueAtTime(2200, t + .35);
+    this.env(n.g, t, .05, .3, .45);
+  },
+  zap() {
+    if (!this.ok()) return; const c = this.ctx, t = this.now();
+    const o = c.createOscillator(); o.type = 'square'; o.frequency.setValueAtTime(1700, t); o.frequency.exponentialRampToValueAtTime(110, t + .28);
+    const g = c.createGain(); this.env(g, t, .005, .08, .28); o.connect(g); g.connect(this.master); o.start(t); o.stop(t + .32);
+    const n = this.noise(t, .3, 'highpass', 3000); this.env(n.g, t, .005, .12, .25);
+  },
+  fail() {
+    if (!this.ok()) return; const c = this.ctx, t = this.now();
+    const o = c.createOscillator(); o.type = 'triangle'; o.frequency.setValueAtTime(240, t); o.frequency.exponentialRampToValueAtTime(105, t + .4);
+    const g = c.createGain(); this.env(g, t, .01, .2, .45); o.connect(g); g.connect(this.master); o.start(t); o.stop(t + .5);
+  },
+  poof() {
+    if (!this.ok()) return; const t = this.now();
+    const n = this.noise(t, .5, 'bandpass', 2000, 1.2); n.f.frequency.setValueAtTime(2600, t); n.f.frequency.exponentialRampToValueAtTime(300, t + .45);
+    this.env(n.g, t, .02, .35, .45); this.tone(880, t, { type: 'sine', peak: .05, dec: .3 });
+  },
+  smash() {
+    if (!this.ok()) return; const t = this.now();
+    const n = this.noise(t, .4, 'highpass', 1800); this.env(n.g, t, .002, .6, .35);
+    for (let i = 0; i < 6; i++) this.tone(rand(1800, 4200), t + i * .03, { type: 'triangle', peak: .06, dec: .15, wet: false });
+    this.tone(110, t, { type: 'sine', peak: .3, dec: .15, wet: false });
+  },
+  stamp() {
+    if (!this.ok()) return; const t = this.now();
+    this.tone(70, t, { type: 'sine', peak: .6, a: .002, dec: .3, wet: false });
+    const n = this.noise(t, .12, 'lowpass', 500); this.env(n.g, t, .002, .5, .1);
+  },
+  crack() {
+    if (!this.ok()) return; const t = this.now();
+    const n = this.noise(t, .15, 'highpass', 2500); this.env(n.g, t, .003, .5, .12);
+    this.tone(160, t, { type: 'sine', peak: .25, dec: .2, wet: false });
+  },
+  blow() { if (!this.ok()) return; const t = this.now(); const n = this.noise(t, 1, 'bandpass', 650, .5); this.env(n.g, t, .08, .45, .9); },
+  hum() {
+    if (!this.ok()) return null; const c = this.ctx, t = this.now();
+    const o = c.createOscillator(); o.type = 'sawtooth'; o.frequency.value = 55;
+    const o2 = c.createOscillator(); o2.type = 'sine'; o2.frequency.value = 110;
+    const f = c.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 300;
+    const g = c.createGain(); g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(.14, t + .2);
+    o.connect(f); o2.connect(f); f.connect(g); g.connect(this.master); o.start(t); o2.start(t);
+    let done = false;
+    return {
+      set(p) { const n = c.currentTime; o.frequency.setTargetAtTime(55 + p * 110, n, .05); o2.frequency.setTargetAtTime(110 + p * 220, n, .05); f.frequency.setTargetAtTime(300 + p * 1800, n, .05); g.gain.setTargetAtTime(.1 + p * .16, n, .05); },
+      stop() { if (done) return; done = true; const n = c.currentTime; g.gain.cancelScheduledValues(n); g.gain.setTargetAtTime(.0001, n, .06); o.stop(n + .4); o2.stop(n + .4); }
+    };
+  },
+  melody() {
+    if (!this.ok()) return;
+    const N = { G4: 392, A4: 440, B4: 493.88, C5: 523.25, D5: 587.33, E5: 659.25, F5: 698.46, G5: 783.99 };
+    const seq = [['G4',.75],['G4',.25],['A4',1],['G4',1],['C5',1],['B4',2],
+                 ['G4',.75],['G4',.25],['A4',1],['G4',1],['D5',1],['C5',2],
+                 ['G4',.75],['G4',.25],['G5',1],['E5',1],['C5',1],['B4',1],['A4',2],
+                 ['F5',.75],['F5',.25],['E5',1],['C5',1],['D5',1],['C5',3]];
+    const beat = .42; let t = this.now() + .2;
+    for (const [n, b] of seq) {
+      const f = N[n];
+      this.tone(f, t, { type: 'sine', peak: .2, a: .005, dec: Math.max(.5, b * beat * 1.6) });
+      this.tone(f * 2, t, { type: 'sine', peak: .045, a: .005, dec: .35 });
+      this.tone(f / 2, t, { type: 'triangle', peak: .05, a: .01, dec: b * beat });
+      t += b * beat;
+    }
+  }
+};
+function audio() { Sound.init(); Sound.resume(); }
+
+/* ================= LIENZOS: estrellas, rayos, energía, confeti ================= */
+const FX = (() => {
+  const sky = $('#sky'), fx = $('#fx');
+  const sc = sky.getContext('2d'), fc = fx.getContext('2d');
+  let W = innerWidth, H = innerHeight, DPR = 1, lastW = 0;
+  let stars = [], parts = [], bolts = [], snakes = [], shoot = null, nextShoot = performance.now() + 6000;
+  let raf = 0, last = 0, running = false;
+
+  function resize() {
+    DPR = Math.min(window.devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight;
+    [sky, fx].forEach(c => { c.width = Math.round(W * DPR); c.height = Math.round(H * DPR); });
+    sc.setTransform(DPR, 0, 0, DPR, 0, 0); fc.setTransform(DPR, 0, 0, DPR, 0, 0);
+    if (Math.abs(W - lastW) > 40 || !stars.length) {
+      lastW = W; stars = [];
+      const n = Math.min(260, Math.round(W * H / 4800));
+      for (let i = 0; i < n; i++) {
+        const big = Math.random() < .07;
+        stars.push({ x: Math.random() * W, y: Math.random() * H * 1.5, r: big ? rand(1.1, 1.9) : rand(.35, 1), d: rand(.04, .3), p: rand(0, 6.28), s: rand(.5, 2),
+          c: Math.random() < .14 ? '#a8f7d2' : (Math.random() < .22 ? '#cfe6ff' : '#fff6e2') });
+      }
+    }
+    drawSky(performance.now());
+  }
+  function drawSky(t) {
+    sc.clearRect(0, 0, W, H);
+    const sy = reduce ? 0 : scrollY, span = H * 1.5;
+    for (const s of stars) {
+      let y = (s.y - sy * s.d) % span; if (y < 0) y += span;
+      if (y > H + 2) continue;
+      sc.globalAlpha = reduce ? .75 : .4 + .6 * Math.abs(Math.sin(t * .001 * s.s + s.p));
+      sc.fillStyle = s.c;
+      if (s.r > 1) { sc.beginPath(); sc.arc(s.x, y, s.r, 0, 6.283); sc.fill(); }
+      else sc.fillRect(s.x, y, s.r * 1.6, s.r * 1.6);
+    }
+    if (!reduce) {
+      if (!shoot && t > nextShoot) shoot = { x: rand(.1, .7) * W, y: rand(.05, .35) * H, l: 0 };
+      if (shoot) {
+        shoot.l += 1 / 50; const k = shoot.l, x = shoot.x + k * 360, y = shoot.y + k * 140;
+        const gr = sc.createLinearGradient(x - 90, y - 35, x, y); gr.addColorStop(0, 'rgba(255,255,255,0)'); gr.addColorStop(1, 'rgba(255,255,255,.9)');
+        sc.globalAlpha = Math.sin(k * Math.PI); sc.strokeStyle = gr; sc.lineWidth = 1.6; sc.beginPath(); sc.moveTo(x - 90, y - 35); sc.lineTo(x, y); sc.stroke();
+        if (k >= 1) { shoot = null; nextShoot = t + rand(7000, 14000); }
+      }
+    }
+    sc.globalAlpha = 1;
+  }
+  function boltPts(x1, y1, x2, y2, disp) {
+    let pts = [[x1, y1], [x2, y2]], d = disp;
+    while (d > 2.5) {
+      const np = [pts[0]];
+      for (let j = 0; j < pts.length - 1; j++) {
+        const [ax, ay] = pts[j], [bx, by] = pts[j + 1];
+        const dx = bx - ax, dy = by - ay, len = Math.hypot(dx, dy) || 1, off = (Math.random() - .5) * d;
+        np.push([(ax + bx) / 2 - dy / len * off, (ay + by) / 2 + dx / len * off], [bx, by]);
+      }
+      pts = np; d /= 2;
+    }
+    return pts;
+  }
+  function strike(x1, y1, x2, y2, { width = 3, life = .45, branches = 3, color = '#a6dcff', alpha = 1 } = {}) {
+    const L = Math.hypot(x2 - x1, y2 - y1);
+    const main = boltPts(x1, y1, x2, y2, L * .22);
+    const segs = [{ pts: main, w: width }];
+    for (let b = 0; b < branches; b++) {
+      const i = Math.floor(rand(.2, .75) * main.length), [bx, by] = main[i];
+      const ang = Math.atan2(y2 - y1, x2 - x1) + rand(-.9, .9), len = L * rand(.15, .35);
+      segs.push({ pts: boltPts(bx, by, bx + Math.cos(ang) * len, by + Math.sin(ang) * len, len * .3), w: width * .45 });
+    }
+    bolts.push({ segs, life: 0, max: reduce ? .25 : life, color, alpha });
+    wake();
+  }
+  function burst(x, y, { count = 24, colors = GREEN, speed = [60, 260], life = [.6, 1.2], size = [1.2, 3], gravity = 60, drag = .94, shape = 'dot', angle = null, spread = Math.PI * 2 } = {}) {
+    if (reduce) count = Math.ceil(count / 3);
+    for (let i = 0; i < count; i++) {
+      const a = angle == null ? Math.random() * Math.PI * 2 : angle + (Math.random() - .5) * spread, v = rand(speed[0], speed[1]);
+      parts.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v, life: 0, max: rand(life[0], life[1]), size: rand(size[0], size[1]), color: pick(colors), g: gravity, drag, shape, rot: rand(0, 6.28), vr: rand(-6, 6) });
+    }
+    wake();
+  }
+  // Energía estilo Kirby: burbujas oscuras con borde brillante
+  function krackle(x, y, { n = 7, spread = 40, color = '#a6dcff', size = [3, 12], life = [.6, 1.2] } = {}) {
+    if (reduce) n = Math.ceil(n / 3);
+    for (let i = 0; i < n; i++) parts.push({ x: x + rand(-spread, spread), y: y + rand(-spread, spread), vx: rand(-14, 14), vy: rand(-14, 14), life: 0, max: rand(life[0], life[1]), size: rand(size[0], size[1]), color, g: 0, drag: .96, shape: 'ring', rot: 0, vr: 0 });
+    wake();
+  }
+  function confetti(n = 170) {
+    const colors = ['#e2b85c', '#ffe3a1', '#4fe3a6', '#1f9c66', '#a6dcff', '#c23a43', '#f4f1ff'];
+    if (reduce) n = Math.ceil(n / 4);
+    for (let i = 0; i < n; i++) parts.push({ x: rand(0, W), y: rand(-H * .6, -10), vx: rand(-40, 40), vy: rand(70, 210), life: 0, max: rand(4, 6.5), size: rand(6, 11), color: pick(colors), g: 30, drag: .995, shape: 'rect', rot: rand(0, 6.28), vr: rand(-5, 5) });
+    wake();
+  }
+  function snake() { snakes.push({ t: 0, dur: 6.5, y: H * rand(.62, .8) }); wake(); }
+
+  function stepParts(dt) {
+    if (!parts.length) return;
+    const k60 = dt * 60;
+    for (let i = parts.length - 1; i >= 0; i--) {
+      const p = parts[i]; p.life += dt;
+      if (p.life >= p.max) { parts.splice(i, 1); continue; }
+      const dr = Math.pow(p.drag, k60); p.vx *= dr; p.vy *= dr; p.vy += p.g * dt;
+      p.x += p.vx * dt; p.y += p.vy * dt; p.rot += p.vr * dt;
+    }
+    fc.save(); fc.globalCompositeOperation = 'lighter';
+    for (const p of parts) {
+      if (p.shape !== 'dot') continue;
+      const a = 1 - p.life / p.max; fc.fillStyle = p.color;
+      fc.globalAlpha = a; fc.beginPath(); fc.arc(p.x, p.y, p.size * (.6 + .4 * a), 0, 6.283); fc.fill();
+      fc.globalAlpha = a * .22; fc.beginPath(); fc.arc(p.x, p.y, p.size * 3.2, 0, 6.283); fc.fill();
+    }
+    fc.restore();
+    for (const p of parts) {
+      if (p.shape === 'rect') {
+        fc.globalAlpha = Math.min(1, (p.max - p.life) / .8); fc.fillStyle = p.color;
+        fc.save(); fc.translate(p.x + Math.sin(p.life * 3 + p.rot) * 10, p.y); fc.rotate(p.rot); fc.scale(1, Math.cos(p.life * 5 + p.rot));
+        fc.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2); fc.restore();
+      } else if (p.shape === 'smoke') {
+        fc.globalAlpha = (1 - p.life / p.max) * .28; fc.fillStyle = p.color;
+        fc.beginPath(); fc.arc(p.x, p.y, p.size * (1 + p.life * 2.2), 0, 6.283); fc.fill();
+      } else if (p.shape === 'ring') {
+        const k = p.life / p.max, r = p.size * (.35 + .75 * Math.sin(Math.min(1, k * 1.5) * Math.PI / 2));
+        fc.globalAlpha = k < .2 ? k / .2 : 1 - (k - .2) / .8;
+        fc.fillStyle = '#04081a'; fc.beginPath(); fc.arc(p.x, p.y, r, 0, 6.283); fc.fill();
+        fc.lineWidth = 1.6; fc.strokeStyle = p.color; fc.shadowColor = p.color; fc.shadowBlur = 10; fc.stroke(); fc.shadowBlur = 0;
+      }
+    }
+    fc.globalAlpha = 1;
+    if (parts.length > 1300) parts.splice(0, parts.length - 1300);
+  }
+  function stepBolts(dt) {
+    for (let i = bolts.length - 1; i >= 0; i--) {
+      const b = bolts[i]; b.life += dt;
+      if (b.life >= b.max) { bolts.splice(i, 1); continue; }
+      const k = b.life / b.max; let a = (1 - k) * b.alpha; if (k < .4 && Math.random() < .3) a *= .35;
+      fc.save(); fc.globalCompositeOperation = 'lighter'; fc.lineJoin = 'round'; fc.lineCap = 'round';
+      for (const s of b.segs) {
+        fc.beginPath(); s.pts.forEach(([x, y], j) => j ? fc.lineTo(x, y) : fc.moveTo(x, y));
+        fc.strokeStyle = b.color; fc.globalAlpha = a * .5; fc.lineWidth = s.w * 4; fc.shadowColor = b.color; fc.shadowBlur = 26; fc.stroke();
+        fc.shadowBlur = 0; fc.globalAlpha = a; fc.strokeStyle = '#ffffff'; fc.lineWidth = s.w; fc.stroke();
+      }
+      fc.restore();
+    }
+  }
+  function stepSnakes(dt) {
+    for (let i = snakes.length - 1; i >= 0; i--) {
+      const s = snakes[i]; s.t += dt; const pr = s.t / s.dur;
+      if (pr >= 1) { snakes.splice(i, 1); continue; }
+      const hx = -160 + (W + 320) * pr, yAt = x => s.y + Math.sin(x * .035 - s.t * 7) * 16;
+      for (let j = 22; j >= 0; j--) {
+        const x = hx - j * 11, y = yAt(x), r = j === 0 ? 11 : Math.max(3, 10 - j * .3);
+        fc.fillStyle = j % 2 ? '#1f9c66' : '#2fbf7f'; fc.beginPath(); fc.arc(x, y, r, 0, 6.283); fc.fill();
+        if (j % 3 === 0 && j > 0) { fc.fillStyle = '#e2b85c'; fc.beginPath(); fc.arc(x, y - r * .3, r * .28, 0, 6.283); fc.fill(); }
+      }
+      const y = yAt(hx);
+      fc.fillStyle = '#ffe3a1'; fc.beginPath(); fc.arc(hx + 4, y - 4, 2.6, 0, 6.283); fc.fill();
+      fc.fillStyle = '#071a10'; fc.beginPath(); fc.arc(hx + 4.8, y - 4, 1.2, 0, 6.283); fc.fill();
+      if (Math.sin(s.t * 14) > 0) {
+        fc.strokeStyle = '#e0454f'; fc.lineWidth = 1.6; fc.beginPath();
+        fc.moveTo(hx + 11, y); fc.lineTo(hx + 20, y); fc.lineTo(hx + 24, y - 3); fc.moveTo(hx + 20, y); fc.lineTo(hx + 24, y + 3); fc.stroke();
+      }
+    }
+  }
+  function frame(now) {
+    const dt = last ? Math.min(.05, (now - last) / 1000) : .016; last = now;
+    if (!reduce) drawSky(now);
+    fc.clearRect(0, 0, W, H);
+    stepParts(dt); stepBolts(dt); stepSnakes(dt);
+    if (reduce && !parts.length && !bolts.length && !snakes.length) { running = false; last = 0; return; }
+    raf = requestAnimationFrame(frame);
+  }
+  function wake() { if (!running && !document.hidden) { running = true; last = 0; raf = requestAnimationFrame(frame); } }
+  document.addEventListener('visibilitychange', () => { if (document.hidden) { cancelAnimationFrame(raf); running = false; } else wake(); });
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(resize, 120); });
+  resize(); if (!reduce) wake();
+  return { strike, burst, krackle, confetti, snake, get W() { return W; }, get H() { return H; } };
+})();
+
+/* ================= Utilidades ================= */
+const toastEl = $('#toast'); let toastTimer;
+function toast(msg, ms = 4600) { toastEl.textContent = msg; toastEl.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => toastEl.classList.remove('show'), ms); }
+function flash(s = .8) { const f = $('#flash'); f.style.transition = 'none'; f.style.opacity = String(reduce ? s * .35 : s); void f.offsetWidth; f.style.transition = 'opacity .75s ease-out'; f.style.opacity = '0'; }
+// Sacude el contenido de las secciones, nunca <main>: un transform en <main> rompe la sección fijada (pin) de las escenas.
+function shakeMain(px = 7) { if (!motion) return; G.fromTo('.hero-inner, main > section > .wrap, .scenes-viewport', { x: -px }, { x: 0, duration: .6, ease: 'elastic.out(1,.25)', overwrite: 'auto' }); }
+function cinema(on) { root.classList.toggle('cinema', !!on); }
+const center = el => { const r = el.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2, r }; };
+const heroTitle = $('#hero-title');
+function aberr() { heroTitle.classList.add('aberr'); setTimeout(() => heroTitle.classList.remove('aberr'), 320); }
+
+/* ================= Secretos de Loki ================= */
+const found = new Set((store.get('violet-secretos') || '').split(',').filter(Boolean));
+const countEl = $('#secret-count'); countEl.textContent = found.size;
+function findSecret(id, msg) {
+  const isNew = !found.has(id); found.add(id); store.set('violet-secretos', [...found].join(','));
+  countEl.textContent = found.size; Sound.chime(); toast(msg);
+  if (isNew && found.size === 3) setTimeout(() => { toast('Encontraste los tres secretos. Loki está orgullosa, aunque nunca lo va a decir.', 5600); FX.confetti(120); Sound.magic(); }, 4800);
+}
+function storm() {
+  for (let i = 0; i < 6; i++) setTimeout(() => {
+    const x = rand(.08, .92) * FX.W, y = rand(.4, .85) * FX.H; FX.strike(x, -20, x + rand(-120, 120), y, { branches: 3 });
+    FX.krackle(x, y, { n: 6 }); flash(.45); if (i % 2 === 0) Sound.thunder(.7);
+  }, i * 260);
+  shakeMain(9);
+  findSecret('tormenta', 'Secreto encontrado: el Dios del Trueno te saluda con una tormenta.');
+}
+let lokiTimer;
+function lokiMode() {
+  if (root.classList.contains('loki-mode')) return;
+  root.classList.add('loki-mode'); Sound.magic();
+  FX.burst(FX.W / 2, FX.H / 2, { count: 140, colors: GREEN, speed: [120, 620], life: [.8, 1.6], gravity: 40 });
+  findSecret('loki', 'Secreto encontrado: Loki tomó el control de la página. Todo es verde y dorado ahora.');
+  clearTimeout(lokiTimer);
+  lokiTimer = setTimeout(() => { root.classList.remove('loki-mode'); toast('Thor recuperó el control. Más o menos.'); }, 9000);
+}
+function snakeEgg() { FX.snake(); findSecret('serpiente', 'Secreto encontrado: ¿te acuerdas de la serpiente? Thor todavía tiene la cicatriz.'); }
+
+/* ================= EL SELLO ================= */
+const gate = $('#gate'), gForm = $('#gate-form'), gInput = $('#gate-input'), gMsg = $('#gate-msg');
+let opened = false, tries = 0, spin = null;
+const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z]/g, '');
+if (motion) spin = G.to('.seal-ring', { rotation: 360, svgOrigin: '120 120', duration: 50, repeat: -1, ease: 'none' });
+if (store.get('violet-abierto')) { gInput.value = 'Violet'; gMsg.textContent = 'Ya conoces el nombre. Rompe el sello otra vez.'; }
+function say(t) { gMsg.textContent = t; }
+function shakeGate() { gate.classList.remove('shake'); void gate.offsetWidth; gate.classList.add('shake'); }
+gForm.addEventListener('submit', e => {
+  e.preventDefault(); if (opened) return; audio();
+  const v = norm(gInput.value);
+  if (!v) { say('Escribe algo, hermana. Hasta Loki tiene nombre.'); shakeGate(); return; }
+  if (['violet', 'violeta', 'violetta', 'viviana', 'vivi'].includes(v)) { say('Ese es. El sello te reconoce.'); openGate(); return; }
+  if (v === 'loki') { say('Te delataste tú solita. Tramposa. Pasa.'); openGate(); return; }
+  tries++;
+  if (['thor', 'gabo', 'gabriel'].includes(v)) say('Ese es el nombre de tu hermano, no el tuyo. Intenta otra vez.');
+  else if (tries === 1) say('Mmm. Eso suena a algo que Loki diría para engañarme. Otra vez.');
+  else if (tries === 2) say('Pista del trueno: es un color y empieza con V.');
+  else { say('Está bien. Loki nunca sigue las reglas, así que tú tampoco. Adelante.'); setTimeout(openGate, 1400); return; }
+  shakeGate(); Sound.fail();
+});
+function unlock() {
+  gate.hidden = true; root.classList.remove('locked');
+  $('#sound').hidden = false;
+  if (store.get('violet-digna')) enableSummon(false);
+  if (spin) spin.kill();
+  if (hasST) ScrollTrigger.refresh();
+  ambient();
+}
+function openGate(instant = false) {
+  if (opened) return; opened = true;
+  store.set('violet-abierto', '1');
+  document.title = 'Feliz cumpleaños, Violet';
+  gInput.blur();
+  if (instant === true || !motion) { unlock(); return; }
+  const c = center($('.seal'));
+  const tl = G.timeline();
+  if (spin) tl.to(spin, { timeScale: 45, duration: 1.2, ease: 'power2.in' }, 0);
+  tl.to('.seal', { scale: 1.12, duration: 1.2, ease: 'power2.in' }, 0)
+    .add(() => { Sound.magic(); FX.burst(c.x, c.y, { count: 70, colors: GREEN, speed: [80, 400], gravity: 20 }); FX.krackle(c.x, c.y, { n: 10, spread: 90, color: '#4fe3a6' }); }, .1)
+    .add(() => { FX.strike(c.x + rand(-60, 60), -20, c.x, c.y, { width: 3.4, branches: 4 }); flash(.9); Sound.thunder(1); }, 1.05)
+    .add(() => playIntro(() => { unlock(); heroIntro(); }), 1.3);
+}
+
+/* ================= INTRO DE ESTUDIO ================= */
+let introTl = null;
+function playIntro(done) {
+  const intro = $('#intro'), panels = $$('.panel', intro), studio = $('#studio'), stxt = $('#studio-text'), ssub = $('#studio-sub');
+  intro.hidden = false; cinema(true);
+  let finished = false;
+  const end = () => { if (finished) return; finished = true; intro.hidden = true; gate.hidden = true; cinema(false); done(); };
+  const tl = G.timeline({ onComplete: end });
+  tl.fromTo(intro, { autoAlpha: 0 }, { autoAlpha: 1, duration: .2 })
+    .add(() => { gate.hidden = true; }, .22)
+    .fromTo('#intro-stack', { scale: 1.35 }, { scale: 1, duration: 2.6, ease: 'power2.out' }, .1);
+  let t = .15;
+  panels.forEach((p, i) => {
+    const d = Math.max(.075, .2 - i * .012);
+    tl.set(p, { autoAlpha: 1, zIndex: i + 1 }, t)
+      .fromTo(p, { rotationY: -40, transformOrigin: '0% 50%' }, { rotationY: 0, duration: d, ease: 'power1.out' }, t)
+      .add(() => Sound.tick(), t);
+    if (i > 0) tl.set(panels[i - 1], { autoAlpha: 0 }, t + d);
+    t += d;
+  });
+  tl.set(panels[panels.length - 1], { autoAlpha: 0 }, t + .05)
+    .set(studio, { autoAlpha: 1 }, t + .05)
+    .fromTo('.studio-box', { scale: 1.7, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: .35, ease: 'power3.out' }, t + .05)
+    .add(() => { Sound.braam(); flash(.35); }, t + .05)
+    .add(() => { studio.classList.add('glitch'); Sound.zap(); }, t + 1.2);
+  if (hasScr) tl.to(stxt, { duration: .6, scrambleText: { text: 'Violet Studios', chars: RUNES, speed: .8 } }, t + 1.25);
+  else tl.add(() => { stxt.textContent = 'Violet Studios'; }, t + 1.3);
+  tl.add(() => { studio.classList.add('loki'); Sound.magic(); const c = center($('.studio-box')); FX.burst(c.x, c.y, { count: 80, colors: GREEN, speed: [100, 520] }); FX.krackle(c.x, c.y, { n: 10, spread: 160, color: '#4fe3a6' }); }, t + 1.5)
+    .to(ssub, { opacity: 1, letterSpacing: '.35em', duration: .8 }, t + 1.7)
+    .to(intro, { autoAlpha: 0, duration: .6 }, t + 3.1);
+  introTl = tl;
+  $('#intro-skip').onclick = () => { tl.kill(); end(); };
+}
+
+/* ================= PÓSTER ================= */
+const heroName = $('#hero-name'), heroRunes = $('#hero-runes');
+function heroIntro() {
+  if (!motion) return;
+  const tl = G.timeline();
+  tl.from('.hero-kicker', { opacity: 0, letterSpacing: '1em', duration: .9, ease: 'power3.out' }, .05)
+    .fromTo(heroTitle, { '--w': 100, opacity: 0, scale: 1.5 }, { '--w': 260, opacity: 1, scale: 1, duration: .9, ease: 'power3.out' }, .15)
+    .add(() => {
+      const c = center(heroTitle);
+      FX.strike(c.x + rand(-140, 140), -30, c.x, c.y - c.r.height * .1, { width: 3.8, branches: 5 });
+      flash(.8); Sound.thunder(.9); Sound.braam(.6); shakeMain(10); aberr();
+      FX.burst(c.x, c.y, { count: 60, colors: BLUE, speed: [100, 460], gravity: 140 });
+      FX.krackle(c.x, c.y, { n: 14, spread: c.r.width * .45, color: '#a6dcff' });
+    }, 1.05)
+    .to(heroTitle, { '--w': 860, duration: .35, ease: 'expo.out' }, 1.07)
+    .from('.hero-icon', { x: i => i ? 160 : -160, opacity: 0, rotation: i => i ? 40 : -40, duration: 1, ease: 'back.out(1.7)' }, 1.15)
+    .from('.hero-tag', { opacity: 0, letterSpacing: '1.2em', duration: 1.1, ease: 'power3.out' }, 1.3)
+    .from(heroRunes, { opacity: 0, duration: .3, onStart: () => { if (hasScr) G.to(heroRunes, { duration: 1.8, scrambleText: { text: heroRunes.textContent, chars: RUNES, speed: .5 } }); } }, 1.5)
+    .from(['.hero-runes-cap', '.billing', '.release'], { opacity: 0, y: 14, stagger: .12, duration: .8, ease: 'power2.out' }, 1.7)
+    .from(['.hero .hint', '.scroll-cue'], { opacity: 0, duration: .8 }, 2.2);
+}
+function ambient() {
+  if (reduce) return;
+  let visible = true;
+  if ('IntersectionObserver' in window) new IntersectionObserver(([en]) => { visible = en.isIntersecting; }, { threshold: .15 }).observe($('#inicio'));
+  (function tick() {
+    setTimeout(() => {
+      if (visible && !document.hidden) {
+        if (Math.random() < .35) {
+          const c = center(heroTitle); FX.strike(c.x + rand(-200, 200), -10, c.x + rand(-c.r.width * .3, c.r.width * .3), c.r.top + 10, { width: 2.2, branches: 2, life: .35, alpha: .8 }); aberr();
+        } else { const x = rand(.05, .95) * FX.W; FX.strike(x, -10, x + rand(-90, 90), rand(.14, .32) * FX.H, { width: 1.6, branches: 2, life: .35, alpha: .55 }); }
+      }
+      tick();
+    }, rand(4200, 8000));
+  })();
+  (function kr() {
+    setTimeout(() => {
+      if (visible && !document.hidden) {
+        const t = center($('#duo-thor')), l = center($('#duo-loki'));
+        FX.krackle(t.x, t.y, { n: 4, spread: t.r.width * .45, color: '#a6dcff', size: [2, 9] });
+        FX.krackle(l.x, l.y, { n: 4, spread: l.r.width * .45, color: '#4fe3a6', size: [2, 9] });
+      }
+      kr();
+    }, 1300);
+  })();
+}
+// Parallax del póster
+if (motion) {
+  const qs = [
+    [G.quickTo('#hero-title', 'x', { duration: .8, ease: 'power3' }), G.quickTo('#hero-title', 'y', { duration: .8, ease: 'power3' }), 10],
+    [G.quickTo('#duo-thor', 'x', { duration: 1, ease: 'power3' }), G.quickTo('#duo-thor', 'y', { duration: 1, ease: 'power3' }), -26],
+    [G.quickTo('#duo-loki', 'x', { duration: 1, ease: 'power3' }), G.quickTo('#duo-loki', 'y', { duration: 1, ease: 'power3' }), -26],
+    [G.quickTo('.hero-ring-wrap', 'y', { duration: 1.2, ease: 'power3' }), null, 18]
+  ];
+  const move = (nx, ny) => qs.forEach(([qx, qy, k]) => { if (qy) { qx(nx * k); qy(ny * k); } else qx(ny * k); });
+  if (fine) addEventListener('pointermove', e => move(e.clientX / innerWidth - .5, e.clientY / innerHeight - .5), { passive: true });
+  else if (window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission !== 'function')
+    addEventListener('deviceorientation', e => { if (e.gamma == null) return; move(G.utils.clamp(-.5, .5, e.gamma / 60), G.utils.clamp(-.5, .5, (e.beta - 45) / 60)); }, { passive: true });
+}
+// Toques: rayo, hechizo y secretos
+let thorTaps = 0, thorT, lokiTaps = 0, lokiT, nameTaps = 0, nameT;
+$('#duo-thor').addEventListener('click', e => {
+  audio(); const c = center(e.currentTarget.querySelector('svg'));
+  FX.strike(c.x + rand(-80, 80), -20, c.x, c.y - c.r.height * .25, { branches: 2 }); FX.krackle(c.x, c.y, { n: 8, spread: 50 }); flash(.3); Sound.thunder(.5); aberr();
+  thorTaps++; clearTimeout(thorT); thorT = setTimeout(() => thorTaps = 0, 2500);
+  if (thorTaps >= 3) { thorTaps = 0; storm(); }
+});
+$('#duo-loki').addEventListener('click', e => {
+  audio(); const c = center(e.currentTarget.querySelector('svg'));
+  FX.burst(c.x, c.y, { count: 40, colors: GREEN, speed: [60, 280], gravity: -20 }); FX.krackle(c.x, c.y, { n: 8, spread: 50, color: '#4fe3a6' }); Sound.magic();
+  lokiTaps++; clearTimeout(lokiT); lokiT = setTimeout(() => lokiTaps = 0, 2500);
+  if (lokiTaps >= 3) { lokiTaps = 0; lokiMode(); }
+});
+heroName.addEventListener('click', () => {
+  audio(); const c = center(heroName);
+  FX.burst(rand(c.r.left, c.r.right), rand(c.r.top, c.r.bottom), { count: 14, colors: GREEN, speed: [40, 160] });
+  if (motion) G.fromTo(heroTitle, { skewX: -8 }, { skewX: 0, duration: .5, ease: 'elastic.out(1,.3)' });
+  nameTaps++; clearTimeout(nameT); nameT = setTimeout(() => nameTaps = 0, 3000);
+  if (nameTaps >= 5) { nameTaps = 0; snakeEgg(); }
+});
+let typed = '';
+addEventListener('keydown', e => {
+  if (!opened || e.target.closest('input,textarea') || e.key.length !== 1) return;
+  typed = (typed + e.key.toLowerCase()).slice(-12);
+  if (typed.endsWith('loki')) { audio(); lokiMode(); typed = ''; }
+  else if (typed.endsWith('thor')) { audio(); storm(); typed = ''; }
+  else if (typed.endsWith('serpiente')) { audio(); snakeEgg(); typed = ''; }
+});
+if (fine && !reduce) {
+  let lt = 0;
+  addEventListener('pointermove', e => {
+    const n = performance.now(); if (n - lt < 30) return; lt = n;
+    FX.burst(e.clientX, e.clientY, { count: 2, speed: [8, 46], life: [.45, .9], size: [.8, 2], gravity: -12, colors: ['#4fe3a6', '#ffe3a1', '#b7ffd9'] });
+  }, { passive: true });
+}
+
+/* ================= Barra de avance ================= */
+const bar = $('#progress'); let ticking = false;
+addEventListener('scroll', () => {
+  if (ticking) return; ticking = true;
+  requestAnimationFrame(() => { const max = document.documentElement.scrollHeight - innerHeight; bar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`; ticking = false; });
+}, { passive: true });
+
+/* ================= SCROLL CINEMATOGRÁFICO ================= */
+if (hasST && !reduce) {
+  // El póster se aleja al bajar
+  G.to('.hero-inner', { yPercent: 18, scale: .9, opacity: .25, ease: 'none', scrollTrigger: { trigger: '#inicio', start: 'top top', end: 'bottom top', scrub: true } });
+
+  // Reparto: entradas con rayo y con magia, barras y números
+  $$('.char').forEach((card, i) => {
+    const inner = card.querySelector('.char-inner');
+    G.from(card, { x: i ? 160 : -160, rotationY: i ? -35 : 35, opacity: 0, duration: 1.1, ease: 'power3.out',
+      scrollTrigger: { trigger: card, start: 'top 82%', once: true, onEnter: () => {
+        setTimeout(() => {
+          const c = center(card);
+          if (i === 0) { FX.strike(c.x + rand(-40, 40), -20, c.x, c.r.top + 60, { branches: 3 }); FX.krackle(c.x, c.r.top + 80, { n: 10, spread: 80 }); flash(.3); Sound.thunder(.5); }
+          else { FX.burst(c.x, c.r.top + 80, { count: 60, colors: GREEN, speed: [60, 320], gravity: -20 }); FX.krackle(c.x, c.r.top + 80, { n: 10, spread: 80, color: '#4fe3a6' }); Sound.magic(); }
+        }, 450);
+      } } });
+    G.from(card.querySelectorAll('.stat-fill'), { scaleX: 0, duration: 1.3, stagger: .12, ease: 'power3.out', scrollTrigger: { trigger: card, start: 'top 70%', once: true } });
+    card.querySelectorAll('.stat-num[data-v]').forEach(n => {
+      const v = +n.dataset.v, o = { v: 0 };
+      G.to(o, { v, duration: 1.3, ease: 'power2.out', onUpdate: () => { n.textContent = Math.round(o.v); }, scrollTrigger: { trigger: card, start: 'top 70%', once: true } });
+    });
+    if (fine) {
+      const rx = G.quickTo(inner, 'rotationX', { duration: .5, ease: 'power3' }), ry = G.quickTo(inner, 'rotationY', { duration: .5, ease: 'power3' });
+      inner.addEventListener('pointermove', e => {
+        const r = inner.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+        rx((.5 - py) * 12); ry((px - .5) * 14); inner.style.setProperty('--mx', px * 100 + '%'); inner.style.setProperty('--my', py * 100 + '%');
+      });
+      inner.addEventListener('pointerleave', () => { rx(0); ry(0); });
+    }
+  });
+
+  // Escenas en horizontal
+  root.classList.add('h-pin');
+  const track = $('#scenes-track'), scenes = $$('.scene');
+  const dist = () => Math.max(0, track.scrollWidth - document.documentElement.clientWidth);
+  const skew = G.quickTo(scenes, 'skewX', { duration: .5, ease: 'power3' });
+  G.to(track, { x: () => -dist(), ease: 'none', scrollTrigger: {
+    trigger: '#escenas', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: .8, invalidateOnRefresh: true, anticipatePin: 1, refreshPriority: 1,
+    onUpdate: self => skew(G.utils.clamp(-8, 8, self.getVelocity() / -260)), onScrubComplete: () => skew(0)
+  } });
+
+  // Mjölnir: la sección se oscurece con barras de cine al acercarse
+  ScrollTrigger.create({ trigger: '.stage', start: 'top 70%', end: 'bottom 30%', onToggle: self => { if (!holdingNow()) cinema(self.isActive); } });
+
+  // Línea temporal sagrada que se dibuja al bajar
+  $$('.timeline path').forEach((p, i) => {
+    const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L;
+    G.to(p, { strokeDashoffset: 0, ease: 'none', scrollTrigger: { trigger: '.timeline', start: i ? 'top 75%' : 'top 90%', end: 'bottom 40%', scrub: true } });
+  });
+
+  // Expediente: se escribe a máquina y cae el sello
+  const file = $('#tva-file'), stampEl = $('#stamp');
+  G.set(stampEl, { autoAlpha: 0 });
+  ScrollTrigger.create({ trigger: '.crt', start: 'top 70%', once: true, onEnter: () => {
+    const go = () => {
+      G.fromTo(stampEl, { autoAlpha: 0, scale: 3, rotation: -30 }, { autoAlpha: 1, scale: 1, rotation: -12, duration: .32, ease: 'power4.in', onComplete: () => {
+        Sound.stamp(); shakeMain(8); const c = center(stampEl); FX.burst(c.x, c.y, { count: 30, colors: ['#ff5a45', '#ffb347'], speed: [80, 300], gravity: 300 });
+      } });
+    };
+    if (hasSplit) {
+      const split = SplitText.create(file, { type: 'chars,words' });
+      const per = .007, total = split.chars.length * per;
+      G.from(split.chars, { opacity: 0, duration: .01, stagger: per, onComplete: go });
+      const iv = setInterval(() => Sound.type(), 70); setTimeout(() => clearInterval(iv), total * 1000);
+    } else go();
+  } });
+} else { $$('.stat-fill').forEach(f => f.style.transform = 'none'); }
+
+/* ================= ESCENA: ¡Otro! ================= */
+const mug = $('#mug'), otro = $('#otro'), mugCount = $('#mug-count'); let mugs = 0, mugBusy = false;
+mug.addEventListener('click', () => {
+  if (mugBusy) return; mugBusy = true; audio();
+  const done = () => {
+    mugs++; mugCount.textContent = `Tazas rotas: ${mugs}.`;
+    const c = center(mug);
+    Sound.smash(); shakeMain(6);
+    FX.burst(c.x, c.y + c.r.height * .3, { count: 46, colors: ['#f3e3c3', '#ffffff', '#5a3418', '#c8202f'], speed: [120, 460], gravity: 900, angle: -Math.PI / 2, spread: 2.6, size: [1.5, 3.5], life: [.6, 1.1] });
+    if (motion) {
+      G.set(mug, { autoAlpha: 0 });
+      G.fromTo(otro, { opacity: 0, scale: 2.6, rotation: -24 }, { opacity: 1, scale: 1, rotation: -10, duration: .35, ease: 'back.out(2)' });
+      G.to(otro, { opacity: 0, duration: .4, delay: 1.1 });
+      G.fromTo(mug, { y: -140, autoAlpha: 1, rotation: 0 }, { y: 0, duration: .7, delay: 1.2, ease: 'bounce.out', onComplete: () => { mugBusy = false; } });
+    } else mugBusy = false;
+  };
+  if (motion) G.timeline().to(mug, { y: -26, rotation: -12, duration: .18, ease: 'power2.out' }).to(mug, { y: 70, rotation: 30, duration: .16, ease: 'power3.in', onComplete: done });
+  else done();
+});
+
+/* ================= MJÖLNIR ================= */
+const hb = $('#hammer-btn'), hammer = $('#hammer'), rp = $('#runes-progress'), rSpans = $$('#runes-progress span');
+const hint = $('#hammer-hint'), worthyEl = $('#worthy'), cracks = $$('.crack');
+const HOLD = 2.2;
+const FAILS = ['Casi. Hasta Thor tiene días flojos.', 'Un poquito más. El martillo ya sabe que eres tú.', 'No lo sueltes hasta que brillen las cinco runas.'];
+let holding = false, prog = 0, hRAF = 0, lastTS = 0, worthy = false, humCtl = null, fails = 0, floatTw = null;
+function holdingNow() { return holding; }
+cracks.forEach(c => { const L = c.getTotalLength(); c.dataset.len = L; c.style.strokeDasharray = L; c.style.strokeDashoffset = L; });
+if (hasG) G.set(hammer, { rotation: 180, x: 0, y: 0, transformOrigin: '50% 50%' });
+function setT(x, y, r) { if (hasG) G.set(hammer, { x, y, rotation: r }); else hammer.style.transform = `translate(${x}px,${y}px) rotate(${r}deg)`; }
+function setProg(p) {
+  prog = Math.max(0, Math.min(1, p));
+  const lit = Math.min(rSpans.length, Math.floor(prog * rSpans.length + .001));
+  rSpans.forEach((s, i) => s.classList.toggle('on', i < lit || prog >= 1));
+  rp.setAttribute('aria-valuenow', String(Math.round(prog * 100)));
+  cracks.forEach(c => { c.style.strokeDashoffset = c.dataset.len * (1 - prog); });
+}
+function holdLoop() {
+  const now = performance.now(), dt = (now - lastTS) / 1000; lastTS = now;
+  if (!holding) return;
+  setProg(prog + dt / HOLD);
+  const amp = reduce ? 0 : 1 + prog * 6;
+  setT(rand(-amp, amp), -prog * 14 + rand(-amp * .4, amp * .4), 180 + rand(-amp * .6, amp * .6));
+  if (humCtl) humCtl.set(prog);
+  const r = hb.getBoundingClientRect();
+  if (Math.random() < .25 + prog * .5) FX.burst(r.left + r.width / 2 + rand(-r.width * .4, r.width * .4), r.bottom - r.height * .1, { count: 2, colors: ['#a6dcff', '#ffffff'], speed: [60, 220], life: [.2, .45], size: [.8, 1.8], gravity: 260 });
+  if (!reduce && Math.random() < prog * .07) { const x = r.left + r.width / 2; FX.strike(x + rand(-160, 160), -10, x + rand(-20, 20), r.top + r.height * .6, { width: 1.8, branches: 1, life: .25, alpha: .7 }); }
+  if (!reduce && Math.random() < .12) FX.krackle(r.left + r.width / 2, r.bottom - r.height * .15, { n: 2, spread: r.width * .4, size: [2, 7] });
+  if (prog >= 1) { lift(); return; }
+  hRAF = requestAnimationFrame(holdLoop);
+}
+function startHold(e) {
+  if (worthy || holding) return;
+  if (e && e.cancelable) e.preventDefault();
+  audio(); holding = true; humCtl = Sound.hum(); lastTS = performance.now();
+  hb.classList.add('holding'); if (hasG) G.killTweensOf(hammer);
+  cinema(true); if (motion) G.to('.stage', { scale: 1.06, duration: 1.2, ease: 'power2.out' });
+  hint.textContent = 'Así. Sigue, sigue...';
+  hRAF = requestAnimationFrame(holdLoop);
+}
+function endHold() {
+  if (!holding) return;
+  holding = false; cancelAnimationFrame(hRAF); hb.classList.remove('holding');
+  if (humCtl) { humCtl.stop(); humCtl = null; }
+  if (motion) G.to('.stage', { scale: 1, duration: .5, ease: 'power2.out' });
+  if (worthy) return;
+  fails++; hint.textContent = FAILS[(fails - 1) % FAILS.length]; Sound.fail();
+  if (hasG) {
+    G.to(hammer, { x: 0, y: 0, rotation: 180, duration: .5, ease: 'bounce.out' });
+    const o = { p: prog }; G.to(o, { p: 0, duration: .6, ease: 'power2.out', onUpdate: () => setProg(o.p) });
+  } else { setT(0, 0, 180); setProg(0); }
+}
+function lift() {
+  holding = false; worthy = true; cancelAnimationFrame(hRAF); hb.classList.remove('holding');
+  if (humCtl) { humCtl.stop(); humCtl = null; }
+  setProg(1); hint.textContent = '';
+  const boom = () => {
+    const c = center(hammer), hx = c.x, hy = c.r.top + c.r.height * .2;
+    for (let i = 0; i < 4; i++) setTimeout(() => FX.strike(hx + rand(-180, 180), -20, hx, hy, { width: 3.6, branches: 4 }), i * 100);
+    flash(1); Sound.thunder(1.2); Sound.braam(.8); shakeMain(12);
+    FX.burst(hx, hy, { count: 90, colors: BLUE, speed: [120, 600], life: [.5, 1.1], gravity: 120 });
+    FX.krackle(hx, hy, { n: 16, spread: 120 });
+  };
+  const show = () => {
+    worthyEl.hidden = false;
+    if (motion) {
+      G.fromTo('.worthy-title', { scale: 2.4, opacity: 0, letterSpacing: '.3em' }, { scale: 1, opacity: 1, letterSpacing: '0em', duration: .5, ease: 'power4.out' });
+      G.from(['.worthy-sub', '#hammer-reset'], { opacity: 0, y: 18, stagger: .14, duration: .7, delay: .3, ease: 'power3.out' });
+    }
+    setTimeout(() => { const r = worthyEl.getBoundingClientRect(); if (r.bottom > innerHeight) scrollBy({ top: Math.min(r.bottom - innerHeight + 24, r.top - 80), behavior: reduce ? 'auto' : 'smooth' }); }, 600);
+    setTimeout(() => cinema(false), 2600);
+    enableSummon(false);
+  };
+  if (!motion) { setT(0, -60, 360); boom(); show(); return; }
+  G.to('.stage', { scale: 1, duration: .6 });
+  G.timeline()
+    .to(hammer, { y: -40, x: 0, rotation: 180, duration: .22, ease: 'power2.out' })
+    .to(hammer, { y: -112, rotation: 360, duration: .7, ease: 'back.out(1.6)' })
+    .add(boom, '-=.28')
+    .add(show, '+=.1')
+    .add(() => { floatTw = G.to(hammer, { y: -98, duration: 1.6, ease: 'sine.inOut', yoyo: true, repeat: -1 }); });
+}
+hb.addEventListener('pointerdown', e => { if (e.button !== undefined && e.button > 0) return; try { hb.setPointerCapture(e.pointerId); } catch (_) {} startHold(e); });
+['pointerup', 'pointercancel', 'lostpointercapture'].forEach(ev => hb.addEventListener(ev, endHold));
+hb.addEventListener('contextmenu', e => e.preventDefault());
+hb.addEventListener('keydown', e => { if ((e.key === ' ' || e.key === 'Enter') && !e.repeat) { e.preventDefault(); startHold(); } });
+hb.addEventListener('keyup', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); endHold(); } });
+hb.addEventListener('blur', endHold);
+$('#hammer-reset').addEventListener('click', () => {
+  worthy = false; worthyEl.hidden = true; fails = 0;
+  if (floatTw) { floatTw.kill(); floatTw = null; }
+  if (motion) G.to(hammer, { y: 0, x: 0, rotation: 540, duration: .8, ease: 'power2.inOut', onComplete: () => G.set(hammer, { rotation: 180 }) });
+  else setT(0, 0, 180);
+  setProg(0); hint.textContent = 'Mantén presionado el martillo hasta que se enciendan las cinco runas.';
+  hb.focus({ preventScroll: true });
+});
+
+/* ================= El Mjölnir obedece: tócalo donde quieras ================= */
+const summonBtn = $('#summon'), flyer = $('#flyer');
+let summonOn = false, flying = false;
+function enableSummon(announce) {
+  if (summonOn) return; summonOn = true; summonBtn.hidden = false; store.set('violet-digna', '1');
+  if (motion) G.from(summonBtn, { scale: 0, rotation: -180, duration: .7, ease: 'back.out(2)' });
+  if (announce) setTimeout(() => toast('El Mjölnir ahora te obedece. Toca cualquier parte de la pantalla para lanzarlo.', 5200), 1200);
+}
+function throwHammer(tx, ty) {
+  if (flying || !motion) return; flying = true; audio();
+  const d = center(summonBtn);
+  G.set(flyer, { x: d.x, y: d.y, xPercent: -50, yPercent: -50, rotation: 0, opacity: 1, scale: .9 });
+  summonBtn.classList.add('empty'); Sound.whoosh();
+  const trail = () => FX.burst(G.getProperty(flyer, 'x'), G.getProperty(flyer, 'y'), { count: 2, colors: ['#a6dcff', '#ffffff'], speed: [10, 60], life: [.2, .45], size: [1, 2.4], gravity: 0 });
+  G.timeline({ onComplete: () => { flying = false; G.set(flyer, { opacity: 0 }); summonBtn.classList.remove('empty'); } })
+    .to(flyer, { x: tx, y: ty, rotation: 900, scale: 1.15, duration: .38, ease: 'power2.in', onUpdate: trail })
+    .add(() => {
+      FX.krackle(tx, ty, { n: 9, spread: 40 }); FX.burst(tx, ty, { count: 34, colors: BLUE, speed: [100, 400], gravity: 200 });
+      FX.strike(tx + rand(-70, 70), -20, tx, ty, { width: 2.4, branches: 2, life: .3 }); flash(.25); Sound.thunder(.45); shakeMain(5);
+    })
+    .to(flyer, { x: d.x, y: d.y, rotation: 1800, scale: .9, duration: .45, ease: 'power2.out', onUpdate: trail }, '+=.08');
+}
+summonBtn.addEventListener('click', e => { e.stopPropagation(); throwHammer(innerWidth * rand(.3, .7), innerHeight * rand(.3, .6)); });
+document.addEventListener('click', e => {
+  if (!summonOn || !opened || !$('#credits').hidden) return;
+  if (e.target.closest('button,a,input,label,textarea,select,.parchment,[role="dialog"]')) return;
+  const sel = window.getSelection && String(window.getSelection()); if (sel) return;
+  throwHammer(e.clientX, e.clientY);
+});
+
+/* ================= ILUSIONES ================= */
+const grid = $('#illusions'), cards = $$('.ill-card'), illMsg = $('#ill-msg'), shBtn = $('#ill-shuffle'), againBtn = $('#ill-again');
+let picks = 0, shuffled = false, busy = false, order = [0, 1, 2];
+function slotX(i, slot) { const w = cards[0].getBoundingClientRect().width, gap = parseFloat(getComputedStyle(grid).columnGap) || 0; return (slot - i) * (w + gap); }
+function permute(a) { let b; do { b = [...a].sort(() => Math.random() - .5); } while (b.every((v, i) => v === a[i])); return b; }
+function resetCards() {
+  picks = 0; shuffled = false; order = [0, 1, 2];
+  cards.forEach(c => {
+    c.classList.remove('gone', 'real'); c.disabled = false; c.removeAttribute('aria-disabled');
+    c.querySelector('.ill-front').hidden = false; c.querySelector('.ill-back').hidden = true;
+    if (hasG) G.set(c, { clearProps: 'all' }); else c.style.cssText = '';
+  });
+}
+async function shuffle() {
+  if (busy) return; busy = true; resetCards(); audio();
+  illMsg.textContent = 'Las ilusiones se mezclan...'; Sound.magic(); shBtn.disabled = true;
+  if (motion) {
+    grid.classList.add('shuffling');
+    for (let k = 0; k < 9; k++) {
+      order = permute(order); if (k % 2 === 0) Sound.whoosh();
+      await new Promise(res => {
+        const tl = G.timeline({ onComplete: res });
+        cards.forEach((c, i) => {
+          tl.to(c, { x: slotX(i, order[i]), duration: .24, ease: 'power2.inOut' }, 0)
+            .to(c, { y: (i - 1) * 18 || -18, duration: .12, yoyo: true, repeat: 1, ease: 'sine.out' }, 0);
+        });
+      });
+    }
+    grid.classList.remove('shuffling');
+  }
+  busy = false; shuffled = true; shBtn.disabled = false;
+  illMsg.textContent = 'Ahora elige. ¿Cuál es la verdadera?';
+}
+function reveal(c) {
+  c.classList.add('real'); c.setAttribute('aria-disabled', 'true'); Sound.magic();
+  const p = center(c); FX.burst(p.x, p.y, { count: 60, colors: ['#ffe3a1', '#e2b85c', '#ffffff'], speed: [80, 320], gravity: 40 });
+  const swap = () => { c.querySelector('.ill-front').hidden = true; c.querySelector('.ill-back').hidden = false; };
+  if (motion) G.timeline().to(c, { rotationY: 90, duration: .22, ease: 'power2.in' }).add(swap).to(c, { rotationY: 0, duration: .35, ease: 'power2.out' })
+    .to(c, { x: slotX(cards.indexOf(c), 1), scale: 1.12, duration: .6, ease: 'back.out(1.6)' }, '-=.1');
+  else swap();
+  illMsg.innerHTML = 'La de verdad siempre es la que se queda. Gracias por quedarte, hermana.<small>Truco de Loki: la verdadera siempre es la última que eliges.</small>';
+  againBtn.hidden = false; shBtn.hidden = true;
+}
+cards.forEach(c => c.addEventListener('click', () => {
+  if (busy || c.classList.contains('gone') || c.classList.contains('real')) return;
+  if (!shuffled) { shuffle(); return; }
+  picks++;
+  if (picks < 3) {
+    c.classList.add('gone'); c.disabled = true;
+    const p = center(c); FX.burst(p.x, p.y, { count: 55, colors: GREEN, speed: [40, 240], life: [.6, 1.2], gravity: -30 }); FX.krackle(p.x, p.y, { n: 6, spread: 40, color: '#4fe3a6' });
+    Sound.poof();
+    if (motion) G.to(c, { opacity: 0, scale: .6, filter: 'blur(8px)', duration: .5, ease: 'power2.in' }); else c.style.opacity = '0';
+    illMsg.textContent = picks === 1 ? 'Ilusión. Típico de ti.' : 'Otra ilusión. ¿De verdad esperabas que fuera fácil?';
+  } else reveal(c);
+}));
+shBtn.addEventListener('click', shuffle);
+againBtn.addEventListener('click', () => { againBtn.hidden = true; shBtn.hidden = false; shuffle(); });
+
+/* ================= LA CARTA ================= */
+const parchment = $('#parchment'), wax = $('#wax'), lBody = $('#letter-body');
+if (hasG) parchment.classList.add('sealed'); else wax.hidden = true;
+wax.addEventListener('click', () => {
+  if (!parchment.classList.contains('sealed')) return;
+  audio(); Sound.crack(); setTimeout(() => Sound.chime(), 180);
+  const p = center(wax); FX.burst(p.x, p.y, { count: 36, colors: ['#1f9c66', '#4fe3a6', '#e2b85c'], speed: [60, 260], gravity: 320, size: [1.5, 3.4] });
+  parchment.classList.remove('sealed');
+  G.to(wax, { scale: 1.3, opacity: 0, rotation: 25, duration: .45, ease: 'back.in(2)', onComplete: () => { wax.hidden = true; } });
+  if (reduce) return;
+  const h = lBody.scrollHeight;
+  G.fromTo(lBody, { height: 0, overflow: 'hidden' }, { height: h, duration: 1.1, ease: 'power3.inOut', onComplete: () => { G.set(lBody, { clearProps: 'height,overflow' }); if (hasST) ScrollTrigger.refresh(); } });
+  if (hasSplit) {
+    const split = SplitText.create(lBody.querySelectorAll('p'), { type: 'words' });
+    G.from(split.words, { opacity: 0, y: 8, filter: 'blur(6px)', stagger: .009, duration: .6, delay: .3, ease: 'power2.out', onComplete: () => split.revert() });
+  } else G.from(lBody.children, { opacity: 0, y: 16, stagger: .16, duration: .8, ease: 'power2.out', delay: .35 });
+});
+
+/* ================= EL DESEO, EL BIFRÖST Y LOS CRÉDITOS ================= */
+const cake = $('#cake'), micBtn = $('#blow-mic'), micMsg = $('#mic-msg'), finalEl = $('#final'), bif = $('#bifrost'), burnEl = $('#burn');
+let finalSplit = null;
+function bifrost() {
+  flash(.7); Sound.magic(); Sound.braam(.5); setTimeout(() => Sound.melody(), 400);
+  FX.confetti(190); cinema(true); setTimeout(() => cinema(false), 2600);
+  const c = center(cake); FX.krackle(c.x, c.r.bottom, { n: 14, spread: 120, color: '#ffe3a1' });
+  if (motion) {
+    G.timeline().set(bif, { opacity: 1 }).fromTo(bif, { scaleX: 0 }, { scaleX: 1, duration: .55, ease: 'expo.out' }).to(bif, { opacity: 0, duration: 1.8, ease: 'power2.out' }, '+=.5');
+    G.fromTo(burnEl, { opacity: 0, scale: .4 }, { opacity: 1, scale: 1, duration: .8, ease: 'power3.out', onComplete: () => G.to(burnEl, { opacity: .5, duration: 2 }) });
+    G.to(burnEl, { rotation: '+=360', duration: 40, ease: 'none', repeat: -1 });
+  } else burnEl.style.opacity = '.5';
+}
+function blowOut() {
+  if (cake.classList.contains('out')) return;
+  audio(); cake.classList.add('out'); Sound.blow();
+  $$('.flame', cake).forEach((f, i) => { if (i % 2) return; const p = center(f); FX.burst(p.x, p.y, { count: 14, colors: ['#9aa3a0', '#c8d6cf'], speed: [10, 50], life: [1.2, 2], size: [3, 6], gravity: -50, drag: .97, shape: 'smoke', angle: -Math.PI / 2, spread: .8 }); });
+  $('#wish-actions').hidden = true; micMsg.textContent = '';
+  setTimeout(() => {
+    bifrost();
+    finalEl.hidden = false;
+    if (hasSplit && !reduce) {
+      if (finalSplit) finalSplit.revert();
+      finalSplit = SplitText.create('#final-title', { type: 'words,chars' });
+      G.from(finalSplit.chars, { yPercent: 120, rotationX: -90, opacity: 0, stagger: .035, duration: .9, ease: 'back.out(1.7)', transformOrigin: '50% 100%' });
+      G.from('#final p, .final-actions', { opacity: 0, y: 14, stagger: .2, duration: .8, delay: .9, ease: 'power2.out' });
+    }
+  }, 750);
+}
+$('#blow').addEventListener('click', blowOut);
+$('#replay').addEventListener('click', () => { audio(); bifrost(); });
+micBtn.addEventListener('click', async () => {
+  audio();
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !Sound.ctx) { micMsg.textContent = 'Este navegador no me deja usar el micrófono. Usa el botón de soplar.'; return; }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    micBtn.disabled = true; micMsg.textContent = 'Te escucho. Sopla fuerte cerca del micrófono.';
+    const src = Sound.ctx.createMediaStreamSource(stream), an = Sound.ctx.createAnalyser(); an.fftSize = 1024; src.connect(an);
+    const data = new Uint8Array(an.fftSize); let over = 0; const t0 = performance.now();
+    const stop = () => { stream.getTracks().forEach(t => t.stop()); try { src.disconnect(); } catch (_) {} };
+    (function listen() {
+      an.getByteTimeDomainData(data); let sum = 0;
+      for (let i = 0; i < data.length; i++) { const d = (data[i] - 128) / 128; sum += d * d; }
+      const rms = Math.sqrt(sum / data.length);
+      if (rms > .2) over++; else over = Math.max(0, over - 1);
+      if (over > 7) { stop(); blowOut(); return; }
+      if (performance.now() - t0 > 20000) { stop(); micBtn.disabled = false; micMsg.textContent = 'No escuché ningún soplido. Prueba otra vez o usa el botón.'; return; }
+      requestAnimationFrame(listen);
+    })();
+  } catch (err) { micMsg.textContent = 'No tengo permiso para usar el micrófono. Usa el botón de soplar.'; }
+});
+// Créditos y escena post-créditos
+const credits = $('#credits'), roll = $('#credits-roll'), post = $('#post');
+let creditsTl = null, postTl = null;
+function showPost() {
+  if (creditsTl) creditsTl.kill();
+  roll.hidden = true; post.hidden = false; $('#credits-skip').hidden = true;
+  if (!motion) return;
+  postTl = G.timeline()
+    .from('.post-label', { opacity: 0, duration: .6 })
+    .from('.post-place', { opacity: 0, y: 10, duration: .7 }, '+=.4')
+    .from('.post-line', { opacity: 0, y: 10, stagger: 1.2, duration: .6 }, '+=.7')
+    .add(() => { Sound.braam(.7); flash(.3); }, '+=.9')
+    .from('.post-return', { opacity: 0, scale: 1.5, letterSpacing: '.7em', duration: 1.3, ease: 'power3.out' }, '<');
+}
+function openCredits() {
+  audio(); credits.hidden = false; root.classList.add('locked'); roll.hidden = false; post.hidden = true; $('#credits-skip').hidden = false;
+  $('#credits-close').focus();
+  if (!motion) { post.hidden = false; return; }
+  Sound.melody();
+  const h = roll.offsetHeight, H = innerHeight;
+  creditsTl = G.fromTo(roll, { y: H }, { y: -h + H * .35, duration: Math.max(16, (h + H) / 80), ease: 'none', onComplete: showPost });
+}
+function closeCredits() {
+  if (creditsTl) creditsTl.kill(); if (postTl) postTl.kill();
+  credits.hidden = true; root.classList.remove('locked');
+  $('#to-credits').focus({ preventScroll: true });
+}
+$('#to-credits').addEventListener('click', openCredits);
+$('#credits-skip').addEventListener('click', showPost);
+$('#credits-close').addEventListener('click', closeCredits);
+addEventListener('keydown', e => { if (e.key === 'Escape' && !credits.hidden) closeCredits(); });
+
+/* ================= Sonido sí / no ================= */
+const sBtn = $('#sound');
+sBtn.addEventListener('click', () => {
+  const on = sBtn.getAttribute('aria-pressed') !== 'true';
+  sBtn.setAttribute('aria-pressed', String(on)); $('#sound-label').textContent = on ? 'Sonido' : 'Sin sonido';
+  audio(); Sound.setOn(on);
+});
+
+/* ================= Títulos que caen letra por letra ================= */
+if (hasSplit && hasST && !reduce) {
+  $$('.split-title').forEach(el => {
+    SplitText.create(el, { type: 'words,chars', autoSplit: true, onSplit(self) {
+      return G.from(self.chars, { yPercent: 115, rotationX: -85, opacity: 0, transformOrigin: '50% 100%', stagger: .025, duration: .75, ease: 'back.out(1.6)',
+        scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+    } });
+  });
+}
+
+/* ================= Arranque ================= */
+if (document.fonts && document.fonts.ready && hasST) document.fonts.ready.then(() => ScrollTrigger.refresh());
+if (location.hash === '#sin-sello') { openGate(true); }
+else root.classList.add('locked');
+})();
+</script>
+
+</html>
